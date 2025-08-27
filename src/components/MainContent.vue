@@ -3,6 +3,7 @@ import Badge from '@/components/ui/badge/Badge.vue'
 import Button from '@/components/ui/button/Button.vue'
 import { techStack } from '@/utils/data.js'
 import ButtonEducation from '@/components/buttons/ButtonEducation.vue'
+import ButtonExperience from './buttons/ButtonExperience.vue'
 </script>
 
 <template>
@@ -29,8 +30,10 @@ import ButtonEducation from '@/components/buttons/ButtonEducation.vue'
           target="_blank"
           href="https://docs.google.com/document/d/1jyEKvQjJeqxRvF9SVVmq6lgxzunbmIyyJ2XKnduaXlg/edit?usp=sharing"
         >
-          View CV
+          + View CV
         </Button>
+
+        <ButtonExperience />
 
         <ButtonEducation />
       </div>

@@ -8,7 +8,7 @@ import { education } from '@/utils/data.js'
 <template>
   <Sheet>
     <SheetTrigger as-child>
-      <Button class="md:w-auto mt-4 hover:cursor-pointer" variant="outline"> Education </Button>
+      <Button class="md:w-auto mt-4 hover:cursor-pointer" variant="outline">+ Education </Button>
     </SheetTrigger>
     <SheetContent>
       <SheetHeader>
