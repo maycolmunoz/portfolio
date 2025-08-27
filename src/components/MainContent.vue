@@ -15,13 +15,11 @@ import { techStack } from '@/utils/data.js'
       </p>
 
       <div class="flex flex-wrap gap-2 mt-3">
-        <Badge v-for="tech in techStack" :key="tech.name" :class="`px-3 py-1 text-sm font-semibold rounded-full ${tech.color}`">
-          {{ tech.name }}
-        </Badge>
+        <Badge v-for="tech in techStack" :key="tech.name" :class="`px-3 py-1 text-sm font-semibold ${tech.color}`"> > {{ tech.name }} </Badge>
       </div>
 
       <Button
-        class="w-full md:w-auto mt-4"
+        class="md:w-auto mt-4"
         variant="outline"
         as="a"
         target="_blank"
@@ -31,6 +29,14 @@ import { techStack } from '@/utils/data.js'
       </Button>
     </article>
 
-    <article class="flex justify-center items-center px-4"></article>
+    <article class="flex justify-center items-center px-4">
+      <dotlottie-wc
+        src="https://lottie.host/a722ffeb-b4eb-404b-8cef-de293c7e42dd/ebIObLH1x3.lottie"
+        class="w-full transform -scale-x-100"
+        speed="2"
+        autoplay
+        loop
+      ></dotlottie-wc>
+    </article>
   </main>
 </template>
