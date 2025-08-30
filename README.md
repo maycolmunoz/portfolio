@@ -1,4 +1,4 @@
-# portfolio
+# Portfolio
 
 ![screenshot](./_docs/screenshot.webp)
 
