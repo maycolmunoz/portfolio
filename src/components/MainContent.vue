@@ -7,7 +7,7 @@ import ButtonExperience from './buttons/ButtonExperience.vue'
 </script>
 
 <template>
-  <main class="grid grid-cols-1 gap-6 md:gap-12 md:my-20 md:grid-cols-2 items-center">
+  <main class="grid grid-cols-1 gap-6 md:gap-10C md:my-10 md:grid-cols-2 items-center">
     <article class="space-y-6 px-6 md:px-10">
       <Badge class="bg-emerald-500 py-2 px-4 text-base md:text-xl font-extrabold" as="h1"> $Backend Developer </Badge>
 
@@ -48,5 +48,12 @@ import ButtonExperience from './buttons/ButtonExperience.vue'
       >
       </lord-icon>
     </article>
+
+    <footer class="text-center text-xs text-slate-500">
+      Icons and animations by
+      <a href="https://lordicon.com/" target="_blank" rel="noopener" class="underline">Lordicon</a>
+      and
+      <a href="https://cocomaterial.com/" target="_blank" rel="noopener" class="underline">Cocomaterial</a>.
+    </footer>
   </main>
 </template>
