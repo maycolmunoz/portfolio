@@ -40,13 +40,13 @@ import ButtonExperience from './buttons/ButtonExperience.vue'
     </article>
 
     <article class="flex justify-center items-center px-4">
-      <dotlottie-wc
-        src="https://lottie.host/a722ffeb-b4eb-404b-8cef-de293c7e42dd/ebIObLH1x3.lottie"
-        class="w-full transform -scale-x-100"
-        speed="2"
-        autoplay
-        loop
-      ></dotlottie-wc>
+      <lord-icon
+        src="https://cdn.lordicon.com/bvlcsjqo.json"
+        class="transform -scale-x-100"
+        trigger="hover"
+        style="width: 500px; height: 500px"
+      >
+      </lord-icon>
     </article>
   </main>
 </template>
