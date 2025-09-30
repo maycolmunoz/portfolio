@@ -40,13 +40,7 @@ import ButtonExperience from './buttons/ButtonExperience.vue'
     </article>
 
     <article class="flex justify-center items-center px-4">
-      <lord-icon
-        src="https://cdn.lordicon.com/bvlcsjqo.json"
-        class="transform -scale-x-100"
-        trigger="hover"
-        style="width: 500px; height: 500px"
-      >
-      </lord-icon>
+      <lord-icon src="https://cdn.lordicon.com/anzrsjfm.json" trigger="hover" style="width: 400px; height: 400px"> </lord-icon>
     </article>
 
     <footer class="text-center text-xs text-slate-500">
