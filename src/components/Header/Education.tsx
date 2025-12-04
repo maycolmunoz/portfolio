@@ -26,14 +26,12 @@ export default function Education() {
           📚 Education
         </Button>
       </SheetTrigger>
-      <SheetContent >
+      <SheetContent>
         <SheetHeader>
           <SheetTitle>My Education</SheetTitle>
           <SheetDescription>
             A summary of my academic background.
           </SheetDescription>
-        </SheetHeader>
-        <div className="mt-4 px-3">
           <Accordion type="single" collapsible>
             {education.map((item, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
@@ -42,7 +40,7 @@ export default function Education() {
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
+        </SheetHeader>
       </SheetContent>
     </Sheet>
   );

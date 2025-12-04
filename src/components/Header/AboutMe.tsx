@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { techStack } from "@/utils/data";
 import { Button } from "@/components/ui/button";
+import Projects from "./Projects";
 import Education from "./Education";
 
 export default function AboutMe() {
@@ -15,7 +16,7 @@ export default function AboutMe() {
         </Badge>
       </div>
 
-      <p className="mt-2 text-slate-300 text-base md:text-xl leading-relaxed">
+      <p className="mt-2 text-slate-300 text-base lg:text-xl leading-relaxed">
         My name is
         <span className="font-semibold text-white"> Maycol Muñoz</span>, a
         Systems Engineering student focused on full-stack development, building
@@ -43,6 +44,8 @@ export default function AboutMe() {
             🗎 View CV
           </a>
         </Button>
+
+        <Projects />
 
         <Education />
       </div>
