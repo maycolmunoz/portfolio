@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { techStack } from "@/utils/data";
 import { Button } from "@/components/ui/button";
+import Education from "./Education";
 
 export default function AboutMe() {
   return (
@@ -33,14 +34,18 @@ export default function AboutMe() {
         ))}
       </div>
 
-      <Button className="md:w-full mt-4" variant="outline" asChild>
-        <a
-          target="_blank"
-          href="https://docs.google.com/document/d/1jyEKvQjJeqxRvF9SVVmq6lgxzunbmIyyJ2XKnduaXlg/edit?usp=sharing"
-        >
-          🗎 View CV
-        </a>
-      </Button>
+      <div className="space-x-2">
+        <Button className="md:w-full mt-4" variant="outline" asChild>
+          <a
+            target="_blank"
+            href="https://docs.google.com/document/d/1jyEKvQjJeqxRvF9SVVmq6lgxzunbmIyyJ2XKnduaXlg/edit?usp=sharing"
+          >
+            🗎 View CV
+          </a>
+        </Button>
+
+        <Education />
+      </div>
     </article>
   );
 }
