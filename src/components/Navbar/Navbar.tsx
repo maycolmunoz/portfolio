@@ -1,7 +1,7 @@
 import rocket from "@/assets/rocket.png";
 import { contacts } from "@/utils/data";
 
-export default function NavBar() {
+export default function Navbar() {
   return (
     <nav className="flex flex-col flex-wrap items-center px-10 py-2 mx-auto  md:flex-row">
       <img src={rocket} className="w-15 animate-bounce" alt="rocket" />
