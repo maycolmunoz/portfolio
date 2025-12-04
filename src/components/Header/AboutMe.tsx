@@ -35,8 +35,8 @@ export default function AboutMe() {
         ))}
       </div>
 
-      <div className="space-x-2">
-        <Button className="md:w-full mt-4" variant="outline" asChild>
+      <div className="space-x-2 space-y-4">
+        <Button className="lg:w-full mt-4" variant="outline" asChild>
           <a
             target="_blank"
             href="https://docs.google.com/document/d/1jyEKvQjJeqxRvF9SVVmq6lgxzunbmIyyJ2XKnduaXlg/edit?usp=sharing"

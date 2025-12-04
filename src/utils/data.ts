@@ -42,45 +42,55 @@ export const education = [
   },
 ];
 
-import offertyImg from "@/assets/projects/offerty.webp";
 import compranaImg from "@/assets/projects/comprana.webp";
 import aventuroImg from "@/assets/projects/aventuro.webp";
 import avatarmakerImg from "@/assets/projects/avatarmaker.webp";
+import orbisImg from "@/assets/projects/orbis.webp";
+import leafletImg from "@/assets/projects/leaflet.webp";
 
 export const projects = [
   {
-    stack: ["Laravel", "Inertia.js"],
-    title: "Offerty",
-    img: offertyImg,
+    stack: ["Vue", "TailwindCSS", "Laravel", "API"],
+    title: "Aventuro",
+    img: aventuroImg,
     description:
-      "Offerty is a modern web application that allows local businesses to publish promotions and locations, while users explore nearby offers on an interactive map.",
-    repository: "https://github.com/maycolmunoz/offerty",
-    link: "https://github.com/maycolmunoz/offerty",
+      "Aventuro is a travel-oriented web application where users can explore packages, manage reservations, and access their account through a smooth and consistent booking experience.",
+    repository: "https://github.com/maycolmunoz/aventuro",
+    link: "https://youtu.be/1F4ABE5Gtbc",
   },
   {
     stack: ["Laravel", "Livewire", "Alpine.js", "TailwindCSS", "MySQL"],
     title: "Comprana",
     img: compranaImg,
     description:
-      "Comprana is a monolithic web application that enables users to order groceries from home and have them delivered to their door. It offers a wide range of products and an intuitive interface for browsing and purchasing.",
+      "Comprana is a grocery delivery platform that provides a clean catalog, fast browsing, and a simple checkout flow for placing home-delivery orders with ease.",
     repository: "https://github.com/maycolmunoz/comprana",
     link: "https://youtu.be/ZDsoQOYZTCI",
   },
   {
-    stack: ["Vue", "TailwindCSS", "Laravel", "API"],
-    title: "Aventuro",
-    img: aventuroImg,
+    stack: ["Laravel", "MySQL", "Moonshine"],
+    title: "Orbis",
+    img: orbisImg,
     description:
-      "Aventuro is a web application for travel agencies that allows users to explore travel packages, make reservations, and manage their accounts efficiently. Designed with user experience in mind, it provides a smooth and enjoyable booking process.",
-    repository: "https://github.com/maycolmunoz/aventuro",
-    link: "https://youtu.be/enFP3gEd3sQ",
+      "Orbis is a modular and minimal ERP system designed for business management, offering a flexible structure to expand features as organizational needs grow.",
+    repository: "https://github.com/maycolmunoz/orbis",
+    link: "https://github.com/maycolmunoz/orbis",
   },
   {
-    stack: ["Bootstrap", "Alpine.js"],
+    stack: ["Laravel", "Moonshine"],
+    title: "Moon Leaflet",
+    img: leafletImg,
+    description:
+      "MoonLeaflet integrates Leaflet with MoonShine to enable interactive maps, letting users pick coordinates or display multiple locations within the admin panel.",
+    repository: "https://github.com/maycolmunoz/moon-leaflet",
+    link: "https://github.com/maycolmunoz/moon-leaflet",
+  },
+  {
+    stack: ["Bootstrap", "Alpine.js", "API"],
     title: "Avatarmaker",
     img: avatarmakerImg,
     description:
-      "Avatarmaker is a website that allows users to create and download custom avatars using the DiceBear API.",
+      "Avatarmaker lets users create and download custom avatars using the DiceBear API, providing a simple interface for generating unique visual identities.",
     repository: "https://github.com/maycolmunoz/avatarmaker",
     link: "https://avatarsmaker.netlify.app/",
   },

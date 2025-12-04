@@ -20,23 +20,19 @@ export default function Projects() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button
-          className="md:w-full mt-4 hover:cursor-pointer"
-          variant="outline"
-        >
+        <Button className="lg:w-full hover:cursor-pointer" variant="outline">
           🧰 Projects
         </Button>
       </SheetTrigger>
 
-      <SheetContent className="h-screen">
+      <SheetContent className="h-screen overflow-scroll">
         <SheetHeader>
           <SheetTitle>Projects</SheetTitle>
           <SheetDescription>A summary of my Projects</SheetDescription>
-          <Accordion type="single" collapsible>
+          <Accordion type="single" collapsible defaultValue="item-0">
             {projects.map((item, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
                 <AccordionTrigger>{item.title}</AccordionTrigger>
-
                 <AccordionContent>
                   <img
                     src={item.img}
@@ -54,21 +50,29 @@ export default function Projects() {
 
                   <div className="flex  gap-2">
                     {item.repository && (
-                      <Button asChild variant="outline" className="text-xs">
+                      <Button
+                        asChild
+                        variant="outline"
+                        className="text-xs flex-1"
+                      >
                         <a
                           href={item.repository}
                           target="_blank"
                           rel="noreferrer"
                         >
-                          Repository
+                          🗂️ Repository
                         </a>
                       </Button>
                     )}
 
                     {item.link && (
-                      <Button asChild variant="outline" className="text-xs">
+                      <Button
+                        asChild
+                        variant="outline"
+                        className="text-xs flex-1"
+                      >
                         <a href={item.link} target="_blank" rel="noreferrer">
-                          Demo
+                          🌐 Demo
                         </a>
                       </Button>
                     )}

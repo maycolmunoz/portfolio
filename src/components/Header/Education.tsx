@@ -19,10 +19,7 @@ export default function Education() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button
-          className="md:w-full hover:cursor-pointer mt-4"
-          variant="outline"
-        >
+        <Button className="lg:w-full hover:cursor-pointer" variant="outline">
           📚 Education
         </Button>
       </SheetTrigger>
