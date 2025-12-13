@@ -7,7 +7,7 @@ export default function Header() {
       <AboutMe />
 
       <article className="px-6 md:px-10">
-        <img src={Image} className="w-10/12  float" />
+        <img src={Image} className="w-10/12 astronaut" />
       </article>
     </main>
   );
