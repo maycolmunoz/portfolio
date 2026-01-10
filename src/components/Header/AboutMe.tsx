@@ -3,10 +3,11 @@ import { techStack } from "@/utils/data";
 import { Button } from "@/components/ui/button";
 import Projects from "./Projects";
 import Education from "./Education";
+import CVIcon from "../Icons/CVIcon";
 
 export default function AboutMe() {
   return (
-    <article className="space-y-6 px-6 md:px-10">
+    <article className="space-y-6 px-6 md:px-10 flex-1">
       <div className="rounded-lg bg-linear-to-r from-indigo-950 to-sky-950 animate-pulse text-center">
         <Badge
           className="bg-secondary py-2 px-4 text-base md:text-xl font-extrabold bg-clip-text text-transparent bg-linear-to-r from-indigo-500 to-sky-500"
@@ -41,7 +42,7 @@ export default function AboutMe() {
             target="_blank"
             href="https://docs.google.com/document/d/1jyEKvQjJeqxRvF9SVVmq6lgxzunbmIyyJ2XKnduaXlg/edit?usp=sharing"
           >
-            🗎 View CV
+            <CVIcon /> View CV
           </a>
         </Button>
 

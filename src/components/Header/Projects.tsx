@@ -15,13 +15,16 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/utils/data.ts";
+import ProjectsIcon from "@/components/Icons/ProjectsIcon";
+import GithubIcon from "@/components/Icons/GithubIcon";
+import LinkIcon from "@/components/Icons/LinkIcon";
 
 export default function Projects() {
   return (
     <Sheet>
       <SheetTrigger asChild>
         <Button className="lg:w-full hover:cursor-pointer" variant="outline">
-          🧰 Projects
+          <ProjectsIcon /> Projects
         </Button>
       </SheetTrigger>
 
@@ -60,7 +63,7 @@ export default function Projects() {
                           target="_blank"
                           rel="noreferrer"
                         >
-                          🗂️ Repository
+                          <GithubIcon /> Repository
                         </a>
                       </Button>
                     )}
@@ -72,7 +75,7 @@ export default function Projects() {
                         className="text-xs flex-1"
                       >
                         <a href={item.link} target="_blank" rel="noreferrer">
-                          🌐 Demo
+                          <LinkIcon /> Demo
                         </a>
                       </Button>
                     )}

@@ -14,13 +14,14 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { education } from "@/utils/data.js";
+import EducationIcon from "@/components/Icons/EducationIcon";
 
 export default function Education() {
   return (
     <Sheet>
       <SheetTrigger asChild>
         <Button className="lg:w-full hover:cursor-pointer" variant="outline">
-          📚 Education
+          <EducationIcon /> Education
         </Button>
       </SheetTrigger>
       <SheetContent>

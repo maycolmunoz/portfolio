@@ -1,13 +1,13 @@
+import MainIcon from "../Icons/MainIcon";
 import AboutMe from "./AboutMe";
-import Image from "@/assets/image.webp";
 
 export default function Header() {
   return (
-    <main className="grid grid-cols-1 gap-6 md:gap-10 md:grid-cols-2 items-center">
+    <main className="min-h-[85vh] md:flex justify-around items-center flex-wrap ">
       <AboutMe />
 
-      <article className="px-6 md:px-10">
-        <img src={Image} className="w-10/12 astronaut" />
+      <article className="p-6 md:p-10 flex-1">
+        <MainIcon />
       </article>
     </main>
   );
