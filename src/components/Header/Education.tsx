@@ -20,7 +20,7 @@ export default function Education() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button className="lg:w-full hover:cursor-pointer" variant="outline">
+        <Button className="w-full hover:cursor-pointer" variant="outline">
           <IconLibraryFilled /> Education
         </Button>
       </SheetTrigger>

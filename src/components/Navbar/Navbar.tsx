@@ -8,7 +8,7 @@ import {
 export default function Navbar() {
   return (
     <nav className="flex flex-col flex-wrap justify-center items-center px-5 py-2 mx md:flex-row">
-      <div className="flex flex-wrap items-center justify-around w-full space-x-0 md:w-auto md:ml-auto md:space-x-5 lg:justify-center mt-2 animate-pulse text-base md:text-md font-extrabold bg-linear-to-r from-indigo-500 to-sky-500 mx-auto rounded-2xl px-2 py-1 duration-200">
+      <div className="flex flex-wrap items-center justify-around w-full space-x-0 md:w-auto md:ml-auto md:space-x-5 lg:justify-center mt-2 icon-float md:text-md font-extrabold bg-linear-to-r from-indigo-500 to-sky-500 mx-auto rounded-2xl px-2 py-1">
         <h1>Full Stack Developer</h1>
 
         <div className="flex gap-1">
