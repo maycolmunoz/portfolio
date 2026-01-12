@@ -1,3 +1,31 @@
+import compranaImg from "@/assets/projects/comprana.webp";
+import aventuroImg from "@/assets/projects/aventuro.webp";
+import avatarmakerImg from "@/assets/projects/avatarmaker.webp";
+import orbisImg from "@/assets/projects/orbis.webp";
+import leafletImg from "@/assets/projects/leaflet.webp";
+import {
+  IconBrandPhp,
+  IconBrandLaravel,
+  IconBrandLivewire,
+  IconBrandInertia,
+  IconBrandMysql,
+  IconBrandReact,
+  IconBrandVue,
+  IconBrandTailwind,
+  IconBrandBootstrap,
+  IconBrandGit,
+  IconBrandAlpineJs,
+  IconBrandHtml5,
+  IconBrandCss3,
+  IconBrandJavascript,
+  IconLayoutDashboard,
+  IconBuildingSkyscraper,
+  IconBuildingCommunity,
+  IconApi,
+  IconDeviceDesktopAnalytics,
+  IconGauge,
+} from "@tabler/icons-react";
+
 export const contacts = {
   linkedin: "https://www.linkedin.com/in/maycolmu%C3%B1oz/",
   github: "https://github.com/maycolmunoz",
@@ -5,18 +33,54 @@ export const contacts = {
 };
 
 export const techStack = [
-  { name: "PHP", color: "bg-indigo-600" },
-  { name: "Laravel", color: "bg-red-500" },
-  { name: "MySQL", color: "bg-sky-800" },
-  { name: "Livewire", color: "bg-pink-600" },
-  { name: "Inertia.js", color: "bg-gray-600" },
-  { name: "React", color: "bg-cyan-700" },
-  { name: "Vue", color: "bg-green-600" },
-  { name: "TailwindCSS", color: "bg-sky-600" },
-  { name: "Bootstrap", color: "bg-purple-700" },
-  { name: "Git", color: "bg-orange-700" },
-  { name: "Alpine.js", color: "bg-cyan-600" },
-  { name: "HTML - CSS - JS", color: "bg-yellow-700 text-black" },
+  { name: "PHP", icon: IconBrandPhp, hover: "hover:text-[#777BB4]" },
+  { name: "Laravel", icon: IconBrandLaravel, hover: "hover:text-[#FF2D20]" },
+  { name: "MySQL", icon: IconBrandMysql, hover: "hover:text-[#4479A1]" },
+  { name: "Livewire", icon: IconBrandLivewire, hover: "hover:text-[#FB70A9]" },
+  { name: "Inertia.js", icon: IconBrandInertia, hover: "hover:text-[#9553E9]" },
+  { name: "React", icon: IconBrandReact, hover: "hover:text-[#61DAFB]" },
+  { name: "Vue", icon: IconBrandVue, hover: "hover:text-[#42B883]" },
+  {
+    name: "TailwindCSS",
+    icon: IconBrandTailwind,
+    hover: "hover:text-[#38BDF8]",
+  },
+  {
+    name: "Bootstrap",
+    icon: IconBrandBootstrap,
+    hover: "hover:text-[#7952B3]",
+  },
+  { name: "Git", icon: IconBrandGit, hover: "hover:text-[#F05032]" },
+  { name: "Alpine.js", icon: IconBrandAlpineJs, hover: "hover:text-[#8BC0D0]" },
+  { name: "HTML", icon: IconBrandHtml5, hover: "hover:text-[#E34F26]" },
+  { name: "CSS", icon: IconBrandCss3, hover: "hover:text-[#1572B6]" },
+  { name: "JS", icon: IconBrandJavascript, hover: "hover:text-[#F7DF1E]" },
+  {
+    name: "FilamentPHP",
+    icon: IconLayoutDashboard,
+    hover: "hover:text-[#F59E0B]",
+  },
+  {
+    name: "Clean Architecture",
+    icon: IconBuildingSkyscraper,
+    hover: "hover:text-violet-400",
+  },
+  {
+    name: "Multitenant SaaS",
+    icon: IconBuildingCommunity,
+    hover: "hover:text-cyan-400",
+  },
+  { name: "API's", icon: IconApi, hover: "hover:text-teal-400" },
+  {
+    name: "ERP & CRM Systems",
+    icon: IconDeviceDesktopAnalytics,
+    hover: "hover:text-amber-400",
+  },
+  {
+    name: "Performance-Oriented",
+    icon: IconGauge,
+    hover: "hover:text-lime-400",
+  },
 ];
 
 export const education = [
@@ -41,12 +105,6 @@ export const education = [
       "Launch X (02/2022 - 05/2022): Hands-on learning in technologies such as JavaScript and Vue.js, focusing on fullstack project development.",
   },
 ];
-
-import compranaImg from "@/assets/projects/comprana.webp";
-import aventuroImg from "@/assets/projects/aventuro.webp";
-import avatarmakerImg from "@/assets/projects/avatarmaker.webp";
-import orbisImg from "@/assets/projects/orbis.webp";
-import leafletImg from "@/assets/projects/leaflet.webp";
 
 export const projects = [
   {

@@ -14,14 +14,14 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { education } from "@/utils/data.js";
-import EducationIcon from "@/components/Icons/EducationIcon";
+import { IconLibraryFilled } from "@tabler/icons-react";
 
 export default function Education() {
   return (
     <Sheet>
       <SheetTrigger asChild>
         <Button className="lg:w-full hover:cursor-pointer" variant="outline">
-          <EducationIcon /> Education
+          <IconLibraryFilled /> Education
         </Button>
       </SheetTrigger>
       <SheetContent>

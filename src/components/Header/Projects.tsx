@@ -15,16 +15,18 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/utils/data.ts";
-import ProjectsIcon from "@/components/Icons/ProjectsIcon";
-import GithubIcon from "@/components/Icons/GithubIcon";
-import LinkIcon from "@/components/Icons/LinkIcon";
+import {
+  IconBrandGithubFilled,
+  IconFoldersFilled,
+  IconLink,
+} from "@tabler/icons-react";
 
 export default function Projects() {
   return (
     <Sheet>
       <SheetTrigger asChild>
         <Button className="lg:w-full hover:cursor-pointer" variant="outline">
-          <ProjectsIcon /> Projects
+          <IconFoldersFilled /> Projects
         </Button>
       </SheetTrigger>
 
@@ -63,7 +65,8 @@ export default function Projects() {
                           target="_blank"
                           rel="noreferrer"
                         >
-                          <GithubIcon /> Repository
+                          <IconBrandGithubFilled />
+                          Repository
                         </a>
                       </Button>
                     )}
@@ -75,7 +78,7 @@ export default function Projects() {
                         className="text-xs flex-1"
                       >
                         <a href={item.link} target="_blank" rel="noreferrer">
-                          <LinkIcon /> Demo
+                          <IconLink stroke={2} /> Demo
                         </a>
                       </Button>
                     )}

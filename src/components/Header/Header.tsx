@@ -1,5 +1,5 @@
-import MainIcon from "../Icons/MainIcon";
 import AboutMe from "./AboutMe";
+import Stack from "./Stack";
 
 export default function Header() {
   return (
@@ -7,7 +7,7 @@ export default function Header() {
       <AboutMe />
 
       <article className="p-6 md:p-10 flex-1">
-        <MainIcon />
+        <Stack/>
       </article>
     </main>
   );
