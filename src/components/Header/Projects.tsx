@@ -47,7 +47,7 @@ export default function Projects() {
                       {item.description}
                     </p>
 
-                    <div className="flex flex-row gap-2 mt-auto">
+                    <div className="flex flex-wrap gap-2 mt-auto">
                       {item.repository && (
                         <Button
                           asChild
@@ -62,7 +62,7 @@ export default function Projects() {
                             className="flex items-center justify-center gap-2"
                           >
                             <IconBrandGithubFilled className="h-4 w-4" />
-                            Repo
+                            Repository
                           </a>
                         </Button>
                       )}

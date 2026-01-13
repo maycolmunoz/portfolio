@@ -1,6 +1,10 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Stack from "./Stack";
-import { IconFoldersFilled, IconLibraryFilled } from "@tabler/icons-react";
+import {
+  IconFoldersFilled,
+  IconLibraryFilled,
+  IconStack2Filled,
+} from "@tabler/icons-react";
 import Projects from "./Projects";
 import Education from "./Education";
 
@@ -9,7 +13,10 @@ export function Sections() {
     <div className="flex w-full  flex-col gap-6 flex-2">
       <Tabs defaultValue="stack">
         <TabsList>
-          <TabsTrigger value="stack">Stack</TabsTrigger>
+          <TabsTrigger value="stack">
+            <IconStack2Filled />
+            Stack
+          </TabsTrigger>
           <TabsTrigger value="projects">
             <IconFoldersFilled />
             Projects
