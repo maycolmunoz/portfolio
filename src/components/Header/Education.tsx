@@ -1,45 +1,28 @@
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
 import { education } from "@/utils/data.js";
-import { IconLibraryFilled } from "@tabler/icons-react";
 
 export default function Education() {
   return (
-    <Sheet>
-      <SheetTrigger asChild>
-        <Button className="w-full hover:cursor-pointer">
-          <IconLibraryFilled /> Education
-        </Button>
-      </SheetTrigger>
-      <SheetContent>
-        <SheetHeader>
-          <SheetTitle>My Education</SheetTitle>
-          <SheetDescription>
-            A summary of my academic background.
-          </SheetDescription>
-          <Accordion type="single" collapsible>
-            {education.map((item, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger>{item.title}</AccordionTrigger>
-                <AccordionContent>{item.description}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </SheetHeader>
-      </SheetContent>
-    </Sheet>
+    <Card className="flex-2 md:h-[80vh] lg:h-[60vh] overflow-y-scroll">
+      <CardHeader>
+        <CardTitle> A summary of my academic background:</CardTitle>
+      </CardHeader>
+      <CardContent className="">
+        <Accordion type="single" collapsible>
+          {education.map((item, index) => (
+            <AccordionItem key={index} value={`item-${index}`}>
+              <AccordionTrigger>{item.title}</AccordionTrigger>
+              <AccordionContent>{item.description}</AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </CardContent>
+    </Card>
   );
 }

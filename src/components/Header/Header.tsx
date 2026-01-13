@@ -1,12 +1,12 @@
 import AboutMe from "./AboutMe";
-import Stack from "./Stack";
+import { Sections } from "./Sections";
 
 export default function Header() {
   return (
-    <main className="min-h-screen md:flex justify-around items-center flex-wrap gap-5 p-6">
+    <main className="min-h-screen md:flex justify-around items-center flex-wrap gap-5 md:p-6 p-4 pt-10">
       <AboutMe />
-      
-      <Stack />
+
+      <Sections />
     </main>
   );
 }

@@ -1,6 +1,4 @@
 import { Button } from "@/components/ui/button";
-import Projects from "./Projects";
-import Education from "./Education";
 import { IconFileCvFilled } from "@tabler/icons-react";
 import {
   Card,
@@ -12,9 +10,18 @@ import Navbar from "../Navbar/Navbar";
 
 export default function AboutMe() {
   return (
-    <Card className="flex-1 mx-auto icon-float my-2">
+    <Card className="flex-1 mx-auto my-2 relative">
       <CardHeader>
-        <Navbar />
+        <div className="bg-indigo-600/70 blur-xl p-2">
+         <img
+          className="mx-auto astronaut-float absolute -top-6 left-[40%]"
+          src="https://github.com/maycolmunoz.png?size=100"
+        /></div>
+         <img
+          className="mx-auto astronaut-float absolute -top-6 left-[40%]"
+          src="https://github.com/maycolmunoz.png?size=100"
+        />
+       
       </CardHeader>
       <CardContent>
         <p className="mt-2 text-slate-300 lg:text-xl leading-relaxed">
@@ -25,8 +32,8 @@ export default function AboutMe() {
           interfaces.
         </p>
       </CardContent>
-      <CardFooter className="flex flex-wrap gap-y-2">
-        <Button className="w-full mt-4" asChild>
+      <CardFooter className="flex justify-between flex-wrap gap-2">
+        <Button className="md:w-full" asChild>
           <a
             target="_blank"
             href="https://docs.google.com/document/d/1jyEKvQjJeqxRvF9SVVmq6lgxzunbmIyyJ2XKnduaXlg/edit?usp=sharing"
@@ -34,10 +41,7 @@ export default function AboutMe() {
             <IconFileCvFilled /> View CV
           </a>
         </Button>
-
-        <Projects />
-
-        <Education />
+        <Navbar />
       </CardFooter>
     </Card>
   );

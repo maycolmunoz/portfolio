@@ -17,6 +17,25 @@
   animation: idle-float 3.5s ease-in-out infinite;
 }
 
+@keyframes astronaut-float {
+  0% {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+}
+
+.astronaut-float {
+  animation: astronaut-float 4s ease-in-out infinite;
+  will-change: transform;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @layer base {
