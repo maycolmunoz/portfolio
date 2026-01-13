@@ -1,22 +1,25 @@
 import { techStack } from "@/utils/data";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "../ui/button";
 
 export default function Stack() {
   return (
-    <div className="w-full max-w-4xl">
-      <h2 className="md:text-xl lg:text-2xl font-bold mb-3">
-        I have experience with:
-      </h2>
-      <div className="flex flex-wrap gap-3">
+    <Card className="flex-2">
+      <CardHeader>
+        <CardTitle>I have experience with:</CardTitle>
+      </CardHeader>
+      <CardContent className="flex flex-wrap gap-3">
         {techStack.map((tech) => (
-          <div
+          <Button
+            variant="outline"
             key={tech.name}
-            className={`flex items-center p-2 bg-gray-800 rounded-xl shadow-lg transition transform hover:scale-105 hover:text-${tech.color} hover:cursor-default text-sm`}
+            className={`flex items-center p-2 rounded-xl shadow-lg transition transform hover:scale-105 hover:text-${tech.color} hover:cursor-default md:text-lg lg:text-xl`}
           >
-            {<tech.icon className="w-5 h-5 lg:w-10 lg:h-10" stroke={1.25} />}
-            <span className="">{tech.name}</span>
-          </div>
+            {<tech.icon className="scale-150" stroke={1.25} />}
+            <span>{tech.name}</span>
+          </Button>
         ))}
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   );
 }

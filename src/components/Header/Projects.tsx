@@ -25,7 +25,7 @@ export default function Projects() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button className="w-full hover:cursor-pointer" variant="outline">
+        <Button className="w-full hover:cursor-pointer">
           <IconFoldersFilled /> Projects
         </Button>
       </SheetTrigger>
