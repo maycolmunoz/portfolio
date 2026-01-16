@@ -6,7 +6,7 @@ import {
   IconMailFilled,
 } from "@tabler/icons-react";
 
-export default function Navbar() {
+export default function Bar() {
   return (
     <nav className="flex flex-wrap justify-around items-center bg-linear-to-r from-indigo-500/90 to-sky-500/0.5 mx-auto rounded-2xl px-2 py-1 font-extrabold gap-2 w-full">
       <h1>Full Stack Developer</h1>

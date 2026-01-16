@@ -4,7 +4,7 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
-import Navbar from "../Navbar/Navbar";
+import Bar from "./Bar";
 
 export default function AboutMe() {
   return (
@@ -31,7 +31,7 @@ export default function AboutMe() {
         </p>
       </CardContent>
       <CardFooter>
-        <Navbar />
+        <Bar />
       </CardFooter>
     </Card>
   );
