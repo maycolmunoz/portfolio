@@ -3,7 +3,7 @@ import { Sections } from "./Sections";
 
 export default function Header() {
   return (
-    <main className="min-h-screen md:flex justify-around items-center flex-wrap gap-5 md:p-6 p-4 pt-10">
+    <main className="min-h-screen flex-wrap items-center justify-around gap-5 p-4 pt-10 md:flex md:p-6">
       <AboutMe />
 
       <Sections />

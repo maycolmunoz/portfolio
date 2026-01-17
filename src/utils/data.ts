@@ -1,31 +1,31 @@
-import compranaImg from "@/assets/projects/comprana.webp";
-import aventuroImg from "@/assets/projects/aventuro.webp";
-import avatarmakerImg from "@/assets/projects/avatarmaker.webp";
-import orbisImg from "@/assets/projects/orbis.webp";
-import leafletImg from "@/assets/projects/leaflet.webp";
 import {
-  IconBrandPhp,
+  IconApi,
+  IconBrandAlpineJs,
+  IconBrandBootstrap,
+  IconBrandCss3,
+  IconBrandGit,
+  IconBrandHtml5,
+  IconBrandInertia,
+  IconBrandJavascript,
   IconBrandLaravel,
   IconBrandLivewire,
-  IconBrandInertia,
   IconBrandMysql,
+  IconBrandPhp,
   IconBrandReact,
-  IconBrandVue,
   IconBrandTailwind,
-  IconBrandBootstrap,
-  IconBrandGit,
-  IconBrandAlpineJs,
-  IconBrandHtml5,
-  IconBrandCss3,
-  IconBrandJavascript,
-  IconLayoutDashboard,
-  IconBuildingSkyscraper,
+  IconBrandVue,
   IconBuildingCommunity,
-  IconApi,
+  IconBuildingSkyscraper,
+  IconDatabase,
   IconDeviceDesktopAnalytics,
   IconGauge,
-  IconDatabase,
+  IconLayoutDashboard,
 } from "@tabler/icons-react";
+import avatarmakerImg from "@/assets/projects/avatarmaker.webp";
+import aventuroImg from "@/assets/projects/aventuro.webp";
+import compranaImg from "@/assets/projects/comprana.webp";
+import leafletImg from "@/assets/projects/leaflet.webp";
+import orbisImg from "@/assets/projects/orbis.webp";
 
 export const contacts = {
   cv: "https://docs.google.com/document/d/1jyEKvQjJeqxRvF9SVVmq6lgxzunbmIyyJ2XKnduaXlg/edit?usp=sharing",

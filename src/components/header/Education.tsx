@@ -1,15 +1,15 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { education } from "@/utils/data.js";
 
 export default function Education() {
   return (
-    <Card className="flex-2 md:h-[80vh] lg:h-[60vh] overflow-y-scroll">
+    <Card className="flex-2 overflow-y-scroll md:h-[80vh] lg:h-[60vh]">
       <CardHeader>
         <CardTitle> A summary of my academic background:</CardTitle>
       </CardHeader>

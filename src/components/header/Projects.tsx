@@ -1,18 +1,18 @@
+import { IconBrandGithubFilled, IconLink } from "@tabler/icons-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { projects } from "@/utils/data.ts";
-import { IconBrandGithubFilled, IconLink } from "@tabler/icons-react";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { projects } from "@/utils/data.ts";
 
 export default function Projects() {
   return (
-    <Card className="flex-2 md:h-[80vh] lg:h-[60vh] overflow-y-scroll">
+    <Card className="flex-2 overflow-y-scroll md:h-[80vh] lg:h-[60vh]">
       <CardHeader>
         <CardTitle>A summary of my Projects:</CardTitle>
       </CardHeader>
@@ -22,12 +22,12 @@ export default function Projects() {
             <AccordionItem key={index} value={`item-${index}`}>
               <AccordionTrigger>{item.title}</AccordionTrigger>
               <AccordionContent>
-                <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-4">
+                <div className="grid grid-cols-1 gap-4 lg:grid-cols-[240px_1fr]">
                   <div className="flex items-center justify-center">
                     <img
                       src={item.img}
                       alt={item.title}
-                      className="w-full h-auto max-h-48 lg:max-h-none object-contain rounded-lg"
+                      className="h-auto max-h-48 w-full rounded-lg object-contain lg:max-h-none"
                     />
                   </div>
 
@@ -43,11 +43,11 @@ export default function Projects() {
                       ))}
                     </div>
 
-                    <p className="text-xs text-muted-foreground">
+                    <p className="text-muted-foreground text-xs">
                       {item.description}
                     </p>
 
-                    <div className="flex flex-wrap gap-2 mt-auto">
+                    <div className="mt-auto flex flex-wrap gap-2">
                       {item.repository && (
                         <Button
                           asChild

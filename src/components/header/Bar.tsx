@@ -1,14 +1,14 @@
-import { contacts } from "@/utils/data";
 import {
   IconBrandGithubFilled,
   IconBrandLinkedinFilled,
   IconFileCvFilled,
   IconMailFilled,
 } from "@tabler/icons-react";
+import { contacts } from "@/utils/data";
 
 export default function Bar() {
   return (
-    <nav className="flex flex-wrap justify-around items-center bg-linear-to-r from-indigo-500/90 to-sky-500/0.5 mx-auto rounded-2xl px-2 py-1 font-extrabold gap-2 w-full">
+    <nav className="mx-auto flex w-full flex-wrap items-center justify-around gap-2 rounded-2xl bg-linear-to-r from-indigo-500/90 to-sky-500/0.5 px-2 py-1 font-extrabold">
       <h1>Full Stack Developer</h1>
 
       <div className="flex gap-1">
