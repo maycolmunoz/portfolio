@@ -36,6 +36,25 @@
   will-change: transform;
 }
 
+.bg-stars {
+  position: relative;
+  background-color: #020617;
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, #ffffff, transparent),
+    radial-gradient(1px 1px at 80px 120px, #ffffff, transparent),
+    radial-gradient(1px 1px at 140px 60px, #ffffff, transparent),
+    radial-gradient(1px 1px at 200px 200px, #ffffff, transparent),
+    radial-gradient(1px 1px at 260px 90px, #ffffff, transparent),
+    radial-gradient(1px 1px at 320px 160px, #ffffff, transparent),
+    radial-gradient(1px 1px at 380px 40px, #ffffff, transparent),
+    radial-gradient(1px 1px at 440px 220px, #ffffff, transparent),
+    radial-gradient(0.5px 0.5px at 15px 40px, #ffffff, transparent),
+    radial-gradient(0.5px 0.5px at 100px 180px, #ffffff, transparent),
+    radial-gradient(0.5px 0.5px at 220px 90px, #ffffff, transparent),
+    radial-gradient(0.5px 0.5px at 300px 150px, #ffffff, transparent);
+  background-size: 200px 200px;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @layer base {
