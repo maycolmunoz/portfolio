@@ -8,7 +8,7 @@ import Education from "./Education";
 import Projects from "./Projects";
 import Stack from "./Stack";
 
-export function Sections() {
+export function SectionTabs() {
   return (
     <div className="flex w-full flex-2 flex-col gap-6">
       <Tabs defaultValue="stack">

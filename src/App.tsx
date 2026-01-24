@@ -1,11 +1,7 @@
-import Header from "@/components/header/Header";
+import Portfolio from "@/components/layout/Portfolio";
 
 function App() {
-  return (
-    <>
-      <Header />
-    </>
-  );
+  return <Portfolio />;
 }
 
 export default App;
