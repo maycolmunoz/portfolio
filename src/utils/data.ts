@@ -25,7 +25,6 @@ import avatarmakerImg from "@/assets/projects/avatarmaker.webp";
 import aventuroImg from "@/assets/projects/aventuro.webp";
 import compranaImg from "@/assets/projects/comprana.webp";
 import leafletImg from "@/assets/projects/leaflet.webp";
-import orbisImg from "@/assets/projects/orbis.webp";
 
 export const contacts = {
   cv: "https://docs.google.com/document/d/1jyEKvQjJeqxRvF9SVVmq6lgxzunbmIyyJ2XKnduaXlg/edit?usp=sharing",
@@ -127,15 +126,6 @@ export const projects = [
       "Comprana is a grocery delivery platform that provides a clean catalog, fast browsing, and a simple checkout flow for placing home-delivery orders with ease.",
     repository: "https://github.com/maycolmunoz/comprana",
     link: "https://youtu.be/ZDsoQOYZTCI",
-  },
-  {
-    stack: ["Laravel", "MySQL", "Moonshine"],
-    title: "Orbis",
-    img: orbisImg,
-    description:
-      "Orbis is a modular and minimal ERP system designed for business management, offering a flexible structure to expand features as organizational needs grow.",
-    repository: "https://github.com/maycolmunoz/orbis",
-    link: "https://github.com/maycolmunoz/orbis",
   },
   {
     stack: ["Laravel", "Moonshine"],
