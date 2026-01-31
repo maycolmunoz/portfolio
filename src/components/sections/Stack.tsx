@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 export default function Stack() {
   return (
-    <Card className="flex-2 overflow-y-scroll md:h-[80vh] lg:h-[60vh]">
+    <Card className="flex-2 overflow-y-auto md:h-[80vh] lg:h-[60vh]">
       <CardHeader>
         <CardTitle>I have experience with:</CardTitle>
       </CardHeader>
