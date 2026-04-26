@@ -1,65 +1,58 @@
 <script setup lang="ts">
 import { Badge } from '@/components/ui/badge'
-import { IconBrandGithub, IconExternalLink } from '@tabler/icons-vue'
+import { IconBrandGithub, IconExternalLink, IconChevronRight } from '@tabler/icons-vue'
 import { projects } from '@/utils/data'
 </script>
 
 <template>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
     <div
       v-for="(project, index) in projects"
       :key="index"
-      class="flex flex-col rounded-2xl overflow-hidden bg-slate-900/60 border border-white/5 hover:border-indigo-500/30 transition-all duration-300 hover:-translate-y-1 shadow-lg"
+      class="group relative flex flex-col bg-slate-900/40 border border-white/5 transition-all duration-300 hover:border-indigo-500/30"
     >
-      <!-- Project Image (Compact aspect ratio) -->
-      <div class="relative aspect-[16/10] overflow-hidden">
+      <div class="relative aspect-video overflow-hidden border-b border-white/5">
         <img
           :src="project.img"
           :alt="project.title"
-          class="size-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105"
+          class="size-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
         />
-        <div class="absolute inset-0 bg-linear-to-t from-slate-950/80 to-transparent" />
+        <div class="absolute inset-0 bg-indigo-500/10 mix-blend-overlay" />
 
-        <!-- Tech Badges (Floating on top) -->
-        <div class="absolute bottom-3 left-3 flex flex-wrap gap-1.5">
-          <Badge
-            v-for="tech in project.stack.slice(0, 2)"
-            :key="tech"
-            class="bg-black/40 backdrop-blur-md border-white/10 text-[9px] text-white py-0 h-4"
-          >
-            {{ tech }}
-          </Badge>
-        </div>
+        <div class="absolute top-2 left-2 size-2 border-t border-l border-white/30" />
+        <div class="absolute bottom-2 right-2 size-2 border-b border-r border-white/30" />
       </div>
 
-      <!-- Compact Content -->
-      <div class="p-4 flex-1 flex flex-col gap-3">
-        <h3 class="text-base font-bold text-white leading-tight">
-          {{ project.title }}
-        </h3>
-        <p class="text-xs text-slate-400 line-clamp-2 leading-relaxed">
+      <div class="p-4 space-y-3">
+        <div class="flex items-center justify-between">
+          <h3 class="text-sm font-bold text-white tech-font uppercase tracking-tight">
+            {{ project.title }}
+          </h3>
+          <IconChevronRight
+            class="size-4 text-indigo-500 opacity-0 group-hover:opacity-100 transition-all"
+          />
+        </div>
+
+        <p class="text-[11px] text-slate-400 tech-font leading-relaxed line-clamp-2">
           {{ project.description }}
         </p>
 
-        <!-- Compact Action Buttons -->
-        <div class="mt-auto pt-2 flex gap-2">
+        <div class="flex gap-3 pt-2">
           <a
             v-if="project.repository"
             :href="project.repository"
             target="_blank"
-            class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-[10px] font-bold text-white transition-colors hover:bg-white/10"
+            class="text-[9px] tech-font font-bold text-slate-500 hover:text-white transition-colors flex items-center gap-1"
           >
-            <IconBrandGithub class="size-3.5" />
-            Code
+            <IconBrandGithub class="size-3" /> [SRC_CODE]
           </a>
           <a
             v-if="project.link"
             :href="project.link"
             target="_blank"
-            class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-600 text-[10px] font-bold text-white transition-colors hover:bg-indigo-500"
+            class="text-[9px] tech-font font-bold text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1"
           >
-            <IconExternalLink class="size-3.5" />
-            Demo
+            <IconExternalLink class="size-3" /> [LIVE_DEMO]
           </a>
         </div>
       </div>

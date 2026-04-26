@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { education } from '@/utils/data'
-import { IconSchool, IconCalendarEvent } from '@tabler/icons-vue'
+import { IconSchool } from '@tabler/icons-vue'
 </script>
 
 <template>
@@ -10,9 +10,8 @@ import { IconSchool, IconCalendarEvent } from '@tabler/icons-vue'
       :key="index"
       class="relative pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-linear-to-b before:from-indigo-500 before:to-transparent"
     >
-      <!-- Timeline Node -->
       <div
-        class="absolute left-[-4px] top-0 size-2 rounded-full bg-indigo-500 shadow-[0_0_10px_rgba(99,102,241,0.8)]"
+        class="absolute -left-1 top-0 size-2 rounded-full bg-indigo-500 shadow-[0_0_10px_rgba(99,102,241,0.8)]"
       />
 
       <div class="space-y-3">

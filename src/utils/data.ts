@@ -19,11 +19,22 @@ import {
   IconApi,
   IconDeviceDesktopAnalytics,
   IconLayoutDashboard,
+  IconStack2,
+  IconFolders,
+  IconLibrary,
 } from '@tabler/icons-vue'
 import avatarmakerImg from '../assets/avatarmaker.webp'
 import aventuroImg from '../assets/aventuro.webp'
 import compranaImg from '../assets/comprana.webp'
 import leafletImg from '../assets/leaflet.webp'
+
+export const personalInfo = {
+  name: 'Maycol',
+  lastName: 'Muñoz',
+  title: 'Full Stack Developer',
+  bio: "I'm a Systems Engineering student focused on full-stack development. I specialize in building scalable backend systems and modern, high-performance user interfaces. My goal is to transform complex ideas into elegant, reliable digital solutions.",
+  avatar: 'https://github.com/maycolmunoz.png?size=200',
+}
 
 export const contacts = {
   cv: 'https://docs.google.com/document/d/1jyEKvQjJeqxRvF9SVVmq6lgxzunbmIyyJ2XKnduaXlg/edit?usp=sharing',
@@ -32,55 +43,75 @@ export const contacts = {
   email: 'mailto:macarny4@gmail.com',
 }
 
-export const techStack = [
-  { name: 'PHP', icon: IconBrandPhp, color: 'hover:text-[#777BB4]' },
-  { name: 'Laravel', icon: IconBrandLaravel, color: 'hover:text-[#FF2D20]' },
-  { name: 'MySQL', icon: IconBrandMysql, color: 'hover:text-[#4479A1]' },
-  { name: 'PostgreSQL', icon: IconDatabase, color: 'hover:text-[#336791]' },
-  { name: 'Livewire', icon: IconBrandLivewire, color: 'hover:text-[#FB70A9]' },
-  { name: 'Inertia.js', icon: IconBrandInertia, color: 'hover:text-[#9553E9]' },
-  { name: 'React', icon: IconBrandReact, color: 'hover:text-[#61DAFB]' },
-  { name: 'Vue', icon: IconBrandVue, color: 'hover:text-[#42B883]' },
+export const navigationSections = [
   {
-    name: 'TailwindCSS',
-    icon: IconBrandTailwind,
-    color: 'hover:text-[#38BDF8]',
+    id: 'stack',
+    title: 'Tech Stack',
+    subtitle: 'Core technologies & skills',
+    icon: IconStack2,
+    color: 'from-indigo-500/20 to-purple-500/20',
   },
   {
-    name: 'Bootstrap',
-    icon: IconBrandBootstrap,
-    color: 'hover:text-[#7952B3]',
-  },
-  { name: 'Git', icon: IconBrandGit, color: 'hover:text-[#F05032]' },
-  { name: 'Alpine.js', icon: IconBrandAlpineJs, color: 'hover:text-[#8BC0D0]' },
-  { name: 'HTML', icon: IconBrandHtml5, color: 'hover:text-[#E34F26]' },
-  { name: 'CSS', icon: IconBrandCss3, color: 'hover:text-[#1572B6]' },
-  { name: 'JS', icon: IconBrandJavascript, color: 'hover:text-[#F7DF1E]' },
-  {
-    name: 'FilamentPHP',
-    icon: IconLayoutDashboard,
-    color: 'hover:text-[#F59E0B]',
+    id: 'projects',
+    title: 'Featured Projects',
+    subtitle: 'My latest work & builds',
+    icon: IconFolders,
+    color: 'from-blue-500/20 to-cyan-500/20',
   },
   {
-    name: 'Clean Architecture',
-    icon: IconBuildingSkyscraper,
-    color: 'hover:text-violet-400',
+    id: 'education',
+    title: 'Learning Path',
+    subtitle: 'Education & certifications',
+    icon: IconLibrary,
+    color: 'from-emerald-500/20 to-teal-500/20',
+  },
+]
+
+export const categorizedStack = [
+  {
+    title: 'Core Technologies',
+    items: [
+      { name: 'PHP', icon: IconBrandPhp, color: 'hover:text-[#777BB4]' },
+      { name: 'Laravel', icon: IconBrandLaravel, color: 'hover:text-[#FF2D20]' },
+      { name: 'Vue', icon: IconBrandVue, color: 'hover:text-[#42B883]' },
+      { name: 'React', icon: IconBrandReact, color: 'hover:text-[#61DAFB]' },
+      { name: 'MySQL', icon: IconBrandMysql, color: 'hover:text-[#4479A1]' },
+      { name: 'PostgreSQL', icon: IconDatabase, color: 'hover:text-[#336791]' },
+    ],
   },
   {
-    name: 'Multitenant SaaS',
-    icon: IconBuildingCommunity,
-    color: 'hover:text-cyan-400',
+    title: 'Frontend & UI',
+    items: [
+      { name: 'JS', icon: IconBrandJavascript, color: 'hover:text-[#F7DF1E]' },
+      { name: 'HTML', icon: IconBrandHtml5, color: 'hover:text-[#E34F26]' },
+      { name: 'CSS', icon: IconBrandCss3, color: 'hover:text-[#1572B6]' },
+      { name: 'TailwindCSS', icon: IconBrandTailwind, color: 'hover:text-[#38BDF8]' },
+      { name: 'Bootstrap', icon: IconBrandBootstrap, color: 'hover:text-[#7952B3]' },
+      { name: 'Alpine.js', icon: IconBrandAlpineJs, color: 'hover:text-[#8BC0D0]' },
+    ],
   },
-  { name: "API's", icon: IconApi, color: 'hover:text-teal-400' },
   {
-    name: 'ERP & CRM Systems',
-    icon: IconDeviceDesktopAnalytics,
-    color: 'hover:text-amber-400',
+    title: 'Ecosystem & Tools',
+    items: [
+      { name: 'Livewire', icon: IconBrandLivewire, color: 'hover:text-[#FB70A9]' },
+      { name: 'Inertia.js', icon: IconBrandInertia, color: 'hover:text-[#9553E9]' },
+      { name: 'Git', icon: IconBrandGit, color: 'hover:text-[#F05032]' },
+      { name: 'FilamentPHP', icon: IconLayoutDashboard, color: 'hover:text-[#F59E0B]' },
+      { name: "API's", icon: IconApi, color: 'hover:text-teal-400' },
+    ],
   },
   {
-    name: 'Performance-Oriented',
-    icon: IconBrandJavascript,
-    color: 'hover:text-lime-400',
+    title: 'Architecture & Specializations',
+    items: [
+      { name: 'Clean Architecture', icon: IconBuildingSkyscraper, color: 'hover:text-violet-400' },
+      { name: 'Multitenant SaaS', icon: IconBuildingCommunity, color: 'hover:text-cyan-400' },
+      {
+        name: 'ERP & CRM Systems',
+        icon: IconDeviceDesktopAnalytics,
+        color: 'hover:text-amber-400',
+      },
+      { name: 'Performance-Oriented', icon: IconBrandJavascript, color: 'hover:text-lime-400' },
+    ],
   },
 ]
 
