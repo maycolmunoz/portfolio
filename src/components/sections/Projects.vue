@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Badge } from '@/components/ui/badge'
 import { IconBrandGithub, IconExternalLink, IconChevronRight } from '@tabler/icons-vue'
 import { projects } from '@/utils/data'
 </script>
@@ -15,7 +14,7 @@ import { projects } from '@/utils/data'
         <img
           :src="project.img"
           :alt="project.title"
-          class="size-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+          class="size-full object-cover transition-all duration-500"
         />
         <div class="absolute inset-0 bg-indigo-500/10 mix-blend-overlay" />
 
