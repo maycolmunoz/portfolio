@@ -8,13 +8,22 @@ import { Card } from '@/components/ui/card'
 
 const mouseX = ref(0)
 const mouseY = ref(0)
+let rafId: number | null = null
+
 const updateMouse = (e: MouseEvent) => {
-  mouseX.value = e.clientX
-  mouseY.value = e.clientY
+  if (rafId) return
+  rafId = requestAnimationFrame(() => {
+    mouseX.value = e.clientX
+    mouseY.value = e.clientY
+    rafId = null
+  })
 }
 
-onMounted(() => window.addEventListener('mousemove', updateMouse))
-onUnmounted(() => window.removeEventListener('mousemove', updateMouse))
+onMounted(() => window.addEventListener('mousemove', updateMouse, { passive: true }))
+onUnmounted(() => {
+  window.removeEventListener('mousemove', updateMouse)
+  if (rafId) cancelAnimationFrame(rafId)
+})
 </script>
 
 <template>

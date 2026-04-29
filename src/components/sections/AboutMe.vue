@@ -1,7 +1,14 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { Card, CardHeader, CardFooter } from '@/components/ui/card'
 import ContactBar from './ContactBar.vue'
 import { personalInfo } from '@/utils/data'
+import defaultAvatar from '@/assets/avatarmaker.webp'
+
+const avatarSrc = ref(personalInfo.avatar)
+const handleAvatarError = () => {
+  avatarSrc.value = defaultAvatar
+}
 </script>
 
 <template>
@@ -16,8 +23,9 @@ import { personalInfo } from '@/utils/data'
         />
         <img
           class="astronaut-float relative size-32 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]"
-          :src="personalInfo.avatar"
+          :src="avatarSrc"
           :alt="personalInfo.name + ' ' + personalInfo.lastName"
+          @error="handleAvatarError"
         />
       </div>
     </div>
