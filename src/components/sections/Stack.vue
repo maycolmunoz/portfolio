@@ -3,10 +3,10 @@ import { categorizedStack } from '@/utils/data'
 </script>
 
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
     <div v-for="category in categorizedStack" :key="category.title" class="space-y-4">
       <h3
-        class="text-[10px] font-bold uppercase tracking-widest text-slate-500 tech-font border-l-2 border-indigo-500 pl-2"
+        class="text-base md:text-lg font-black uppercase tracking-tighter border-b-4 border-border pb-2"
       >
         {{ category.title }}
       </h3>
@@ -14,10 +14,10 @@ import { categorizedStack } from '@/utils/data'
         <div
           v-for="tech in category.items"
           :key="tech.name"
-          class="flex items-center gap-2 px-3 py-1.5 rounded-sm border border-white/5 bg-white/5 text-slate-300 transition-all duration-300 hover:border-indigo-500/50 hover:bg-indigo-500/10 hover:text-white"
+          class="flex items-center gap-2 px-3 py-2 border-2 border-border text-foreground font-bold text-xs md:text-sm uppercase hover:bg-indigo-500 hover:text-white dark:hover:bg-indigo-500 dark:hover:text-white transition-colors duration-100"
         >
-          <component :is="tech.icon" class="size-3.5" stroke-width="1.5" />
-          <span class="text-[10px] tech-font font-medium">{{ tech.name }}</span>
+          <component :is="tech.icon" class="size-4" stroke-width="2" />
+          <span>{{ tech.name }}</span>
         </div>
       </div>
     </div>
