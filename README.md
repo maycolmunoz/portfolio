@@ -1,6 +1,6 @@
-# portfolio
+# Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+![Screenshot](./_docs/Screenshot.png)
 
 ## Recommended IDE Setup
 
