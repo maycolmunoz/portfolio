@@ -16,7 +16,7 @@ const tabs = [
 </script>
 
 <template>
-  <main class="min-h-screen bg-background p-4 xl:p-0 selection:bg-indigo-500 selection:text-white">
+  <main class="min-h-screen bg-background p-4 xl:p-0 selection:bg-primary selection:text-primary-foreground">
     <ThemeToggle />
 
     <div
@@ -33,11 +33,11 @@ const tabs = [
               v-for="tab in tabs"
               :key="tab.id"
               @click="activeTab = tab.id"
-              class="flex-1 px-4 py-3 text-xs md:text-sm font-black uppercase tracking-wider border-r-4 border-border last:border-r-0 transition-colors duration-100"
+              class="flex-1 px-4 py-3 text-xs md:text-sm font-black uppercase tracking-wider border-r-4 border-border last:border-r-0 transition-colors duration-100 cursor-pointer"
               :class="
                 activeTab === tab.id
-                  ? 'bg-black text-white dark:bg-white dark:text-black'
-                  : 'hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black'
+                  ? 'bg-foreground text-background'
+                  : 'hover:bg-foreground hover:text-background'
               "
             >
               {{ tab.label }}

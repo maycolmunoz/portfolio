@@ -8,7 +8,7 @@ import { projects } from '@/utils/data'
     <div
       v-for="(project, index) in projects"
       :key="index"
-      class="border-4 border-border p-4 md:p-6 space-y-4 hover:bg-indigo-500 hover:text-white dark:hover:bg-indigo-500 dark:hover:text-white transition-colors duration-100 group"
+      class="border-4 border-border p-4 md:p-6 space-y-4 hover:bg-primary hover:text-primary-foreground transition-colors duration-100 group"
     >
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
         <div class="md:col-span-1">
@@ -21,12 +21,12 @@ import { projects } from '@/utils/data'
 
         <div class="md:col-span-2 space-y-3">
           <h3
-            class="text-xl md:text-2xl font-black uppercase tracking-tighter group-hover:text-white"
+            class="text-xl md:text-2xl font-black uppercase tracking-tighter group-hover:text-primary-foreground"
           >
             {{ project.title }}
           </h3>
 
-          <p class="text-xs md:text-sm leading-relaxed text-foreground group-hover:text-white">
+          <p class="text-xs md:text-sm leading-relaxed text-foreground group-hover:text-primary-foreground">
             {{ project.description }}
           </p>
 
@@ -35,7 +35,7 @@ import { projects } from '@/utils/data'
               v-if="project.repository"
               :href="project.repository"
               target="_blank"
-              class="text-xs font-bold uppercase tracking-wider border-b-2 border-black dark:border-white/20 hover:border-indigo-500 hover:text-indigo-500 inline-flex items-center gap-1"
+              class="text-xs font-bold uppercase tracking-wider border-b-2 border-border hover:border-primary hover:text-primary inline-flex items-center gap-1"
             >
               <IconBrandGithub class="size-4" /> Source
             </a>
@@ -43,7 +43,7 @@ import { projects } from '@/utils/data'
               v-if="project.link"
               :href="project.link"
               target="_blank"
-              class="text-xs font-bold uppercase tracking-wider border-b-2 border-black dark:border-white/20 hover:border-indigo-500 hover:text-indigo-500 inline-flex items-center gap-1"
+              class="text-xs font-bold uppercase tracking-wider border-b-2 border-border hover:border-primary hover:text-primary inline-flex items-center gap-1"
             >
               <IconExternalLink class="size-4" /> Demo
             </a>

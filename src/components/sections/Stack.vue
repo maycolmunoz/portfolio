@@ -14,7 +14,7 @@ import { categorizedStack } from '@/utils/data'
         <div
           v-for="tech in category.items"
           :key="tech.name"
-          class="flex items-center gap-2 px-3 py-2 border-2 border-border text-foreground font-bold text-xs md:text-sm uppercase hover:bg-indigo-500 hover:text-white dark:hover:bg-indigo-500 dark:hover:text-white transition-colors duration-100"
+          class="flex items-center gap-2 px-3 py-2 border-2 border-border text-foreground font-bold text-xs md:text-sm uppercase hover:bg-primary hover:text-primary-foreground transition-colors duration-100"
         >
           <component :is="tech.icon" class="size-4" stroke-width="2" />
           <span>{{ tech.name }}</span>

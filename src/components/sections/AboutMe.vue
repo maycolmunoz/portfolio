@@ -22,12 +22,12 @@ const handleAvatarError = () => {
     <div class="space-y-4">
       <div>
         <h2 class="text-2xl md:text-3xl font-black uppercase break-words">
-          {{ personalInfo.name }} <span class="text-indigo-500">{{ personalInfo.lastName }}</span>
+          {{ personalInfo.name }} <span class="text-primary">{{ personalInfo.lastName }}</span>
         </h2>
         <p class="text-xs md:text-sm font-bold uppercase tracking-wider text-foreground/80 mt-1">
           {{ personalInfo.title }}
         </p>
-        <div class="h-1.5 w-12 bg-indigo-500 mt-3" />
+        <div class="h-1.5 w-12 bg-primary mt-3" />
       </div>
 
       <p class="text-xs md:text-md leading-relaxed text-foreground break-words">

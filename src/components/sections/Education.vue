@@ -9,7 +9,7 @@ import { education } from '@/utils/data'
       :key="index"
       class="relative pl-6 md:pl-8 border-l-4 border-border"
     >
-      <div class="absolute -left-2 top-0 size-4 bg-indigo-500 border-2 border-border" />
+      <div class="absolute -left-2 top-0 size-4 bg-primary border-2 border-border" />
 
       <div class="space-y-3">
         <h3 class="text-lg md:text-xl font-black uppercase tracking-tighter">

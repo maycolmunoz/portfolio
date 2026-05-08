@@ -11,7 +11,7 @@ import { contacts } from '@/utils/data'
 <template>
   <nav class="flex w-full flex-wrap items-center justify-between gap-y-4 gap-x-4 py-4">
     <a
-      class="hover:text-indigo-500 transition-colors duration-100"
+      class="hover:scale-125 duration-300"
       :href="contacts.cv"
       target="_blank"
       title="CV"
@@ -20,14 +20,14 @@ import { contacts } from '@/utils/data'
       <IconFileCvFilled class="size-6" />
     </a>
     <a
-      class="hover:text-indigo-500 transition-colors duration-100"
+      class="hover:scale-125 duration-300"
       :href="contacts.email"
       title="Email"
     >
       <IconMailFilled class="size-6" />
     </a>
     <a
-      class="hover:text-indigo-500 transition-colors duration-100"
+      class="hover:scale-125 duration-300"
       :href="contacts.github"
       target="_blank"
       title="GitHub"
@@ -36,7 +36,7 @@ import { contacts } from '@/utils/data'
       <IconBrandGithubFilled class="size-6" />
     </a>
     <a
-      class="hover:text-indigo-500 transition-colors duration-100"
+      class="hover:scale-125 duration-300"
       :href="contacts.linkedin"
       target="_blank"
       title="LinkedIn"

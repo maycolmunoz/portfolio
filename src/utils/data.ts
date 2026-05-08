@@ -50,21 +50,21 @@ export const navigationSections = [
     title: 'Tech Stack',
     subtitle: 'Core technologies & skills',
     icon: IconStack2,
-    color: 'from-indigo-500/20 to-purple-500/20',
+    color: 'from-primary/20 to-primary/10',
   },
   {
     id: 'projects',
     title: 'Featured Projects',
     subtitle: 'My latest work & builds',
     icon: IconFolders,
-    color: 'from-blue-500/20 to-cyan-500/20',
+    color: 'from-primary/20 to-primary/10',
   },
   {
     id: 'education',
     title: 'Learning Path',
     subtitle: 'Education & certifications',
     icon: IconLibrary,
-    color: 'from-emerald-500/20 to-teal-500/20',
+    color: 'from-primary/20 to-primary/10',
   },
 ]
 
