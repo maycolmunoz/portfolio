@@ -4,7 +4,6 @@ import AboutMe from './sections/AboutMe.vue'
 import Stack from './sections/Stack.vue'
 import Projects from './sections/Projects.vue'
 import Education from './sections/Education.vue'
-import ThemeToggle from './ThemeToggle.vue'
 
 const activeTab = ref('stack')
 
@@ -17,8 +16,6 @@ const tabs = [
 
 <template>
   <main class="min-h-screen bg-background p-4 xl:p-0 selection:bg-primary selection:text-primary-foreground">
-    <ThemeToggle />
-
     <div
       class="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 lg:items-center lg:min-h-screen"
     >

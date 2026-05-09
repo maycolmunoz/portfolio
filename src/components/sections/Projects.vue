@@ -35,7 +35,7 @@ import { projects } from '@/utils/data'
               v-if="project.repository"
               :href="project.repository"
               target="_blank"
-              class="text-xs font-bold uppercase tracking-wider border-b-2 border-border hover:border-primary hover:text-primary inline-flex items-center gap-1"
+              class="text-xs font-bold uppercase tracking-wider border-b-2 border-border hover:border-primary hover:text-primary inline-flex items-center gap-1 group-hover:border-primary-foreground group-hover:text-primary-foreground group-hover:hover:bg-primary-foreground group-hover:hover:text-primary transition-all duration-100"
             >
               <IconBrandGithub class="size-4" /> Source
             </a>
@@ -43,7 +43,7 @@ import { projects } from '@/utils/data'
               v-if="project.link"
               :href="project.link"
               target="_blank"
-              class="text-xs font-bold uppercase tracking-wider border-b-2 border-border hover:border-primary hover:text-primary inline-flex items-center gap-1"
+              class="text-xs font-bold uppercase tracking-wider border-b-2 border-border hover:border-primary hover:text-primary inline-flex items-center gap-1 group-hover:border-primary-foreground group-hover:text-primary-foreground group-hover:hover:bg-primary-foreground group-hover:hover:text-primary transition-all duration-100"
             >
               <IconExternalLink class="size-4" /> Demo
             </a>

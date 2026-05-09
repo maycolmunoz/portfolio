@@ -145,7 +145,7 @@ export const projects = [
     title: 'Aventuro',
     img: aventuroImg,
     description:
-      'Aventuro is a travel-oriented web application where users can explore packages, manage reservations, and access their account through a smooth and consistent booking experience.',
+      'A travel-oriented web application where users can explore packages, manage reservations, and access their account through a smooth and consistent booking experience.',
     repository: 'https://github.com/maycolmunoz/aventuro',
     link: 'https://youtu.be/1F4ABE5Gtbc',
   },
@@ -154,7 +154,7 @@ export const projects = [
     title: 'Comprana',
     img: compranaImg,
     description:
-      'Comprana is a grocery delivery platform that provides a clean catalog, fast browsing, and a simple checkout flow for placing home-delivery orders with ease.',
+      'A grocery delivery platform that provides a clean catalog, fast browsing, and a simple checkout flow for placing home-delivery orders with ease.',
     repository: 'https://github.com/maycolmunoz/comprana',
     link: 'https://youtu.be/ZDsoQOYZTCI',
   },
@@ -163,7 +163,7 @@ export const projects = [
     title: 'Moon Leaflet',
     img: leafletImg,
     description:
-      'MoonLeaflet integrates Leaflet with MoonShine to enable interactive maps, letting users pick coordinates or display multiple locations within the admin panel.',
+      'Integrates Leaflet with MoonShine to enable interactive maps, letting users pick coordinates or display multiple locations within the admin panel.',
     repository: 'https://github.com/maycolmunoz/moon-leaflet',
     link: 'https://github.com/maycolmunoz/moon-leaflet',
   },
@@ -172,7 +172,7 @@ export const projects = [
     title: 'Avatarmaker',
     img: avatarmakerImg,
     description:
-      'Avatarmaker lets users create and download custom avatars using the DiceBear API, providing a simple interface for generating unique visual identities.',
+      'Lets users create and download custom avatars using the Dicebear API, providing a simple interface for generating unique visual identities.',
     repository: 'https://github.com/maycolmunoz/avatarmaker',
     link: 'https://avatarsmaker.netlify.app/',
   },
