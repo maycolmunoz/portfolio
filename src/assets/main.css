@@ -71,14 +71,14 @@ html {
   --card-foreground: #ffffff;
   --popover: #1a1a1a;
   --popover-foreground: #ffffff;
-  --accent: #00f0ff;
+  --accent: #4682b4;
   --primary: #ffffff;
   --primary-foreground: #000000;
   --secondary: #1a1a1a;
   --secondary-foreground: #ffffff;
   --muted: #1a1a1a;
   --muted-foreground: #999999;
-  --accent-foreground: #000000;
+  --accent-foreground: #ffffff;
   --destructive: #ff0040;
   --destructive-foreground: #ffffff;
   --border: rgba(255, 255, 255, 0.2);
@@ -159,8 +159,8 @@ html {
     0deg,
     transparent,
     transparent 2px,
-    rgba(0, 240, 255, 0.015) 2px,
-    rgba(0, 240, 255, 0.015) 4px
+    rgba(70, 130, 180, 0.015) 2px,
+    rgba(70, 130, 180, 0.015) 4px
   );
 }
 
