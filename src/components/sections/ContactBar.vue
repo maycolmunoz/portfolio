@@ -9,9 +9,9 @@ import { contacts } from '@/utils/data'
 </script>
 
 <template>
-  <nav class="flex w-full flex-wrap items-center justify-between gap-y-4 gap-x-4 py-4">
+  <nav class="flex flex-wrap items-center justify-between gap-y-4 gap-x-4 py-2">
     <a
-      class="hover:scale-125 duration-300"
+      class="hover:scale-125 duration-300 hover:text-accent"
       :href="contacts.cv"
       target="_blank"
       title="CV"
@@ -19,15 +19,11 @@ import { contacts } from '@/utils/data'
     >
       <IconFileCvFilled class="size-6" />
     </a>
-    <a
-      class="hover:scale-125 duration-300"
-      :href="contacts.email"
-      title="Email"
-    >
+    <a class="hover:scale-125 duration-300 hover:text-accent" :href="contacts.email" title="Email">
       <IconMailFilled class="size-6" />
     </a>
     <a
-      class="hover:scale-125 duration-300"
+      class="hover:scale-125 duration-300 hover:text-accent"
       :href="contacts.github"
       target="_blank"
       title="GitHub"
@@ -36,7 +32,7 @@ import { contacts } from '@/utils/data'
       <IconBrandGithubFilled class="size-6" />
     </a>
     <a
-      class="hover:scale-125 duration-300"
+      class="hover:scale-125 duration-300 hover:text-accent"
       :href="contacts.linkedin"
       target="_blank"
       title="LinkedIn"

@@ -20,9 +20,6 @@ import {
   IconApi,
   IconDeviceDesktopAnalytics,
   IconLayoutDashboard,
-  IconStack2,
-  IconFolders,
-  IconLibrary,
 } from '@tabler/icons-vue'
 import avatarmakerImg from '../assets/avatarmaker.webp'
 import aventuroImg from '../assets/aventuro.webp'
@@ -43,30 +40,6 @@ export const contacts = {
   github: 'https://github.com/maycolmunoz',
   email: 'mailto:macarny4@gmail.com',
 }
-
-export const navigationSections = [
-  {
-    id: 'stack',
-    title: 'Tech Stack',
-    subtitle: 'Core technologies & skills',
-    icon: IconStack2,
-    color: 'from-primary/20 to-primary/10',
-  },
-  {
-    id: 'projects',
-    title: 'Featured Projects',
-    subtitle: 'My latest work & builds',
-    icon: IconFolders,
-    color: 'from-primary/20 to-primary/10',
-  },
-  {
-    id: 'education',
-    title: 'Learning Path',
-    subtitle: 'Education & certifications',
-    icon: IconLibrary,
-    color: 'from-primary/20 to-primary/10',
-  },
-]
 
 export const categorizedStack = [
   {
