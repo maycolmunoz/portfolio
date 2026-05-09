@@ -24,7 +24,7 @@ const tabs = [
           <AboutMe />
         </aside>
 
-        <section class="lg:col-span-8 space-y-8">
+        <section class="lg:col-span-8 space-y-4">
           <!-- Tab bar -->
           <div class="border-4 border-border flex">
             <button

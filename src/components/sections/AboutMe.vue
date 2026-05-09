@@ -11,7 +11,7 @@ const handleAvatarError = () => {
 </script>
 
 <template>
-  <div class="border-4 border-border p-6 md:p-8 space-y-6 glitch-hover">
+  <div class="border-4 border-border p-6 md:p-8 space-y-6">
     <div class="flex items-start gap-5">
       <div class="relative">
         <img

@@ -3,35 +3,30 @@ import { projects } from '@/utils/data'
 </script>
 
 <template>
-  <div class="space-y-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     <div
       v-for="project in projects"
       :key="project.title"
       v-reveal
-      class="border-4 border-border p-5 md:p-8 hover:bg-accent hover:text-accent-foreground transition-none group"
+      class="border-4 border-border p-5 md:p-6 hover:bg-accent hover:text-accent-foreground transition-none group"
     >
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 relative z-10">
-        <!-- Image column -->
-        <div class="md:col-span-5">
-          <div class="relative border-2 border-border overflow-hidden">
-            <img
-              :src="project.img"
-              :alt="project.title"
-              class="w-full aspect-video object-cover group-hover:mix-blend-luminosity transition-none"
-            />
-            <div class="absolute inset-0 bg-accent/0 group-hover:bg-accent/10 transition-none" />
-          </div>
+      <div class="space-y-4">
+        <div class="relative border-2 border-border overflow-hidden">
+          <img
+            :src="project.img"
+            :alt="project.title"
+            class="w-full aspect-video object-cover group-hover:mix-blend-luminosity transition-none"
+          />
+          <div class="absolute inset-0 bg-accent/0 group-hover:bg-accent/10 transition-none" />
         </div>
 
-        <!-- Content column -->
-        <div class="md:col-span-7 space-y-4">
+        <div class="space-y-3">
           <h3
-            class="font-display text-xl md:text-2xl font-black uppercase tracking-tighter leading-tight"
+            class="font-display text-lg md:text-xl font-black uppercase tracking-tighter leading-tight"
           >
             {{ project.title }}
           </h3>
 
-          <!-- Tech tags -->
           <div class="flex flex-wrap gap-1.5">
             <span
               v-for="tech in project.stack"
@@ -46,22 +41,16 @@ import { projects } from '@/utils/data'
             {{ project.description }}
           </p>
 
-          <!-- Links -->
-          <div class="flex gap-6 pt-2">
+          <div class="flex gap-6 pt-1">
             <a
               v-if="project.repository"
               :href="project.repository"
               target="_blank"
-              class="link-accent group-hover:border-accent-foreground group-hover:text-accent-foreground"
+              class="link-accent"
             >
               [SOURCE]
             </a>
-            <a
-              v-if="project.link"
-              :href="project.link"
-              target="_blank"
-              class="link-accent group-hover:border-accent-foreground group-hover:text-accent-foreground"
-            >
+            <a v-if="project.link" :href="project.link" target="_blank" class="link-accent">
               [DEMO]
             </a>
           </div>

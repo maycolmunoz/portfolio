@@ -183,16 +183,14 @@ html {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  border-bottom: 3px solid var(--border);
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding-bottom: 0.15rem;
   transition: none;
 }
 .link-accent:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .node-square {
