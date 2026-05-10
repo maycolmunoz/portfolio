@@ -65,18 +65,18 @@ html {
 }
 
 :root {
-  --background: #0a0a0a;
+  --background: #010310;
   --foreground: #ffffff;
-  --card: #0a0a0a;
+  --card: #010310;
   --card-foreground: #ffffff;
-  --popover: #1a1a1a;
+  --popover: #0a0c1a;
   --popover-foreground: #ffffff;
-  --accent: #4682b4;
+  --accent: #23a9bd;
   --primary: #ffffff;
   --primary-foreground: #000000;
-  --secondary: #1a1a1a;
+  --secondary: #0a0c1a;
   --secondary-foreground: #ffffff;
-  --muted: #1a1a1a;
+  --muted: #0a0c1a;
   --muted-foreground: #999999;
   --accent-foreground: #ffffff;
   --destructive: #ff0040;
@@ -159,8 +159,8 @@ html {
     0deg,
     transparent,
     transparent 2px,
-    rgba(70, 130, 180, 0.015) 2px,
-    rgba(70, 130, 180, 0.015) 4px
+    rgba(35, 169, 189, 0.015) 2px,
+    rgba(35, 169, 189, 0.015) 4px
   );
 }
 
@@ -212,4 +212,8 @@ html {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.stroke-text-muted {
+  -webkit-text-stroke: 2px var(--border);
 }

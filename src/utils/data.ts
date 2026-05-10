@@ -30,6 +30,9 @@ export const personalInfo = {
   name: 'Maycol',
   lastName: 'Muñoz',
   title: 'Full Stack Developer',
+  role: 'Full Stack',
+  mainStack: 'Laravel + Vue',
+  location: 'Colombia',
   bio: "I'm a Systems Engineering student focused on full-stack development. I specialize in building scalable backend systems and modern, high-performance user interfaces. My goal is to transform complex ideas into elegant, reliable digital solutions.",
   avatar: 'https://github.com/maycolmunoz.png?size=200',
 }

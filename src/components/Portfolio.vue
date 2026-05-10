@@ -15,27 +15,46 @@ const tabs = [
 </script>
 
 <template>
-  <div class="noise scanlines">
+  <div class="noise scanlines overflow-x-hidden">
     <main class="min-h-screen bg-background relative">
+      <!-- Background Typography Chaos -->
+      <div class="fixed inset-0 pointer-events-none select-none overflow-hidden z-0">
+        <div
+          class="absolute -top-[5%] -left-[5%] font-display text-[25vw] leading-none font-black text-transparent stroke-text-muted opacity-10"
+        >
+          MAYCOL
+        </div>
+        <div
+          class="absolute bottom-[5%] -right-[10%] font-display text-[20vw] leading-none font-black text-transparent stroke-text-muted opacity-10 rotate-12"
+        >
+          MUÑOZ
+        </div>
+        <div
+          class="absolute top-[40%] left-[50%] -translate-x-1/2 font-display text-[15vw] leading-none font-black text-accent opacity-[0.03]"
+        >
+          FULLSTACK
+        </div>
+      </div>
+
       <div
-        class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 px-4 xl:px-0 py-8"
+        class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 px-4 xl:px-0 py-8 relative z-10"
       >
         <aside class="lg:col-span-4 space-y-8 lg:sticky lg:top-8 self-start">
           <AboutMe />
         </aside>
 
         <section class="lg:col-span-8 space-y-4">
-          <!-- Tab bar -->
-          <div class="border-4 border-border flex">
+          <!-- Tab bar with Spine Aesthetic -->
+          <div class="border-4 border-border flex bg-accent/5 overflow-hidden">
             <button
               v-for="tab in tabs"
               :key="tab.id"
               @click="activeTab = tab.id"
-              class="flex-1 px-3 md:px-4 py-3 md:py-4 text-xs md:text-sm font-black uppercase border-r-4 border-border last:border-r-0 transition-none cursor-pointer"
+              class="flex-1 px-3 md:px-4 py-3 md:py-4 text-xs md:text-sm font-black uppercase border-r-2 border-border last:border-r-0 transition-all duration-200 cursor-pointer"
               :class="
                 activeTab === tab.id
                   ? 'bg-accent text-accent-foreground'
-                  : 'hover:bg-accent hover:text-accent-foreground'
+                  : 'text-accent/60 hover:bg-accent/10 hover:text-accent'
               "
             >
               {{ tab.label }}
