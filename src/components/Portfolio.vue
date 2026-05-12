@@ -20,12 +20,12 @@ const tabs = [
       <!-- Background Typography Chaos -->
       <div class="fixed inset-0 pointer-events-none select-none overflow-hidden z-0">
         <div
-          class="absolute -top-[5%] -left-[5%] font-display text-[25vw] leading-none font-black text-transparent stroke-text-muted opacity-10"
+          class="absolute top-[-5%] left-[-5%] font-display text-[25vw] leading-none font-black text-transparent stroke-text-muted opacity-10"
         >
           MAYCOL
         </div>
         <div
-          class="absolute bottom-[5%] -right-[10%] font-display text-[20vw] leading-none font-black text-transparent stroke-text-muted opacity-10 rotate-12"
+          class="absolute bottom-[5%] right-[-10%] font-display text-[20vw] leading-none font-black text-transparent stroke-text-muted opacity-10 rotate-12"
         >
           MUÑOZ
         </div>
