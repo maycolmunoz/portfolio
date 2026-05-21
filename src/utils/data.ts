@@ -34,13 +34,13 @@ export const personalInfo = {
   mainStack: 'Laravel + Vue',
   location: 'Colombia',
   bio: "I'm a Systems Engineering student focused on full-stack development. I specialize in building scalable backend systems and modern, high-performance user interfaces. My goal is to transform complex ideas into elegant, reliable digital solutions.",
-  avatar: 'https://github.com/maycolmunoz.png?size=200',
+  avatar: 'https://github.com/itsmmunoz.png?size=200',
 }
 
 export const contacts = {
   cv: 'https://docs.google.com/document/d/1jyEKvQjJeqxRvF9SVVmq6lgxzunbmIyyJ2XKnduaXlg/edit?usp=sharing',
   linkedin: 'https://www.linkedin.com/in/maycolmunoz/',
-  github: 'https://github.com/maycolmunoz',
+  github: 'https://github.com/itsmmunoz',
   email: 'mailto:macarny4@gmail.com',
 }
 
@@ -207,7 +207,7 @@ export const projects = [
     img: aventuroImg,
     description:
       'A travel-oriented web application where users can explore packages, manage reservations, and access their account through a smooth and consistent booking experience.',
-    repository: 'https://github.com/maycolmunoz/aventuro',
+    repository: 'https://github.com/itsmmunoz/aventuro',
     link: 'https://youtu.be/1F4ABE5Gtbc',
   },
   {
@@ -216,7 +216,7 @@ export const projects = [
     img: compranaImg,
     description:
       'A grocery delivery platform that provides a clean catalog, fast browsing, and a simple checkout flow for placing home-delivery orders with ease.',
-    repository: 'https://github.com/maycolmunoz/comprana',
+    repository: 'https://github.com/itsmmunoz/comprana',
     link: 'https://youtu.be/ZDsoQOYZTCI',
   },
   {
@@ -225,8 +225,8 @@ export const projects = [
     img: leafletImg,
     description:
       'Integrates Leaflet with MoonShine to enable interactive maps, letting users pick coordinates or display multiple locations within the admin panel.',
-    repository: 'https://github.com/maycolmunoz/moon-leaflet',
-    link: 'https://github.com/maycolmunoz/moon-leaflet',
+    repository: 'https://github.com/itsmmunoz/moon-leaflet',
+    link: 'https://github.com/itsmmunoz/moon-leaflet',
   },
   {
     stack: ['Bootstrap', 'Alpine.js', 'API'],
@@ -234,7 +234,7 @@ export const projects = [
     img: avatarmakerImg,
     description:
       'Lets users create and download custom avatars using the Dicebear API, providing a simple interface for generating unique visual identities.',
-    repository: 'https://github.com/maycolmunoz/avatarmaker',
+    repository: 'https://github.com/itsmmunoz/avatarmaker',
     link: 'https://avatarsmaker.netlify.app/',
   },
 ]
