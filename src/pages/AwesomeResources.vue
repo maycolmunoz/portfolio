@@ -3,8 +3,9 @@ import { computed, ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import { type AwesomeResource } from '@/utils/data'
 import { useAwesomeResources } from '@/utils/useAwesomeResources'
-import { IconArrowLeft, IconSearch } from '@tabler/icons-vue'
+import { IconArrowLeft, IconSearch, IconStar, IconStarFilled } from '@tabler/icons-vue'
 import { usePageMeta } from '@/utils/usePageMeta'
+import { useFavorites } from '@/utils/useFavorites'
 
 usePageMeta(
   'Awesome Resources — MMunoz',
@@ -12,6 +13,7 @@ usePageMeta(
 )
 
 const { resources, loading, error, retry } = useAwesomeResources()
+const { toggle, isFavorite } = useFavorites()
 
 const searchQuery = ref('')
 const selectedCategory = ref<string | null>(null)
@@ -69,8 +71,15 @@ const groupedFiltered = computed(() => {
   return groups
 })
 
+const favoriteResources = computed(() => resources.value.filter((r) => isFavorite(r.url)))
+
 function selectCategory(category: string) {
   selectedCategory.value = selectedCategory.value === category ? null : category
+}
+
+function clearFilters() {
+  searchQuery.value = ''
+  selectedCategory.value = null
 }
 
 const faviconUrl = (domain: string) => `https://www.google.com/s2/favicons?domain=${domain}&sz=64`
@@ -148,7 +157,7 @@ const authBadge = (auth: AwesomeResource['auth']) => {
         />
         <button
           v-if="searchQuery || selectedCategory"
-          @click="searchQuery = ''; selectedCategory = null"
+          @click="clearFilters"
           class="text-[0.55rem] font-black uppercase tracking-widest text-accent/60 hover:text-accent shrink-0"
         >
           CLEAR
@@ -233,43 +242,121 @@ const authBadge = (auth: AwesomeResource['auth']) => {
           Latest Added
         </h2>
         <div class="border-4 border-border divide-y-2 divide-border bg-secondary">
-          <a
+          <div
             v-for="item in latestResources"
             :key="item.url"
-            :href="item.url"
-            target="_blank"
-            rel="noopener noreferrer"
             class="flex items-center gap-3 px-4 md:px-6 py-3 hover:bg-accent/5 transition-colors duration-200 group bg-secondary"
           >
-            <img
-              :src="faviconUrl(item.domain)"
-              :alt="item.title"
-              class="w-6 h-6 shrink-0 border border-border"
-              loading="lazy"
-              @error="(e) => onFaviconError(e, item.domain)"
-            />
-            <div class="min-w-0 flex-1">
-              <p
-                class="text-xs font-black uppercase tracking-wide group-hover:text-accent transition-colors"
-              >
-                {{ item.title }}
-              </p>
-              <p class="text-[0.6rem] text-foreground/40 mt-0.5">
-                {{ categoryLabels[item.category] ?? item.category }}
-              </p>
-            </div>
+            <a
+              :href="item.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-3 min-w-0 flex-1"
+            >
+              <img
+                :src="faviconUrl(item.domain)"
+                :alt="item.title"
+                class="w-6 h-6 shrink-0 border border-border"
+                loading="lazy"
+                @error="(e) => onFaviconError(e, item.domain)"
+              />
+              <div class="min-w-0 flex-1">
+                <p
+                  class="text-xs font-black uppercase tracking-wide group-hover:text-accent transition-colors"
+                >
+                  {{ item.title }}
+                </p>
+                <p class="text-[0.6rem] text-foreground/40 mt-0.5">
+                  {{ categoryLabels[item.category] ?? item.category }}
+                </p>
+              </div>
+            </a>
+            <button
+              @click="toggle(item.url)"
+              class="shrink-0 cursor-pointer hover:scale-110 transition-transform"
+              :class="
+                isFavorite(item.url)
+                  ? 'text-yellow-400'
+                  : 'text-foreground/30 hover:text-yellow-400'
+              "
+            >
+              <IconStarFilled v-if="isFavorite(item.url)" :size="14" />
+              <IconStar v-else :size="14" />
+            </button>
             <span
               class="text-[0.55rem] uppercase tracking-widest font-black px-1.5 py-0.5 border shrink-0"
               :class="pricingBadge(item.pricing)"
             >
               {{ item.pricing }}
             </span>
-          </a>
+          </div>
         </div>
       </section>
 
       <!-- ════════════════════════════════════════ -->
-      <!-- 6. ALL RESOURCES                           -->
+      <!-- 6. FAVORITES                                -->
+      <!-- ════════════════════════════════════════ -->
+      <section v-if="favoriteResources.length" class="mb-10">
+        <h2 class="font-display text-lg md:text-xl font-black uppercase tracking-tighter mb-4">
+          Favorites
+          <span class="text-foreground/30 text-xs font-bold ml-1">
+            ({{ favoriteResources.length }})
+          </span>
+        </h2>
+        <div class="border-4 border-border divide-y-2 divide-border bg-secondary">
+          <div
+            v-for="item in favoriteResources"
+            :key="item.url"
+            class="flex items-center gap-3 px-4 md:px-6 py-3 hover:bg-accent/5 transition-colors duration-200 group bg-secondary"
+          >
+            <a
+              :href="item.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-3 min-w-0 flex-1"
+            >
+              <img
+                :src="faviconUrl(item.domain)"
+                :alt="item.title"
+                class="w-6 h-6 shrink-0 border border-border"
+                loading="lazy"
+                @error="(e) => onFaviconError(e, item.domain)"
+              />
+              <div class="min-w-0 flex-1">
+                <p
+                  class="text-xs font-black uppercase tracking-wide group-hover:text-accent transition-colors"
+                >
+                  {{ item.title }}
+                </p>
+                <p class="text-[0.6rem] text-foreground/40 mt-0.5">
+                  {{ categoryLabels[item.category] ?? item.category }}
+                </p>
+              </div>
+            </a>
+            <button
+              @click="toggle(item.url)"
+              class="shrink-0 cursor-pointer hover:scale-110 transition-transform"
+              :class="
+                isFavorite(item.url)
+                  ? 'text-yellow-400'
+                  : 'text-foreground/30 hover:text-yellow-400'
+              "
+            >
+              <IconStarFilled v-if="isFavorite(item.url)" :size="14" />
+              <IconStar v-else :size="14" />
+            </button>
+            <span
+              class="text-[0.55rem] uppercase tracking-widest font-black px-1.5 py-0.5 border shrink-0"
+              :class="pricingBadge(item.pricing)"
+            >
+              {{ item.pricing }}
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════════════ -->
+      <!-- 7. ALL RESOURCES                           -->
       <!-- ════════════════════════════════════════ -->
       <section>
         <div class="flex items-center justify-between mb-4">
@@ -304,57 +391,73 @@ const authBadge = (auth: AwesomeResource['auth']) => {
 
             <div class="p-4 md:p-6">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <a
+                <div
                   v-for="item in items"
                   :key="item.url"
-                  :href="item.url"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="block border-2 border-border p-4 hover:bg-accent/5 hover:border-accent transition-all duration-200 group bg-secondary"
+                  class="border-2 border-border p-4 hover:bg-accent/5 hover:border-accent transition-all duration-200 group bg-secondary"
                 >
                   <div class="flex items-start gap-3">
-                    <img
-                      :src="faviconUrl(item.domain)"
-                      :alt="item.title"
-                      class="w-8 h-8 shrink-0 border border-border"
-                      loading="lazy"
-                      @error="(e) => onFaviconError(e, item.domain)"
-                    />
-                    <div class="min-w-0 space-y-1.5">
-                      <h4
-                        class="font-display text-xs font-black uppercase tracking-wide group-hover:text-accent transition-colors"
-                      >
-                        {{ item.title }}
-                      </h4>
-                      <p class="text-xs text-foreground/60 leading-relaxed line-clamp-2">
-                        {{ item.description }}
-                      </p>
-                      <div class="flex flex-wrap gap-1">
-                        <span
-                          v-for="tag in item.tags"
-                          :key="tag"
-                          class="text-[0.55rem] uppercase tracking-wider font-bold px-1.5 py-0.5 border border-border/40 text-foreground/50"
+                    <a
+                      :href="item.url"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="flex items-start gap-3 min-w-0 flex-1"
+                    >
+                      <img
+                        :src="faviconUrl(item.domain)"
+                        :alt="item.title"
+                        class="w-8 h-8 shrink-0 border border-border"
+                        loading="lazy"
+                        @error="(e) => onFaviconError(e, item.domain)"
+                      />
+                      <div class="min-w-0 flex-1 space-y-1.5">
+                        <h4
+                          class="font-display text-xs font-black uppercase tracking-wide group-hover:text-accent transition-colors"
                         >
-                          {{ tag }}
-                        </span>
+                          {{ item.title }}
+                        </h4>
+                        <p class="text-xs text-foreground/60 leading-relaxed line-clamp-2">
+                          {{ item.description }}
+                        </p>
+                        <div class="flex flex-wrap gap-1">
+                          <span
+                            v-for="tag in item.tags"
+                            :key="tag"
+                            class="text-[0.55rem] uppercase tracking-wider font-bold px-1.5 py-0.5 border border-border/40 text-foreground/50"
+                          >
+                            {{ tag }}
+                          </span>
+                        </div>
+                        <div class="flex gap-3">
+                          <span
+                            class="text-[0.55rem] uppercase tracking-widest font-black px-1.5 py-0.5 border"
+                            :class="pricingBadge(item.pricing)"
+                          >
+                            {{ item.pricing }}
+                          </span>
+                          <span
+                            class="text-[0.55rem] uppercase tracking-widest font-black px-1.5 py-0.5 border"
+                            :class="authBadge(item.auth)"
+                          >
+                            {{ item.auth === 'none' ? 'no auth' : item.auth }}
+                          </span>
+                        </div>
                       </div>
-                      <div class="flex gap-3">
-                        <span
-                          class="text-[0.55rem] uppercase tracking-widest font-black px-1.5 py-0.5 border"
-                          :class="pricingBadge(item.pricing)"
-                        >
-                          {{ item.pricing }}
-                        </span>
-                        <span
-                          class="text-[0.55rem] uppercase tracking-widest font-black px-1.5 py-0.5 border"
-                          :class="authBadge(item.auth)"
-                        >
-                          {{ item.auth === 'none' ? 'no auth' : item.auth }}
-                        </span>
-                      </div>
-                    </div>
+                    </a>
+                    <button
+                      @click="toggle(item.url)"
+                      class="shrink-0 cursor-pointer hover:scale-110 transition-transform"
+                      :class="
+                        isFavorite(item.url)
+                          ? 'text-yellow-400'
+                          : 'text-foreground/30 hover:text-yellow-400'
+                      "
+                    >
+                      <IconStarFilled v-if="isFavorite(item.url)" :size="16" />
+                      <IconStar v-else :size="16" />
+                    </button>
                   </div>
-                </a>
+                </div>
               </div>
             </div>
           </div>
