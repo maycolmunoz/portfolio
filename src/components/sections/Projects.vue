@@ -8,7 +8,7 @@ import { projects } from '@/utils/data'
       v-for="project in projects"
       :key="project.title"
       v-reveal
-      class="border-4 border-border p-5 md:p-6 hover:bg-accent hover:text-accent-foreground transition-none group"
+      class="border-4 border-border p-5 md:p-6 hover:bg-accent/5 hover:border-accent transition-all duration-200 group bg-secondary"
     >
       <div class="space-y-4">
         <div class="relative border-2 border-border overflow-hidden">

@@ -11,9 +11,7 @@ const handleAvatarError = () => {
 </script>
 
 <template>
-  <div
-    class="border-4 border-border space-y-0 bg-background relative overflow-hidden flex flex-col"
-  >
+  <div class="border-4 border-border space-y-0 bg-secondary relative overflow-hidden flex flex-col">
     <!-- Horizontal Top Spine Text -->
     <div
       class="w-full h-8 md:h-10 bg-accent/10 border-b-2 border-border flex items-center px-4 md:px-6 overflow-hidden shrink-0"

@@ -21,11 +21,6 @@ import {
   IconDeviceDesktopAnalytics,
   IconLayoutDashboard,
 } from '@tabler/icons-vue'
-import avatarmakerImg from '../assets/avatarmaker.webp'
-import aventuroImg from '../assets/aventuro.webp'
-import compranaImg from '../assets/comprana.webp'
-import leafletImg from '../assets/leaflet.webp'
-
 export const personalInfo = {
   name: 'Maycol',
   lastName: 'Muñoz',
@@ -200,11 +195,24 @@ export const education = [
   },
 ]
 
+export interface AwesomeResource {
+  url: string
+  domain: string
+  category: string
+  title: string
+  description: string
+  tags: string[]
+  pricing: 'free' | 'paid' | 'freemium'
+  auth: 'none' | 'optional' | 'required login'
+  featured?: boolean
+  addedAt?: string
+}
+
 export const projects = [
   {
     stack: ['Vue', 'TailwindCSS', 'Laravel', 'API'],
     title: 'Aventuro',
-    img: "https://github.com/itsmmunoz/aventuro/blob/main/_docs/front/home.webp?raw=true",
+    img: 'https://github.com/itsmmunoz/aventuro/blob/main/_docs/front/home.webp?raw=true',
     description:
       'A travel-oriented web application where users can explore packages, manage reservations, and access their account through a smooth and consistent booking experience.',
     repository: 'https://github.com/itsmmunoz/aventuro',
@@ -213,7 +221,7 @@ export const projects = [
   {
     stack: ['Laravel', 'Livewire', 'Alpine.js', 'TailwindCSS', 'MySQL'],
     title: 'Comprana',
-    img: "https://github.com/itsmmunoz/comprana/blob/main/_docs/imgs/inicio.webp?raw=true",
+    img: 'https://github.com/itsmmunoz/comprana/blob/main/_docs/imgs/inicio.webp?raw=true',
     description:
       'A grocery delivery platform that provides a clean catalog, fast browsing, and a simple checkout flow for placing home-delivery orders with ease.',
     repository: 'https://github.com/itsmmunoz/comprana',
@@ -222,7 +230,7 @@ export const projects = [
   {
     stack: ['Laravel', 'Moonshine'],
     title: 'Moon Leaflet',
-    img: "https://github.com/itsmmunoz/moon-leaflet/blob/main/_docs/images/component.webp?raw=true",
+    img: 'https://github.com/itsmmunoz/moon-leaflet/blob/main/_docs/images/component.webp?raw=true',
     description:
       'Integrates Leaflet with MoonShine to enable interactive maps, letting users pick coordinates or display multiple locations within the admin panel.',
     repository: 'https://github.com/itsmmunoz/moon-leaflet',
@@ -231,7 +239,7 @@ export const projects = [
   {
     stack: ['Bootstrap', 'Alpine.js', 'API'],
     title: 'Avatarmaker',
-    img: "https://github.com/itsmmunoz/avatarmaker/blob/main/img/screenshot.webp?raw=true",
+    img: 'https://github.com/itsmmunoz/avatarmaker/blob/main/img/screenshot.webp?raw=true',
     description:
       'Lets users create and download custom avatars using the Dicebear API, providing a simple interface for generating unique visual identities.',
     repository: 'https://github.com/itsmmunoz/avatarmaker',

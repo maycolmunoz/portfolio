@@ -3,21 +3,16 @@ import { education } from '@/utils/data'
 </script>
 
 <template>
-  <div class="space-y-10 md:space-y-14">
+  <div class="space-y-6">
     <div
       v-for="(item, index) in education"
       :key="index"
       v-reveal
-      class="relative pl-8 md:pl-10 border-l-4 border-border"
+      class="border-4 border-border p-5 md:p-6 bg-secondary"
     >
-      <!-- Timeline node -->
-      <div class="absolute -left-[9px] top-0">
-        <div class="node-square" />
-      </div>
-
       <div class="space-y-3">
         <h3
-          class="font-display text-base md:text-lg font-black uppercase tracking-tighter leading-tight"
+          class="font-display text-lg md:text-xl font-black uppercase tracking-tighter leading-tight"
         >
           {{ item.title }}
         </h3>
