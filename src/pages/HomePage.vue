@@ -9,7 +9,7 @@ import Projects from '@/components/sections/Projects.vue'
 import Education from '@/components/sections/Education.vue'
 
 usePageMeta(
-  'MMunoz | Full Stack Developer',
+  'portfolio | mmunoz',
   'Portfolio de MMunoz. Estudiante de Ingeniería de Sistemas y desarrollador full stack especializado en Laravel, Vue, y sistemas escalables.',
 )
 

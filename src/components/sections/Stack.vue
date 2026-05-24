@@ -3,7 +3,7 @@ import { categorizedStack } from '@/utils/data'
 </script>
 
 <template>
-  <div class="border-4 border-border p-5 md:p-6 bg-secondary">
+  <div class="p-5 md:p-6 bg-secondary">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
       <div v-for="category in categorizedStack" :key="category.title" v-reveal class="space-y-4">
         <h3

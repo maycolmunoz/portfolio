@@ -8,7 +8,7 @@ import { usePageMeta } from '@/utils/usePageMeta'
 import { useFavorites } from '@/utils/useFavorites'
 
 usePageMeta(
-  'Awesome Resources — MMunoz',
+  'awesome-resources | mmunoz',
   'Colección curada de herramientas y recursos web que uso diariamente: diseño, desarrollo, iconos, educación y más.',
 )
 
@@ -416,7 +416,7 @@ const authBadge = (auth: AwesomeResource['auth']) => {
                         >
                           {{ item.title }}
                         </h4>
-                        <p class="text-xs text-foreground/60 leading-relaxed line-clamp-2">
+                        <p class="text-xs text-foreground/60 leading-relaxed">
                           {{ item.description }}
                         </p>
                         <div class="flex flex-wrap gap-1">
