@@ -18,11 +18,7 @@ const { toggle, isFavorite } = useFavorites()
 const searchQuery = ref('')
 const selectedCategory = ref<string | null>(null)
 
-const latestResources = computed(() =>
-  [...resources.value]
-    .sort((a, b) => new Date(b.addedAt ?? 0).getTime() - new Date(a.addedAt ?? 0).getTime())
-    .slice(0, 4),
-)
+const latestResources = computed(() => [...resources.value].reverse().slice(0, 4))
 
 const categoryLabels: Record<string, string> = {
   design: 'Design',
@@ -206,28 +202,28 @@ const authBadge = (auth: AwesomeResource['auth']) => {
         </h2>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
           <button
+            @click="selectedCategory = null"
+            class="border-4 border-border p-4 text-left transition-all duration-200 cursor-pointer bg-secondary hover:bg-accent/15 hover:border-accent"
+            :class="selectedCategory === null ? 'category-active' : ''"
+          >
+            <p class="font-display text-xs font-black uppercase tracking-wide text-accent">
+              All
+            </p>
+            <p class="text-xs font-black mt-1 text-foreground/50">
+              {{ resources.length }} {{ resources.length === 1 ? 'resource' : 'resources' }}
+            </p>
+          </button>
+          <button
             v-for="(count, category) in categoryCounts"
             :key="category"
             @click="selectCategory(category)"
-            class="border-4 border-border p-4 text-left transition-all duration-200 cursor-pointer bg-secondary"
-            :class="
-              selectedCategory === category
-                ? 'bg-accent text-accent-foreground border-accent'
-                : 'hover:bg-accent/5 hover:border-accent'
-            "
+            class="border-4 border-border p-4 text-left transition-all duration-200 cursor-pointer bg-secondary hover:bg-accent/15 hover:border-accent"
+            :class="selectedCategory === category ? 'category-active' : ''"
           >
-            <p
-              class="font-display text-xs font-black uppercase tracking-wide"
-              :class="selectedCategory === category ? 'text-accent-foreground' : 'text-accent'"
-            >
+            <p class="font-display text-xs font-black uppercase tracking-wide text-accent">
               {{ categoryLabels[category] ?? category }}
             </p>
-            <p
-              class="text-xs font-black mt-1"
-              :class="
-                selectedCategory === category ? 'text-accent-foreground/70' : 'text-foreground/50'
-              "
-            >
+            <p class="text-xs font-black mt-1 text-foreground/50">
               {{ count }} {{ count === 1 ? 'resource' : 'resources' }}
             </p>
           </button>
@@ -466,3 +462,10 @@ const authBadge = (auth: AwesomeResource['auth']) => {
     </template>
   </div>
 </template>
+
+<style scoped>
+.category-active {
+  background-color: color-mix(in oklab, var(--accent) 15%, transparent) !important;
+  border-color: var(--accent) !important;
+}
+</style>
