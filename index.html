@@ -1,25 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/logo.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google" content="notranslate" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <title>portfolio | mmunoz</title>
-    <meta name="description" content="Portfolio de MMunoz. Estudiante de Ingeniería de Sistemas y desarrollador full stack especializado en Laravel, Vue, y sistemas escalables.">
-    <meta property="og:title" content="portfolio | mmunoz">
-    <meta property="og:description" content="Portfolio de MMunoz. Estudiante de Ingeniería de Sistemas y desarrollador full stack.">
-    <meta property="og:image" content="https://github.com/itsmmunoz.png?size=400">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="portfolio | mmunoz">
-    <meta name="twitter:description" content="Portfolio de MMunoz. Estudiante de Ingeniería de Sistemas y desarrollador full stack.">
-    <meta name="twitter:image" content="https://github.com/itsmmunoz.png?size=400">
+    <meta
+      name="description"
+      content="MMunoz's Portfolio. Systems Engineering student and full-stack developer specialized in Laravel, Vue, and scalable systems."
+    />
+    <meta property="og:title" content="portfolio | mmunoz" />
+    <meta
+      property="og:description"
+      content="MMunoz's Portfolio. Systems Engineering student and full-stack developer."
+    />
+    <meta property="og:image" content="https://github.com/itsmmunoz.png?size=400" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="portfolio | mmunoz" />
+    <meta
+      name="twitter:description"
+      content="MMunoz's Portfolio. Systems Engineering student and full-stack developer."
+    />
+    <meta name="twitter:image" content="https://github.com/itsmmunoz.png?size=400" />
   </head>
   <body class="bg-background">
     <div id="app"></div>
+
+    <div id="google_translate_element"></div>
+
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: 'en',
+            includedLanguages: 'en,es,fr,de,pt,it,ja,zh-CN,ru,ko',
+            autoDisplay: false,
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          'google_translate_element',
+        )
+      }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

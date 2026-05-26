@@ -9,7 +9,7 @@ import { useFavorites } from '@/utils/useFavorites'
 
 usePageMeta(
   'awesome-resources | mmunoz',
-  'Colección curada de herramientas y recursos web que uso diariamente: diseño, desarrollo, iconos, educación y más.',
+  'A curated collection of web tools and resources I use daily: design, development, icons, education, and more.',
 )
 
 const { resources, loading, error, retry } = useAwesomeResources()
@@ -206,9 +206,7 @@ const authBadge = (auth: AwesomeResource['auth']) => {
             class="border-4 border-border p-4 text-left transition-all duration-200 cursor-pointer bg-secondary hover:bg-accent/15 hover:border-accent"
             :class="selectedCategory === null ? 'category-active' : ''"
           >
-            <p class="font-display text-xs font-black uppercase tracking-wide text-accent">
-              All
-            </p>
+            <p class="font-display text-xs font-black uppercase tracking-wide text-accent">All</p>
             <p class="text-xs font-black mt-1 text-foreground/50">
               {{ resources.length }} {{ resources.length === 1 ? 'resource' : 'resources' }}
             </p>

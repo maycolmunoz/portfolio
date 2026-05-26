@@ -10,7 +10,7 @@ import Education from '@/components/sections/Education.vue'
 
 usePageMeta(
   'portfolio | mmunoz',
-  'Portfolio de MMunoz. Estudiante de Ingeniería de Sistemas y desarrollador full stack especializado en Laravel, Vue, y sistemas escalables.',
+  "MMunoz's Portfolio. Systems Engineering student and full-stack developer specialized in Laravel, Vue, and scalable systems.",
 )
 
 const activeTab = ref('stack')

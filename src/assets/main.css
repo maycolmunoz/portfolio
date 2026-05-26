@@ -217,3 +217,55 @@ html {
 .stroke-text-muted {
   -webkit-text-stroke: 2px var(--border);
 }
+
+/* ── Google Translate Widget ────────────────────── */
+
+#google_translate_element {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10000;
+}
+
+.goog-te-gadget-simple {
+  background-color: var(--secondary) !important;
+  border: 2px solid var(--border) !important;
+  width: 36px !important;
+  height: 36px !important;
+  padding: 0 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  transition: border-color 0.2s !important;
+}
+
+.goog-te-gadget-simple:hover {
+  border-color: var(--accent) !important;
+}
+
+.goog-te-gadget-simple::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%206.371h7%22/%3E%3Cpath%20d%3D%22M9%206.371c0%204.418%20-2.239%206.629%20-5%206.629%22/%3E%3Cpath%20d%3D%22M5%209c0%202.144%202.252%203.908%206%204%22/%3E%3Cpath%20d%3D%22M12%2020l4%20-9l4%209%22/%3E%3Cpath%20d%3D%22M19.1%2018h-6.2%22/%3E%3Cpath%20d%3D%22M6.694%203l.793%20.582%22/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.goog-te-gadget-simple span,
+.goog-te-gadget-simple img {
+  display: none !important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
