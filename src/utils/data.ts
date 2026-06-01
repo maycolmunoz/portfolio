@@ -37,144 +37,57 @@ export const contacts = {
   linkedin: 'https://www.linkedin.com/in/maycolmunoz/',
   github: 'https://github.com/itsmmunoz',
   email: 'mailto:macarny4@gmail.com',
+  x: 'https://x.com/itsmmunoz',
 }
 
 export const categorizedStack = [
   {
     title: 'NÚCLEO',
     items: [
-      {
-        name: 'PHP',
-        icon: IconBrandPhp,
-        color: 'hover:bg-[#6C7192] hover:border-[#6C7192] hover:text-white',
-      },
-      {
-        name: 'LARAVEL',
-        icon: IconBrandLaravel,
-        color: 'hover:bg-[#D14039] hover:border-[#D14039] hover:text-white',
-      },
-      {
-        name: 'VUE',
-        icon: IconBrandVue,
-        color: 'hover:bg-[#3E926D] hover:border-[#3E926D] hover:text-white',
-      },
-      {
-        name: 'REACT',
-        icon: IconBrandReact,
-        color: 'hover:bg-[#5A9CB0] hover:border-[#5A9CB0] hover:text-white',
-      },
-      {
-        name: 'MYSQL',
-        icon: IconBrandMysql,
-        color: 'hover:bg-[#3E6380] hover:border-[#3E6380] hover:text-white',
-      },
-      {
-        name: 'POSTGRESQL',
-        icon: IconDatabase,
-        color: 'hover:bg-[#336791] hover:border-[#336791] hover:text-white',
-      },
+      { name: 'PHP', icon: IconBrandPhp },
+      { name: 'LARAVEL', icon: IconBrandLaravel },
+      { name: 'VUE', icon: IconBrandVue },
+      { name: 'REACT', icon: IconBrandReact },
+      { name: 'MYSQL', icon: IconBrandMysql },
+      { name: 'POSTGRESQL', icon: IconDatabase },
     ],
   },
   {
     title: 'FRONTEND',
     items: [
-      {
-        name: 'JS',
-        icon: IconBrandJavascript,
-        color: 'hover:bg-[#D4C02E] hover:border-[#D4C02E] hover:text-black',
-      },
-      {
-        name: 'HTML',
-        icon: IconBrandHtml5,
-        color: 'hover:bg-[#C24D2F] hover:border-[#C24D2F] hover:text-white',
-      },
-      {
-        name: 'CSS',
-        icon: IconBrandCss3,
-        color: 'hover:bg-[#2F6690] hover:border-[#2F6690] hover:text-white',
-      },
-      {
-        name: 'TAILWIND',
-        icon: IconBrandTailwind,
-        color: 'hover:bg-[#387B8A] hover:border-[#387B8A] hover:text-white',
-      },
-      {
-        name: 'BOOTSTRAP',
-        icon: IconBrandBootstrap,
-        color: 'hover:bg-[#674D91] hover:border-[#674D91] hover:text-white',
-      },
-      {
-        name: 'ALPINE.JS',
-        icon: IconBrandAlpineJs,
-        color: 'hover:bg-[#77A4B1] hover:border-[#77A4B1] hover:text-black',
-      },
+      { name: 'JS', icon: IconBrandJavascript },
+      { name: 'HTML', icon: IconBrandHtml5 },
+      { name: 'CSS', icon: IconBrandCss3 },
+      { name: 'TAILWIND', icon: IconBrandTailwind },
+      { name: 'BOOTSTRAP', icon: IconBrandBootstrap },
+      { name: 'ALPINE.JS', icon: IconBrandAlpineJs },
     ],
   },
   {
     title: 'HERRAMIENTAS',
     items: [
-      {
-        name: 'LIVEWIRE',
-        icon: IconBrandLivewire,
-        color: 'hover:bg-[#D15E8B] hover:border-[#D15E8B] hover:text-white',
-      },
-      {
-        name: 'INERTIA.JS',
-        icon: IconBrandInertia,
-        color: 'hover:bg-[#7B4BAE] hover:border-[#7B4BAE] hover:text-white',
-      },
-      {
-        name: 'GIT',
-        icon: IconBrandGit,
-        color: 'hover:bg-[#C9432B] hover:border-[#C9432B] hover:text-white',
-      },
-      {
-        name: 'FILAMENT',
-        icon: IconLayoutDashboard,
-        color: 'hover:bg-[#D68A14] hover:border-[#D68A14] hover:text-black',
-      },
-      {
-        name: 'APIs',
-        icon: IconApi,
-        color: 'hover:bg-[#2F6B8F] hover:border-[#2F6B8F] hover:text-white',
-      },
-      {
-        name: 'LINUX',
-        icon: IconTerminal,
-        color: 'hover:bg-[#D4A723] hover:border-[#D4A723] hover:text-black',
-      },
+      { name: 'LIVEWIRE', icon: IconBrandLivewire },
+      { name: 'INERTIA.JS', icon: IconBrandInertia },
+      { name: 'GIT', icon: IconBrandGit },
+      { name: 'FILAMENT', icon: IconLayoutDashboard },
+      { name: 'APIs', icon: IconApi },
+      { name: 'LINUX', icon: IconTerminal },
     ],
   },
   {
     title: 'ARQUITECTURA',
     items: [
-      {
-        name: 'CLEAN ARCH',
-        icon: IconBuildingSkyscraper,
-        color: 'hover:bg-accent hover:border-accent hover:text-white',
-      },
-      {
-        name: 'MULTITENANT',
-        icon: IconBuildingCommunity,
-        color: 'hover:bg-accent hover:border-accent hover:text-white',
-      },
-      {
-        name: 'ERP & CRM',
-        icon: IconDeviceDesktopAnalytics,
-        color: 'hover:bg-accent hover:border-accent hover:text-white',
-      },
-      {
-        name: 'PERFORMANCE',
-        icon: IconBrandJavascript,
-        color: 'hover:bg-accent hover:border-accent hover:text-white',
-      },
+      { name: 'CLEAN ARCH', icon: IconBuildingSkyscraper },
+      { name: 'MULTITENANT', icon: IconBuildingCommunity },
+      { name: 'ERP & CRM', icon: IconDeviceDesktopAnalytics },
+      { name: 'PERFORMANCE', icon: IconBrandJavascript },
     ],
   },
 ]
 
 export const education = [
   {
-    title: 'Ingeniería de Sistemas (En Curso)',
+    title: 'Ingeniería de Sistemas',
     description:
       'Universidad Nacional Abierta y a Distancia (UNAD) (2022 - Presente): Estudios en curso enfocados en el diseño, desarrollo y gestión de sistemas tecnológicos.',
   },

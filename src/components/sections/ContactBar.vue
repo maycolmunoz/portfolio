@@ -2,6 +2,7 @@
 import {
   IconBrandGithubFilled,
   IconBrandLinkedinFilled,
+  IconBrandXFilled,
   IconFileCvFilled,
   IconMailFilled,
 } from '@tabler/icons-vue'
@@ -9,9 +10,9 @@ import { contacts } from '@/utils/data'
 </script>
 
 <template>
-  <nav class="flex flex-wrap items-center justify-between gap-y-4 gap-x-4 py-2">
+  <nav class="flex flex-wrap items-center justify-between gap-6 py-1">
     <a
-      class="hover:scale-125 duration-300 hover:text-accent"
+      class="text-text-secondary hover:text-primary transition-colors duration-200"
       :href="contacts.cv"
       target="_blank"
       title="Currículum"
@@ -21,7 +22,7 @@ import { contacts } from '@/utils/data'
       <IconFileCvFilled class="size-6" />
     </a>
     <a
-      class="hover:scale-125 duration-300 hover:text-accent"
+      class="text-text-secondary hover:text-primary transition-colors duration-200"
       :href="contacts.email"
       title="Correo"
       aria-label="Correo"
@@ -29,7 +30,7 @@ import { contacts } from '@/utils/data'
       <IconMailFilled class="size-6" />
     </a>
     <a
-      class="hover:scale-125 duration-300 hover:text-accent"
+      class="text-text-secondary hover:text-primary transition-colors duration-200"
       :href="contacts.github"
       target="_blank"
       title="GitHub"
@@ -39,7 +40,7 @@ import { contacts } from '@/utils/data'
       <IconBrandGithubFilled class="size-6" />
     </a>
     <a
-      class="hover:scale-125 duration-300 hover:text-accent"
+      class="text-text-secondary hover:text-primary transition-colors duration-200"
       :href="contacts.linkedin"
       target="_blank"
       title="LinkedIn"
@@ -47,6 +48,16 @@ import { contacts } from '@/utils/data'
       rel="noopener noreferrer"
     >
       <IconBrandLinkedinFilled class="size-6" />
+    </a>
+    <a
+      class="text-text-secondary hover:text-primary transition-colors duration-200"
+      :href="contacts.x"
+      target="_blank"
+      title="X"
+      aria-label="X"
+      rel="noopener noreferrer"
+    >
+      <IconBrandXFilled class="size-6" />
     </a>
   </nav>
 </template>

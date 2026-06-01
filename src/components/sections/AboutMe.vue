@@ -11,51 +11,42 @@ const handleAvatarError = () => {
 </script>
 
 <template>
-  <div class="border-4 border-border space-y-0 bg-secondary relative overflow-hidden flex flex-col">
-    <!-- Horizontal Top Spine Text -->
+  <div
+    class="bg-card rounded-[24px] shadow-sm border-2 border-dashed border-border overflow-hidden flex flex-col"
+  >
     <div
-      class="w-full h-8 md:h-10 bg-accent/10 border-b-2 border-border flex items-center px-4 md:px-6 overflow-hidden shrink-0"
+      class="w-full h-10 md:h-11 bg-primary/10 border-b border-dashed border-border flex items-center px-4 md:px-5 overflow-hidden shrink-0"
     >
-      <p
-        class="font-display text-[0.6rem] md:text-xs font-black uppercase tracking-[0.3em] whitespace-nowrap text-accent"
-      >
-        {{ personalInfo.role }} <span class="mx-2 opacity-30">//</span> {{ personalInfo.mainStack }}
+      <p class="font-body text-sm md:text-base text-primary truncate">
+        {{ personalInfo.role }}<span class="mx-2 opacity-30">//</span>{{ personalInfo.mainStack }}
       </p>
     </div>
 
-    <div class="p-6 md:p-8 space-y-8 flex-1">
-      <!-- Header: Photo & Name -->
+    <div class="p-5 md:p-6 space-y-6 flex-1">
       <div class="flex items-center gap-5">
         <div class="relative shrink-0">
           <img
-            class="w-20 h-20 md:w-24 md:h-24 object-cover border-2 border-border grayscale hover:grayscale-0 transition-all duration-500"
+            class="w-20 h-20 md:w-24 md:h-24 object-cover rounded-full border-4 border-primary/30"
             :src="avatarSrc"
             :alt="personalInfo.name + ' ' + personalInfo.lastName"
             @error="handleAvatarError"
           />
-          <div class="absolute -bottom-1 -right-1 w-4 h-4 bg-accent border-2 border-background" />
         </div>
         <div class="space-y-1 flex-1">
-          <h2
-            class="font-display text-2xl md:text-3xl font-black uppercase leading-none tracking-tighter"
-          >
+          <h2 class="font-display text-3xl md:text-4xl">
             {{ personalInfo.name }}<br />
-            <span class="text-accent">{{ personalInfo.lastName }}</span>
+            <span class="text-primary">{{ personalInfo.lastName }}</span>
           </h2>
         </div>
       </div>
 
-      <!-- Biography: Main Context -->
       <div class="space-y-4">
-        <p
-          class="text-xs md:text-sm leading-relaxed text-foreground/80 italic border-l-2 border-accent/30 pl-4"
-        >
-          "{{ personalInfo.bio }}"
+        <p class="text-base md:text-lg leading-relaxed text-text-secondary">
+          {{ personalInfo.bio }}
         </p>
       </div>
 
-      <!-- Footer: Actions -->
-      <div class="pt-6 border-t-2 border-border/50">
+      <div class="pt-5 border-t border-dashed border-border">
         <ContactBar />
       </div>
     </div>

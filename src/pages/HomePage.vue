@@ -22,30 +22,34 @@ const tabs = [
 
 <template>
   <div
-    class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 px-4 xl:px-0 py-8 relative z-10"
+    class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 px-4 xl:px-0 py-8 relative"
   >
-    <aside class="lg:col-span-4 space-y-8 lg:sticky lg:top-8 self-start">
+    <aside class="lg:col-span-4 lg:sticky lg:top-8 self-start">
       <AboutMe />
     </aside>
 
     <section class="lg:col-span-8 space-y-4">
-      <div class="border-4 border-border flex bg-accent/5 overflow-hidden">
+      <div
+        class="bg-card rounded-[24px] shadow-sm border-2 border-dashed border-border flex overflow-hidden"
+      >
         <button
           v-for="tab in tabs"
           :key="tab.id"
           @click="activeTab = tab.id"
-          class="flex-1 px-3 md:px-4 py-3 md:py-4 text-xs md:text-sm font-black uppercase border-r-2 border-border last:border-r-0 transition-all duration-200 cursor-pointer"
+          class="flex-1 px-4 md:px-5 py-3 md:py-3.5 text-sm md:text-base font-bold border-r border-dashed border-border last:border-r-0 transition-colors duration-200 cursor-pointer"
           :class="
             activeTab === tab.id
-              ? 'bg-accent text-accent-foreground'
-              : 'text-accent/60 hover:bg-accent/10 hover:text-accent'
+              ? 'bg-primary text-white'
+              : 'bg-transparent hover:bg-primary/10 hover:text-primary'
           "
         >
           {{ tab.label }}
         </button>
       </div>
 
-      <div class="border-4 border-border p-6 md:p-8 lg:p-12 overflow-y-auto h-[80vh] bg-secondary">
+      <div
+        class="bg-card rounded-[24px] shadow-sm border-2 border-dashed border-border p-6 md:p-8 lg:p-10 overflow-y-auto h-[80vh]"
+      >
         <Stack v-if="activeTab === 'stack'" />
         <Projects v-if="activeTab === 'projects'" />
         <Education v-if="activeTab === 'education'" />

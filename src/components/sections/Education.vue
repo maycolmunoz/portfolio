@@ -8,16 +8,14 @@ import { education } from '@/utils/data'
       v-for="(item, index) in education"
       :key="index"
       v-reveal
-      class="border-4 border-border p-5 md:p-6 bg-secondary"
+      class="bg-card rounded-[24px] shadow-sm border-2 border-dashed border-border p-5 hover:border-primary hover:shadow-md transition-all duration-200"
     >
       <div class="space-y-3">
-        <h3
-          class="font-display text-lg md:text-xl font-black uppercase tracking-tighter leading-tight"
-        >
+        <h3 class="font-display text-xl md:text-2xl">
           {{ item.title }}
         </h3>
 
-        <p class="text-xs md:text-sm leading-relaxed text-foreground/85 max-w-2xl">
+        <p class="text-base leading-relaxed text-text-secondary max-w-2xl">
           {{ item.description }}
         </p>
       </div>
