@@ -14,5 +14,11 @@ export const vReveal: Directive<HTMLElement, void> = {
       { threshold: 0.1 },
     )
     observer.observe(el)
+    ;(el as any).__revealObserver = observer
+  },
+  unmounted(el) {
+    const observer = (el as any).__revealObserver as IntersectionObserver | undefined
+    observer?.disconnect()
+    delete (el as any).__revealObserver
   },
 }

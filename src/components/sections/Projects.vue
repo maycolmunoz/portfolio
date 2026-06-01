@@ -48,7 +48,7 @@ import { projects } from '@/utils/data'
               target="_blank"
               class="link-accent"
             >
-              [SOURCE]
+              [CÓDIGO]
             </a>
             <a v-if="project.link" :href="project.link" target="_blank" class="link-accent">
               [DEMO]

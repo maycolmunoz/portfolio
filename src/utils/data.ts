@@ -28,7 +28,7 @@ export const personalInfo = {
   role: 'Full Stack',
   mainStack: 'Laravel + Vue',
   location: 'Colombia',
-  bio: "I'm a Systems Engineering student focused on full-stack development. I specialize in building scalable backend systems and modern, high-performance user interfaces. My goal is to transform complex ideas into elegant, reliable digital solutions.",
+  bio: 'Soy estudiante de Ingeniería de Sistemas enfocado en el desarrollo full-stack. Me especializo en construir sistemas backend escalables e interfaces de usuario modernas y de alto rendimiento. Mi objetivo es transformar ideas complejas en soluciones digitales elegantes y confiables.',
   avatar: 'https://github.com/itsmmunoz.png?size=200',
 }
 
@@ -41,7 +41,7 @@ export const contacts = {
 
 export const categorizedStack = [
   {
-    title: 'CORE',
+    title: 'NÚCLEO',
     items: [
       {
         name: 'PHP',
@@ -111,7 +111,7 @@ export const categorizedStack = [
     ],
   },
   {
-    title: 'TOOLS',
+    title: 'HERRAMIENTAS',
     items: [
       {
         name: 'LIVEWIRE',
@@ -146,7 +146,7 @@ export const categorizedStack = [
     ],
   },
   {
-    title: 'ARCH',
+    title: 'ARQUITECTURA',
     items: [
       {
         name: 'CLEAN ARCH',
@@ -174,39 +174,26 @@ export const categorizedStack = [
 
 export const education = [
   {
-    title: 'Systems Engineering (In Progress)',
+    title: 'Ingeniería de Sistemas (En Curso)',
     description:
-      'Universidad Nacional Abierta y a Distancia (UNAD) (2022 - Present): Ongoing studies focused on the design, development, and management of technological systems.',
+      'Universidad Nacional Abierta y a Distancia (UNAD) (2022 - Presente): Estudios en curso enfocados en el diseño, desarrollo y gestión de sistemas tecnológicos.',
   },
   {
-    title: 'Frontend Development with React',
+    title: 'Desarrollo Frontend con React',
     description:
-      'Alura (01/2023 - 06/2023): Intensive training in building modern, interactive user interfaces using React.',
+      'Alura (01/2023 - 06/2023): Formación intensiva en la creación de interfaces de usuario modernas e interactivas utilizando React.',
   },
   {
-    title: 'Web Application Development',
+    title: 'Desarrollo de Aplicaciones Web',
     description:
-      'Universidad Tecnológica de Pereira (UTP) (04/2022 - 12/2022): Specialized training in creating functional and scalable web applications.',
+      'Universidad Tecnológica de Pereira (UTP) (04/2022 - 12/2022): Formación especializada en la creación de aplicaciones web funcionales y escalables.',
   },
   {
-    title: 'Fullstack Development',
+    title: 'Desarrollo Fullstack',
     description:
-      'Launch X (02/2022 - 05/2022): Hands-on learning in technologies such as JavaScript and Vue.js, focusing on fullstack project development.',
+      'Launch X (02/2022 - 05/2022): Aprendizaje práctico en tecnologías como JavaScript y Vue.js, enfocado en el desarrollo de proyectos fullstack.',
   },
 ]
-
-export interface AwesomeResource {
-  url: string
-  domain: string
-  category: string
-  title: string
-  description: string
-  tags: string[]
-  pricing: 'free' | 'paid' | 'freemium'
-  auth: 'none' | 'optional' | 'required login'
-  featured?: boolean
-  addedAt?: string
-}
 
 export const projects = [
   {
@@ -214,7 +201,7 @@ export const projects = [
     title: 'Aventuro',
     img: 'https://github.com/itsmmunoz/aventuro/blob/main/_docs/front/home.webp?raw=true',
     description:
-      'A travel-oriented web application where users can explore packages, manage reservations, and access their account through a smooth and consistent booking experience.',
+      'Aplicación web orientada a viajes donde los usuarios pueden explorar paquetes, gestionar reservas y acceder a su cuenta a través de una experiencia de reserva fluida y consistente.',
     repository: 'https://github.com/itsmmunoz/aventuro',
     link: 'https://youtu.be/1F4ABE5Gtbc',
   },
@@ -223,7 +210,7 @@ export const projects = [
     title: 'Comprana',
     img: 'https://github.com/itsmmunoz/comprana/blob/main/_docs/imgs/inicio.webp?raw=true',
     description:
-      'A grocery delivery platform that provides a clean catalog, fast browsing, and a simple checkout flow for placing home-delivery orders with ease.',
+      'Plataforma de entrega de comestibles que proporciona un catálogo limpio, navegación rápida y un flujo de pago simple para realizar pedidos a domicilio con facilidad.',
     repository: 'https://github.com/itsmmunoz/comprana',
     link: 'https://youtu.be/ZDsoQOYZTCI',
   },
@@ -232,7 +219,7 @@ export const projects = [
     title: 'Moon Leaflet',
     img: 'https://github.com/itsmmunoz/moon-leaflet/blob/main/_docs/images/component.webp?raw=true',
     description:
-      'Integrates Leaflet with MoonShine to enable interactive maps, letting users pick coordinates or display multiple locations within the admin panel.',
+      'Integra Leaflet con MoonShine para habilitar mapas interactivos, permitiendo seleccionar coordenadas o mostrar múltiples ubicaciones dentro del panel de administración.',
     repository: 'https://github.com/itsmmunoz/moon-leaflet',
     link: 'https://github.com/itsmmunoz/moon-leaflet',
   },
@@ -241,7 +228,7 @@ export const projects = [
     title: 'Avatarmaker',
     img: 'https://github.com/itsmmunoz/avatarmaker/blob/main/img/screenshot.webp?raw=true',
     description:
-      'Lets users create and download custom avatars using the Dicebear API, providing a simple interface for generating unique visual identities.',
+      'Permite crear y descargar avatares personalizados usando la API de Dicebear, proporcionando una interfaz simple para generar identidades visuales únicas.',
     repository: 'https://github.com/itsmmunoz/avatarmaker',
     link: 'https://avatarsmaker.netlify.app/',
   },

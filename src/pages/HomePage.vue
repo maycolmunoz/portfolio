@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { RouterLink } from 'vue-router'
-import { IconArrowLeft } from '@tabler/icons-vue'
 import { usePageMeta } from '@/utils/usePageMeta'
 import AboutMe from '@/components/sections/AboutMe.vue'
 import Stack from '@/components/sections/Stack.vue'
@@ -9,16 +7,16 @@ import Projects from '@/components/sections/Projects.vue'
 import Education from '@/components/sections/Education.vue'
 
 usePageMeta(
-  'portfolio | mmunoz',
-  "MMunoz's Portfolio. Systems Engineering student and full-stack developer specialized in Laravel, Vue, and scalable systems.",
+  'portafolio | mmunoz',
+  'Desarrollador full-stack con Laravel y Vue. Estudiante de Ingeniería de Sistemas.',
 )
 
 const activeTab = ref('stack')
 
 const tabs = [
   { id: 'stack', label: 'Stack' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'education', label: 'Education' },
+  { id: 'projects', label: 'Proyectos' },
+  { id: 'education', label: 'Educación' },
 ]
 </script>
 
@@ -28,17 +26,6 @@ const tabs = [
   >
     <aside class="lg:col-span-4 space-y-8 lg:sticky lg:top-8 self-start">
       <AboutMe />
-
-      <RouterLink
-        to="/awesome-resources"
-        class="flex items-center justify-center gap-2 border-4 border-border p-4 bg-secondary hover:bg-accent/5 hover:border-accent transition-all duration-200 group"
-      >
-        <IconArrowLeft :size="16" class="rotate-180 group-hover:text-accent transition-colors" />
-        <span
-          class="font-display text-xs font-black uppercase tracking-wide group-hover:text-accent transition-colors"
-          >Awesome Resources</span
-        >
-      </RouterLink>
     </aside>
 
     <section class="lg:col-span-8 space-y-4">

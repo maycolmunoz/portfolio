@@ -14,12 +14,18 @@ import { contacts } from '@/utils/data'
       class="hover:scale-125 duration-300 hover:text-accent"
       :href="contacts.cv"
       target="_blank"
-      title="CV"
+      title="Currículum"
+      aria-label="Currículum"
       rel="noopener noreferrer"
     >
       <IconFileCvFilled class="size-6" />
     </a>
-    <a class="hover:scale-125 duration-300 hover:text-accent" :href="contacts.email" title="Email">
+    <a
+      class="hover:scale-125 duration-300 hover:text-accent"
+      :href="contacts.email"
+      title="Correo"
+      aria-label="Correo"
+    >
       <IconMailFilled class="size-6" />
     </a>
     <a
@@ -27,6 +33,7 @@ import { contacts } from '@/utils/data'
       :href="contacts.github"
       target="_blank"
       title="GitHub"
+      aria-label="GitHub"
       rel="noopener noreferrer"
     >
       <IconBrandGithubFilled class="size-6" />
@@ -36,6 +43,7 @@ import { contacts } from '@/utils/data'
       :href="contacts.linkedin"
       target="_blank"
       title="LinkedIn"
+      aria-label="LinkedIn"
       rel="noopener noreferrer"
     >
       <IconBrandLinkedinFilled class="size-6" />

@@ -9,11 +9,6 @@ const router = createRouter({
       name: 'home',
       component: HomePage,
     },
-    {
-      path: '/awesome-resources',
-      name: 'awesome-resources',
-      component: () => import('@/pages/AwesomeResources.vue'),
-    },
   ],
 })
 
