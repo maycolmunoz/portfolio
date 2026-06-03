@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { usePageMeta } from '@/utils/usePageMeta'
+import { RouterLink } from 'vue-router'
+import { IconArticle, IconArrowRight } from '@tabler/icons-vue'
+import { usePageMeta } from '@/composables/usePageMeta'
 import AboutMe from '@/components/sections/AboutMe.vue'
 import Stack from '@/components/sections/Stack.vue'
 import Projects from '@/components/sections/Projects.vue'
@@ -24,8 +26,25 @@ const tabs = [
   <div
     class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 px-4 xl:px-0 py-8 relative"
   >
-    <aside class="lg:col-span-4 lg:sticky lg:top-8 self-start">
+    <aside class="lg:col-span-4 lg:sticky lg:top-8 self-start space-y-6">
       <AboutMe />
+
+      <RouterLink
+        to="/blog"
+        class="bg-card rounded-[24px] shadow-sm border-2 border-dashed border-border p-5 md:p-6 flex items-center gap-4 hover:border-primary transition-colors duration-200 group"
+        aria-label="Blog"
+      >
+        <div class="bg-primary/20 rounded-full p-3 shrink-0">
+          <IconArticle class="size-6 text-primary" />
+        </div>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-display text-xl text-primary">Blog</h3>
+          <p class="font-body text-sm text-text-secondary truncate">Artículos y apuntes</p>
+        </div>
+        <IconArrowRight
+          class="size-5 text-primary shrink-0 group-hover:translate-x-1 transition-transform duration-200"
+        />
+      </RouterLink>
     </aside>
 
     <section class="lg:col-span-8 space-y-4">

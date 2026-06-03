@@ -6,7 +6,7 @@ import {
   IconFileCvFilled,
   IconMailFilled,
 } from '@tabler/icons-vue'
-import { contacts } from '@/utils/data'
+import { contacts } from '@/content/portfolio'
 </script>
 
 <template>

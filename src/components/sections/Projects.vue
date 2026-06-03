@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { projects } from '@/utils/data'
+import { projects } from '@/content/portfolio'
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { education } from '@/utils/data'
+import { education } from '@/content/portfolio'
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { categorizedStack } from '@/utils/data'
+import { categorizedStack } from '@/content/portfolio'
 </script>
 
 <template>

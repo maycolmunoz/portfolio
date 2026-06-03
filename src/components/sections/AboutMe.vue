@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import ContactBar from './ContactBar.vue'
-import { personalInfo } from '@/utils/data'
+import { personalInfo } from '@/content/portfolio'
 import defaultAvatar from '@/assets/avatarmaker.webp'
 
 const avatarSrc = ref(personalInfo.avatar)
