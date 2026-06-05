@@ -5,7 +5,13 @@ import ThemeToggle from '@/components/ThemeToggle.vue'
 
 <template>
   <div class="overflow-x-hidden">
-    <main class="min-h-screen relative">
+    <a
+      href="#main-content"
+      class="fixed -top-40 left-4 z-[10002] bg-primary text-white px-4 py-2 rounded-[16px] font-body font-bold transition-all duration-200 focus:top-4"
+    >
+      Saltar al contenido
+    </a>
+    <main id="main-content" class="min-h-screen relative">
       <RouterView />
     </main>
     <div

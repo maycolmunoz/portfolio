@@ -12,7 +12,7 @@ import { projects } from '@/content/portfolio'
     >
       <div class="space-y-4">
         <div class="relative rounded-[16px] overflow-hidden border-2 border-dashed border-border">
-          <img :src="project.img" :alt="project.title" class="w-full aspect-video object-cover" />
+          <img :src="project.img" :alt="project.title" loading="lazy" class="w-full aspect-video object-cover" />
         </div>
 
         <div class="space-y-3">

@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { useRoute, RouterLink } from 'vue-router'
-import { marked } from 'marked'
 import { IconArrowLeft } from '@tabler/icons-vue'
 import { usePageMeta } from '@/composables/usePageMeta'
 import { getPost, getPostContent } from '@/content/blog'
@@ -10,9 +9,14 @@ const route = useRoute()
 const slug = route.params.slug as string
 
 const post = computed(() => getPost(slug))
-const content = computed(() => {
+const content = ref('')
+
+onMounted(async () => {
   const md = getPostContent(slug)
-  return md ? marked(md) : ''
+  if (md) {
+    const { marked } = await import('marked')
+    content.value = marked(md) as string
+  }
 })
 
 usePageMeta(

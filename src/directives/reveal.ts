@@ -1,5 +1,7 @@
 import type { Directive } from 'vue'
 
+const observers = new WeakMap<HTMLElement, IntersectionObserver>()
+
 export const vReveal: Directive<HTMLElement, void> = {
   mounted(el) {
     el.classList.add('reveal')
@@ -14,11 +16,11 @@ export const vReveal: Directive<HTMLElement, void> = {
       { threshold: 0.1 },
     )
     observer.observe(el)
-    ;(el as any).__revealObserver = observer
+    observers.set(el, observer)
   },
   unmounted(el) {
-    const observer = (el as any).__revealObserver as IntersectionObserver | undefined
+    const observer = observers.get(el)
     observer?.disconnect()
-    delete (el as any).__revealObserver
+    observers.delete(el)
   },
 }

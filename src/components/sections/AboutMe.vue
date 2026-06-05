@@ -29,6 +29,7 @@ const handleAvatarError = () => {
             class="w-20 h-20 md:w-24 md:h-24 object-cover rounded-full border-4 border-primary/30"
             :src="avatarSrc"
             :alt="personalInfo.name + ' ' + personalInfo.lastName"
+            loading="lazy"
             @error="handleAvatarError"
           />
         </div>
