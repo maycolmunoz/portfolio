@@ -69,9 +69,9 @@ const tabs = [
       <div
         class="bg-card rounded-[24px] shadow-sm border-2 border-dashed border-border p-6 md:p-8 lg:p-10 overflow-y-auto h-[80vh]"
       >
-        <Stack v-if="activeTab === 'stack'" />
-        <Projects v-if="activeTab === 'projects'" />
-        <Education v-if="activeTab === 'education'" />
+        <Stack v-show="activeTab === 'stack'" />
+        <Projects v-show="activeTab === 'projects'" />
+        <Education v-show="activeTab === 'education'" />
       </div>
     </section>
   </div>

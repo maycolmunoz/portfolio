@@ -12,7 +12,11 @@ import ThemeToggle from '@/components/ThemeToggle.vue'
       Saltar al contenido
     </a>
     <main id="main-content" class="min-h-screen relative">
-      <RouterView />
+      <RouterView v-slot="{ Component }">
+        <KeepAlive include="home" max="2">
+          <component :is="Component" />
+        </KeepAlive>
+      </RouterView>
     </main>
     <div
       class="fixed top-4 right-[60px] z-[10001] bg-card border-2 border-dashed border-border rounded-[16px] shadow-sm w-10 h-10 flex items-center justify-center"
