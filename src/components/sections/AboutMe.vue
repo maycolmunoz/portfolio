@@ -2,11 +2,11 @@
 import { ref } from 'vue'
 import ContactBar from './ContactBar.vue'
 import { personalInfo } from '@/content/portfolio'
-import defaultAvatar from '@/assets/avatarmaker.webp'
+import { IconUserCircle } from '@tabler/icons-vue'
 
-const avatarSrc = ref(personalInfo.avatar)
+const avatarError = ref(false)
 const handleAvatarError = () => {
-  avatarSrc.value = defaultAvatar
+  avatarError.value = true
 }
 </script>
 
@@ -26,12 +26,19 @@ const handleAvatarError = () => {
       <div class="flex items-center gap-5">
         <div class="relative shrink-0">
           <img
+            v-if="!avatarError"
             class="w-20 h-20 md:w-24 md:h-24 object-cover rounded-full border-4 border-primary/30"
-            :src="avatarSrc"
+            :src="personalInfo.avatar"
             :alt="personalInfo.name + ' ' + personalInfo.lastName"
             loading="lazy"
             @error="handleAvatarError"
           />
+          <div
+            v-else
+            class="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-primary/30 bg-primary/10 flex items-center justify-center"
+          >
+            <IconUserCircle class="size-10 md:size-12 text-primary/60" />
+          </div>
         </div>
         <div class="space-y-1 flex-1">
           <h2 class="font-display text-3xl md:text-4xl">

@@ -68,7 +68,7 @@ function formatDate(dateStr: string): string {
           <div
             class="inline-flex items-center gap-2 font-body text-primary border-2 border-dashed border-primary rounded-[16px] px-4 py-1.5 hover:bg-primary/10 transition-colors duration-200 mt-2"
           >
-            Leer más
+            Leer
             <IconArrowRight class="size-4" />
           </div>
         </RouterLink>

@@ -21,6 +21,14 @@ export const blogPosts: BlogPostMeta[] = [
     excerpt:
       'Configurar múltiples cuentas de GitHub mediante SSH para separar entornos personales y profesionales desde la misma máquina.',
   },
+  {
+    slug: 'solucion-dns-sitios-no-cargan',
+    title: 'Solución DNS: sitios que no cargan',
+    date: '2026-06-08',
+    tags: ['DNS', 'Redes', 'Privacidad', 'Navegadores'],
+    excerpt:
+      'Guía para solucionar errores de resolución DNS como DNS_PROBE_POSSIBLE activando DNS-over-HTTPS en Firefox, Chrome, Chromium y Brave.',
+  },
 ]
 
 export function getPost(slug: string): BlogPostMeta | undefined {
