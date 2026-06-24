@@ -5,9 +5,9 @@ Si trabajas con una cuenta personal y otra profesional en GitHub, configurar amb
 Lo recomendable es crear una clave independiente para cada cuenta.
 
 ```bash
-ssh-keygen -t ed25519 -C "personal@email.com" -f ~/.ssh/id_ed25519_github_personal
+ssh-keygen -t ed25519 -C "personal@gmail.com" -f ~/.ssh/id_ed25519_github_personal
 
-ssh-keygen -t ed25519 -C "work@email.com" -f ~/.ssh/id_ed25519_github_work
+ssh-keygen -t ed25519 -C "work@gmail.com" -f ~/.ssh/id_ed25519_github_work
 ```
 
 ## Agregar las claves al ssh-agent
@@ -67,7 +67,7 @@ Para evitar que los commits se firmen con el correo equivocado, configura el usu
 
 ```bash
 git config user.name "Tu Nombre"
-git config user.email "tu@email.com"
+git config user.email "tu@gmail.com"
 ```
 
 ## Verificar la configuración
