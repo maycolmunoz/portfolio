@@ -29,13 +29,13 @@ export const personalInfo = {
   mainStack: 'Laravel + Vue',
   location: 'Colombia',
   bio: 'Soy estudiante de Ingeniería de Sistemas enfocado en el desarrollo full-stack. Me especializo en construir sistemas backend escalables e interfaces de usuario modernas y de alto rendimiento. Mi objetivo es transformar ideas complejas en soluciones digitales elegantes y confiables.',
-  avatar: 'https://github.com/itsmmunoz.png?size=200',
+  avatar: 'https://github.com/maycolmunoz.png?size=200',
 }
 
 export const contacts = {
   cv: 'https://docs.google.com/document/d/1jyEKvQjJeqxRvF9SVVmq6lgxzunbmIyyJ2XKnduaXlg/edit?usp=sharing',
   linkedin: 'https://www.linkedin.com/in/maycolmunoz/',
-  github: 'https://github.com/itsmmunoz',
+  github: 'https://github.com/maycolmunoz',
   email: 'mailto:macarny4@gmail.com',
   x: 'https://x.com/itsmmunoz',
 }
@@ -112,37 +112,37 @@ export const projects = [
   {
     stack: ['Vue', 'TailwindCSS', 'Laravel', 'API'],
     title: 'Aventuro',
-    img: 'https://github.com/itsmmunoz/aventuro/blob/main/_docs/front/home.webp?raw=true',
+    img: 'https://github.com/maycolmunoz/aventuro/blob/main/_docs/front/home.webp?raw=true',
     description:
       'Aplicación web orientada a viajes donde los usuarios pueden explorar paquetes, gestionar reservas y acceder a su cuenta a través de una experiencia de reserva fluida y consistente.',
-    repository: 'https://github.com/itsmmunoz/aventuro',
+    repository: 'https://github.com/maycolmunoz/aventuro',
     link: 'https://youtu.be/1F4ABE5Gtbc',
   },
   {
     stack: ['Laravel', 'Livewire', 'Alpine.js', 'TailwindCSS', 'MySQL'],
     title: 'Comprana',
-    img: 'https://github.com/itsmmunoz/comprana/blob/main/_docs/imgs/inicio.webp?raw=true',
+    img: 'https://github.com/maycolmunoz/comprana/blob/main/_docs/imgs/inicio.webp?raw=true',
     description:
       'Plataforma de entrega de comestibles que proporciona un catálogo limpio, navegación rápida y un flujo de pago simple para realizar pedidos a domicilio con facilidad.',
-    repository: 'https://github.com/itsmmunoz/comprana',
+    repository: 'https://github.com/maycolmunoz/comprana',
     link: 'https://youtu.be/ZDsoQOYZTCI',
   },
   {
     stack: ['Laravel', 'Moonshine'],
     title: 'Moon Leaflet',
-    img: 'https://github.com/itsmmunoz/moon-leaflet/blob/main/_docs/images/component.webp?raw=true',
+    img: 'https://github.com/maycolmunoz/moon-leaflet/blob/main/_docs/images/component.webp?raw=true',
     description:
       'Integra Leaflet con MoonShine para habilitar mapas interactivos, permitiendo seleccionar coordenadas o mostrar múltiples ubicaciones dentro del panel de administración.',
-    repository: 'https://github.com/itsmmunoz/moon-leaflet',
-    link: 'https://github.com/itsmmunoz/moon-leaflet',
+    repository: 'https://github.com/maycolmunoz/moon-leaflet',
+    link: 'https://github.com/maycolmunoz/moon-leaflet',
   },
   {
     stack: ['Bootstrap', 'Alpine.js', 'API'],
     title: 'Avatarmaker',
-    img: 'https://github.com/itsmmunoz/avatarmaker/blob/main/img/screenshot.webp?raw=true',
+    img: 'https://github.com/maycolmunoz/avatarmaker/blob/main/img/screenshot.webp?raw=true',
     description:
       'Permite crear y descargar avatares personalizados usando la API de Dicebear, proporcionando una interfaz simple para generar identidades visuales únicas.',
-    repository: 'https://github.com/itsmmunoz/avatarmaker',
+    repository: 'https://github.com/maycolmunoz/avatarmaker',
     link: 'https://avatarsmaker.netlify.app/',
   },
 ]
