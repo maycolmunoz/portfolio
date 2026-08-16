@@ -13,6 +13,8 @@ import {
   IconBrandReact,
   IconBrandTailwind,
   IconBrandVue,
+  IconBrandDocker,
+  IconBrandVite,
   IconTerminal,
   IconBuildingCommunity,
   IconBuildingSkyscraper,
@@ -28,7 +30,7 @@ export const personalInfo = {
   role: 'Full Stack',
   mainStack: 'Laravel + Vue',
   location: 'Colombia',
-  bio: 'Soy estudiante de Ingeniería de Sistemas enfocado en el desarrollo full-stack. Me especializo en construir sistemas backend escalables e interfaces de usuario modernas y de alto rendimiento. Mi objetivo es transformar ideas complejas en soluciones digitales elegantes y confiables.',
+  bio: 'Desarrollador full-stack enfocado en el ecosistema TALL (Tailwind, Alpine, Laravel, Livewire), con experiencia creando paneles de administración, SaaS y APIs REST. Colaboro en proyectos open source como Orion y traducciones de MoonShine, construyendo sistemas backend escalables e interfaces modernas y de alto rendimiento.',
   avatar: 'https://github.com/maycolmunoz.png?size=200',
 }
 
@@ -37,7 +39,7 @@ export const contacts = {
   linkedin: 'https://www.linkedin.com/in/maycolmunoz/',
   github: 'https://github.com/maycolmunoz',
   email: 'mailto:macarny4@gmail.com',
-  x: 'https://x.com/itsmmunoz',
+  x: 'https://x.com/mmunozlab',
 }
 
 export const categorizedStack = [
@@ -50,6 +52,7 @@ export const categorizedStack = [
       { name: 'REACT', icon: IconBrandReact },
       { name: 'MYSQL', icon: IconBrandMysql },
       { name: 'POSTGRESQL', icon: IconDatabase },
+      { name: 'TALL STACK', icon: IconBrandVue },
     ],
   },
   {
@@ -70,6 +73,8 @@ export const categorizedStack = [
       { name: 'INERTIA.JS', icon: IconBrandInertia },
       { name: 'GIT', icon: IconBrandGit },
       { name: 'FILAMENT', icon: IconLayoutDashboard },
+      { name: 'DOCKER', icon: IconBrandDocker },
+      { name: 'VITE', icon: IconBrandVite },
       { name: 'APIs', icon: IconApi },
       { name: 'LINUX', icon: IconTerminal },
     ],
@@ -85,33 +90,63 @@ export const categorizedStack = [
   },
 ]
 
+export const experience = [
+  {
+    company: 'InnovaDev Solutions',
+    location: 'Remoto',
+    role: 'Desarrollador Web',
+    period: '01/2025 - 05/2026',
+    bullets: [
+      'Desarrollo de aplicaciones web escalables en Laravel, con enfoque en rendimiento, seguridad y buenas prácticas.',
+      'Implementación de paneles administrativos personalizados usando Filament, mejorando la gestión interna y la experiencia de usuario.',
+      'Creación de interfaces interactivas con Blade, TailwindCSS y Alpine.js, aumentando la usabilidad y retención de usuarios.',
+      'Gestión del código con Git y GitHub, manteniendo un flujo de trabajo colaborativo, limpio y controlado.',
+    ],
+  },
+]
+
 export const education = [
   {
     title: 'Ingeniería de Sistemas',
+    link: 'https://www.unad.edu.co/',
     description:
       'Universidad Nacional Abierta y a Distancia (UNAD) (2022 - Presente): Estudios en curso enfocados en el diseño, desarrollo y gestión de sistemas tecnológicos.',
   },
   {
     title: 'Desarrollo Frontend con React',
+    link: 'https://www.alura.com.br/',
     description:
       'Alura (01/2023 - 06/2023): Formación intensiva en la creación de interfaces de usuario modernas e interactivas utilizando React.',
   },
   {
     title: 'Desarrollo de Aplicaciones Web',
+    link: 'https://www.utp.edu.co/',
     description:
       'Universidad Tecnológica de Pereira (UTP) (04/2022 - 12/2022): Formación especializada en la creación de aplicaciones web funcionales y escalables.',
   },
   {
     title: 'Desarrollo Fullstack',
+    link: 'https://github.com/Launch-X-Latam',
     description:
       'Launch X (02/2022 - 05/2022): Aprendizaje práctico en tecnologías como JavaScript y Vue.js, enfocado en el desarrollo de proyectos fullstack.',
   },
 ]
 
-export const projects = [
+export interface Project {
+  stack: string[]
+  title: string
+  stars: number
+  img?: string
+  description: string
+  repository: string
+  link?: string
+}
+
+export const projects: Project[] = [
   {
     stack: ['Vue', 'TailwindCSS', 'Laravel', 'API'],
     title: 'Aventuro',
+    stars: 6,
     img: 'https://github.com/maycolmunoz/aventuro/blob/main/_docs/front/home.webp?raw=true',
     description:
       'Aplicación web orientada a viajes donde los usuarios pueden explorar paquetes, gestionar reservas y acceder a su cuenta a través de una experiencia de reserva fluida y consistente.',
@@ -119,8 +154,17 @@ export const projects = [
     link: 'https://youtu.be/1F4ABE5Gtbc',
   },
   {
-    stack: ['Laravel', 'Livewire', 'Alpine.js', 'TailwindCSS', 'MySQL'],
+    stack: [
+      'Laravel 10',
+      'Livewire 3',
+      'Filament',
+      'TailwindCSS',
+      'Alpine.js',
+      'MercadoPago',
+      'MySQL',
+    ],
     title: 'Comprana',
+    stars: 1,
     img: 'https://github.com/maycolmunoz/comprana/blob/main/_docs/imgs/inicio.webp?raw=true',
     description:
       'Plataforma de entrega de comestibles que proporciona un catálogo limpio, navegación rápida y un flujo de pago simple para realizar pedidos a domicilio con facilidad.',
@@ -130,6 +174,7 @@ export const projects = [
   {
     stack: ['Laravel', 'Moonshine'],
     title: 'Moon Leaflet',
+    stars: 2,
     img: 'https://github.com/maycolmunoz/moon-leaflet/blob/main/_docs/images/component.webp?raw=true',
     description:
       'Integra Leaflet con MoonShine para habilitar mapas interactivos, permitiendo seleccionar coordenadas o mostrar múltiples ubicaciones dentro del panel de administración.',
@@ -139,10 +184,30 @@ export const projects = [
   {
     stack: ['Bootstrap', 'Alpine.js', 'API'],
     title: 'Avatarmaker',
+    stars: 0,
     img: 'https://github.com/maycolmunoz/avatarmaker/blob/main/img/screenshot.webp?raw=true',
     description:
       'Permite crear y descargar avatares personalizados usando la API de Dicebear, proporcionando una interfaz simple para generar identidades visuales únicas.',
     repository: 'https://github.com/maycolmunoz/avatarmaker',
     link: 'https://avatarsmaker.netlify.app/',
+  },
+  {
+    stack: ['Laravel 12', 'MoonShine', 'RBAC', 'Modular'],
+    title: 'Orion',
+    stars: 17,
+    img: 'https://github.com/maycolmunoz/orion/blob/main/_docs/image.png?raw=true',
+    description:
+      'Starter kit open source para construir paneles de administración en Laravel con MoonShine: arquitectura modular, RBAC integrado y configuración lista para usar.',
+    repository: 'https://github.com/maycolmunoz/orion',
+    link: 'https://github.com/maycolmunoz/orion',
+  },
+  {
+    stack: ['Laravel', 'MoonShine', 'Open Source'],
+    title: 'MoonShine Language Spanish',
+    stars: 4,
+    description:
+      'Traducción al español del panel de administración MoonShine, ampliando la accesibilidad del framework para la comunidad hispanohablante.',
+    repository: 'https://github.com/maycolmunoz/moonshine-language-spanish',
+    link: 'https://github.com/maycolmunoz/moonshine-language-spanish',
   },
 ]

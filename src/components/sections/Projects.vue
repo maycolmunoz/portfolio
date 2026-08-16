@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { IconStarFilled, IconMoonStars } from '@tabler/icons-vue'
 import { projects } from '@/content/portfolio'
 </script>
 
@@ -13,11 +14,27 @@ import { projects } from '@/content/portfolio'
       <div class="space-y-4">
         <div class="relative rounded-[16px] overflow-hidden border-2 border-dashed border-border">
           <img
+            v-if="project.img"
             :src="project.img"
             :alt="project.title"
             loading="lazy"
             class="w-full aspect-video object-cover"
           />
+          <div
+            v-else
+            class="w-full aspect-video bg-primary/10 flex items-center justify-center"
+            aria-hidden="true"
+          >
+            <IconMoonStars class="size-12 text-primary/60" />
+          </div>
+          <span
+            v-if="project.stars && project.stars > 0"
+            class="absolute top-3 right-3 flex items-center gap-1 bg-card/90 backdrop-blur px-2.5 py-1 rounded-full text-sm font-bold text-text border border-border shadow-sm"
+            :title="`${project.stars} estrellas en GitHub`"
+          >
+            <IconStarFilled class="size-4 text-tertiary" />
+            {{ project.stars }}
+          </span>
         </div>
 
         <div class="space-y-3">

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { IconArrowUpRight } from '@tabler/icons-vue'
 import { education } from '@/content/portfolio'
 </script>
 
@@ -18,6 +19,17 @@ import { education } from '@/content/portfolio'
         <p class="text-base leading-relaxed text-text-secondary max-w-2xl">
           {{ item.description }}
         </p>
+
+        <a
+          v-if="item.link"
+          :href="item.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 font-body text-primary border-2 border-dashed border-primary rounded-[16px] px-4 py-1.5 hover:bg-primary/10 transition-colors duration-200 text-sm"
+        >
+          Ver institución
+          <IconArrowUpRight class="size-4" />
+        </a>
       </div>
     </div>
   </div>

@@ -2,7 +2,7 @@
 import { RouterLink } from 'vue-router'
 import { usePageMeta } from '@/composables/usePageMeta'
 
-usePageMeta('404 | portafolio | mmunoz', 'Página no encontrada')
+usePageMeta('404 | portafolio | mmunoz', 'Página no encontrada', { path: '404' })
 </script>
 
 <template>

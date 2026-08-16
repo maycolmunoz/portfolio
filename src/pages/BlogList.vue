@@ -5,7 +5,7 @@ import { IconArticle, IconArrowRight } from '@tabler/icons-vue'
 import { usePageMeta } from '@/composables/usePageMeta'
 import { blogPosts } from '@/content/blog'
 
-usePageMeta('blog | mmunoz', 'Artículos')
+usePageMeta('blog | mmunoz', 'Artículos', { path: 'blog' })
 
 const posts = computed(() =>
   [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()),
@@ -59,7 +59,7 @@ function formatDate(dateStr: string): string {
             <span
               v-for="tag in post.tags"
               :key="tag"
-              class="font-body text-xs font-semibold text-primary bg-primary/20 px-3 py-1 rounded-full border border-primary/40"
+              class="font-body text-sm font-semibold text-primary bg-primary/20 px-3.5 py-1.5 rounded-full border border-primary/40"
             >
               {{ tag }}
             </span>
