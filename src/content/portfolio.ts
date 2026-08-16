@@ -35,7 +35,7 @@ export const personalInfo = {
 }
 
 export const contacts = {
-  cv: 'https://docs.google.com/document/d/1jyEKvQjJeqxRvF9SVVmq6lgxzunbmIyyJ2XKnduaXlg/edit?usp=sharing',
+  cv: '/cv.pdf',
   linkedin: 'https://www.linkedin.com/in/maycolmunoz/',
   github: 'https://github.com/maycolmunoz',
   email: 'mailto:macarny4@gmail.com',
