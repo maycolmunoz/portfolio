@@ -24,6 +24,9 @@ importers:
         specifier: ^4.5.0
         version: 4.6.4(vue@3.5.34(typescript@6.0.3))
     devDependencies:
+      '@flukxr/typst-cli':
+        specifier: 0.15.1-npm.0
+        version: 0.15.1-npm.0
       '@tailwindcss/vite':
         specifier: ^4.2.4
         version: 4.3.0(vite@8.0.12(@types/node@24.12.4)(jiti@2.7.0))
@@ -259,6 +262,47 @@ packages:
   '@eslint/plugin-kit@0.7.1':
     resolution: {integrity: sha512-rZAP3aVgB9ds9KOeUSL+zZ21hPmo8dh6fnIFwRQj5EAZl9gzR7wxYbYXYysAM8CTqGmUGyp2S4kUdV17MnGuWQ==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
+
+  '@flukxr/typst-cli-darwin-arm64@0.15.1-npm.0':
+    resolution: {integrity: sha512-r3IbSrcCjz7D8B9jVqE8YqhGOlQlzyOJTmVCdUBUZQkSCQpILYF7eIkOkKqLO2AlbseFLJZvlJA06VY12kerVA==}
+    engines: {node: '>=18'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@flukxr/typst-cli-darwin-x64@0.15.1-npm.0':
+    resolution: {integrity: sha512-7Gr9rsLAyGDjJup4n4sWZGwC5meEMsnVSI4X3+RU1iWYhiCCY0epg9E8Szf6WV+19XnGFCn4k3Z2CDapUR2pZw==}
+    engines: {node: '>=18'}
+    cpu: [x64]
+    os: [darwin]
+
+  '@flukxr/typst-cli-linux-arm64@0.15.1-npm.0':
+    resolution: {integrity: sha512-8PPBv1DC5QxCaIAVfSgVvCKIGfW5TciSQVQyzO+w0u8x5DXTRpqhKeqLIDLMRbgn5POh6qMWTdxG2VEiuzQ3hA==}
+    engines: {node: '>=18'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@flukxr/typst-cli-linux-x64@0.15.1-npm.0':
+    resolution: {integrity: sha512-qzXyXhF0ebelZ5UfLsmh2892rWViKdDStOGaE7ua48Z35+U/lMiC9hsZ0nN3Lp3Tm8Iv9nG4d7v6dIKtdChCiQ==}
+    engines: {node: '>=18'}
+    cpu: [x64]
+    os: [linux]
+
+  '@flukxr/typst-cli-win32-arm64@0.15.1-npm.0':
+    resolution: {integrity: sha512-g9Mnnrm2TFuCs2SeoAwBmKXJs1Epw69XO5SMDvL+gxDZw8soD10vxv/DLpNegKQgd4U6/UpwHhCUqt9K0uV7hQ==}
+    engines: {node: '>=18'}
+    cpu: [arm64]
+    os: [win32]
+
+  '@flukxr/typst-cli-win32-x64@0.15.1-npm.0':
+    resolution: {integrity: sha512-EUqMMyDNWqku3pons1bcEh7Vp9WUhfgax0CFOWYHUQJcUa3vO17zRwhribinS1FsRWeSOzjrlW+YrvEFMUtkFw==}
+    engines: {node: '>=18'}
+    cpu: [x64]
+    os: [win32]
+
+  '@flukxr/typst-cli@0.15.1-npm.0':
+    resolution: {integrity: sha512-Iu0fPIyTHVLFRna+AB7TDcrxhG5eTQCfq+jxM3OM18sIAHH6nZiZJ1qGqD23QOsikEe2yN+RxiAvEWu3UUEx8w==}
+    engines: {node: '>=18'}
+    hasBin: true
 
   '@humanfs/core@0.19.2':
     resolution: {integrity: sha512-UhXNm+CFMWcbChXywFwkmhqjs3PRCmcSa/hfBgLIb7oQ5HNb1wS0icWsGtSAUNgefHeI+eBrA8I1fxmbHsGdvA==}
@@ -1770,6 +1814,7 @@ packages:
     engines: {node: '>=v14.21.3'}
     peerDependencies:
       vite: ^6.0.0 || ^7.0.0 || ^8.0.0
+      vue: '*'
 
   vite-plugin-vue-inspector@6.0.0:
     resolution: {integrity: sha512-OpyITJLgZNibxlrik1EmRtvXHDjLRxNPsWkGFTERZs2LgMEdG4W0WoFt5GIgp3a3jRou+eJR8U1zOBk/XQgEbw==}
@@ -2124,6 +2169,33 @@ snapshots:
     dependencies:
       '@eslint/core': 1.2.1
       levn: 0.4.1
+
+  '@flukxr/typst-cli-darwin-arm64@0.15.1-npm.0':
+    optional: true
+
+  '@flukxr/typst-cli-darwin-x64@0.15.1-npm.0':
+    optional: true
+
+  '@flukxr/typst-cli-linux-arm64@0.15.1-npm.0':
+    optional: true
+
+  '@flukxr/typst-cli-linux-x64@0.15.1-npm.0':
+    optional: true
+
+  '@flukxr/typst-cli-win32-arm64@0.15.1-npm.0':
+    optional: true
+
+  '@flukxr/typst-cli-win32-x64@0.15.1-npm.0':
+    optional: true
+
+  '@flukxr/typst-cli@0.15.1-npm.0':
+    optionalDependencies:
+      '@flukxr/typst-cli-darwin-arm64': 0.15.1-npm.0
+      '@flukxr/typst-cli-darwin-x64': 0.15.1-npm.0
+      '@flukxr/typst-cli-linux-arm64': 0.15.1-npm.0
+      '@flukxr/typst-cli-linux-x64': 0.15.1-npm.0
+      '@flukxr/typst-cli-win32-arm64': 0.15.1-npm.0
+      '@flukxr/typst-cli-win32-x64': 0.15.1-npm.0
 
   '@humanfs/core@0.19.2':
     dependencies:
@@ -3471,10 +3543,10 @@ snapshots:
       vite: 8.0.12(@types/node@24.12.4)(jiti@2.7.0)
       vite-plugin-inspect: 11.3.3(vite@8.0.12(@types/node@24.12.4)(jiti@2.7.0))
       vite-plugin-vue-inspector: 6.0.0(vite@8.0.12(@types/node@24.12.4)(jiti@2.7.0))
+      vue: 3.5.34(typescript@6.0.3)
     transitivePeerDependencies:
       - '@nuxt/kit'
       - supports-color
-      - vue
 
   vite-plugin-vue-inspector@6.0.0(vite@8.0.12(@types/node@24.12.4)(jiti@2.7.0)):
     dependencies:

@@ -10,6 +10,7 @@ Vue 3 + Vite + TypeScript portfolio SPA. Deployed on Netlify.
 - `pnpm run lint` — `eslint . --fix --cache`; **auto-fixes** files, and includes oxlint correctness rules merged via `eslint-plugin-oxlint` (see `.oxlintrc.json`)
 - `pnpm run build` — type-check then `vite build` (already covers the check)
 - `pnpm run format` — prettier on `src/` only
+- `pnpm run cv` — regenera `public/cv.pdf` desde `_docs/cv.typ` (Typst vía `@flukxr/typst-cli`)
 - No test framework is installed. Verify with type-check + lint.
 
 ## Architecture

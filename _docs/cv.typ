@@ -7,7 +7,7 @@
 #align(center)[
   #text(size: 20pt, weight: "bold", tracking: 0.5pt)[MAYCOL MUÑOZ]
   #v(2pt)
-  #text(size: 11pt, weight: "bold")[Full Stack Developer · Laravel + Vue]
+  #text(size: 11pt, weight: "bold")[Full Stack Developer · Laravel]
   #v(3pt)
   #text(size: 9pt)[
     #link("mailto:macarny4@gmail.com")[#text("macarny4@gmail.com")] #h(.5em) · #h(.5em)
