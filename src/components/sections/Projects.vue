@@ -1,35 +1,30 @@
 <script setup lang="ts">
 import { IconArrowUpRight, IconStarFilled, IconMoonStars } from '@tabler/icons-vue'
 import { projects } from '@/content/portfolio'
-import { stickers } from '@/lib/stickers'
 </script>
 
 <template>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <div
-      v-for="project in projects"
-      :key="project.title"
-      class="card p-5 hover:-translate-y-0.5 transition-transform duration-200 group"
-    >
+    <div v-for="project in projects" :key="project.title" class="card p-5">
       <div class="space-y-4">
-        <div class="relative rounded-card overflow-hidden border border-carbon">
+        <div class="relative rounded-card overflow-hidden border-2 border-carbon">
           <img
             v-if="project.img"
             :src="project.img"
             :alt="project.title"
             loading="lazy"
-            class="w-full aspect-video object-cover"
+            class="w-full aspect-video object-cover grayscale contrast-110"
           />
           <div
             v-else
-            class="w-full aspect-video bg-sky-wash flex items-center justify-center"
+            class="w-full aspect-video bg-surface-muted flex items-center justify-center text-carbon"
             aria-hidden="true"
           >
             <IconMoonStars class="size-12" />
           </div>
           <span
             v-if="project.stars && project.stars > 0"
-            class="sticker rounded-full bg-sunburst absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 label"
+            class="sticker rounded-full bg-carbon text-paper-white absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 label font-mono"
             :title="`${project.stars} estrellas en GitHub`"
           >
             <IconStarFilled class="size-3.5" />
@@ -42,16 +37,15 @@ import { stickers } from '@/lib/stickers'
 
           <div class="flex flex-wrap gap-2">
             <span
-              v-for="(tech, techIndex) in project.stack"
+              v-for="tech in project.stack"
               :key="tech"
-              class="pill"
-              :class="stickers[techIndex % stickers.length]"
+              class="pill bg-surface-muted text-carbon text-xs"
             >
               {{ tech }}
             </span>
           </div>
 
-          <p class="text-base leading-relaxed text-carbon/70">
+          <p class="text-base leading-relaxed text-carbon/75">
             {{ project.description }}
           </p>
 
@@ -61,20 +55,20 @@ import { stickers } from '@/lib/stickers'
               :href="project.repository"
               target="_blank"
               rel="noopener noreferrer"
-              class="pill"
+              class="pill hover:bg-carbon hover:text-paper-white"
             >
               Código
-              <IconArrowUpRight class="size-4 group-hover:translate-x-0.5 transition-transform" />
+              <IconArrowUpRight class="size-4" />
             </a>
             <a
               v-if="project.link"
               :href="project.link"
               target="_blank"
               rel="noopener noreferrer"
-              class="pill"
+              class="pill hover:bg-carbon hover:text-paper-white"
             >
               Demo
-              <IconArrowUpRight class="size-4 group-hover:translate-x-0.5 transition-transform" />
+              <IconArrowUpRight class="size-4" />
             </a>
           </div>
         </div>

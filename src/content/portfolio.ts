@@ -28,7 +28,7 @@ export const personalInfo = {
   lastName: 'Muñoz',
   role: 'Full Stack',
   mainStack: 'Laravel + Vue',
-  bio: 'Desarrollador full-stack enfocado en el ecosistema TALL (Tailwind, Alpine, Laravel, Livewire), con experiencia creando paneles de administración, SaaS y APIs REST. Colaboro en proyectos open source como Orion y traducciones de MoonShine, construyendo sistemas backend escalables e interfaces modernas y de alto rendimiento.',
+  bio: 'Desarrollador full-stack enfocado en el ecosistema TALL (Tailwind, Alpine, Laravel, Livewire), con experiencia creando paneles de administración, SaaS y APIs REST sobre sistemas backend escalables e interfaces modernas de alto rendimiento.',
   avatar: 'https://github.com/maycolmunoz.png?size=200',
 }
 

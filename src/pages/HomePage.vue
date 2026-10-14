@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
-import { IconArticle, IconArrowRight } from '@tabler/icons-vue'
+import { IconArticle, IconArrowRight, IconArrowUpRight, IconFileCvFilled } from '@tabler/icons-vue'
 import { usePageMeta } from '@/composables/usePageMeta'
+import { contacts } from '@/content/portfolio'
 import AboutMe from '@/components/sections/AboutMe.vue'
 import Stack from '@/components/sections/Stack.vue'
 import Projects from '@/components/sections/Projects.vue'
@@ -38,27 +39,44 @@ function onTabKeydown(event: KeyboardEvent, index: number) {
 
 <template>
   <div
-    class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 px-4 sm:px-6 lg:px-8 py-8 relative"
+    class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 px-4 sm:px-6 lg:px-8 py-8 relative"
   >
     <aside class="lg:col-span-4 lg:sticky lg:top-8 self-start space-y-6">
       <AboutMe />
 
-      <RouterLink
-        to="/blog"
-        class="card p-5 md:p-6 flex items-center gap-4 hover:-translate-y-0.5 transition-transform duration-200 group"
-        aria-label="Blog"
-      >
-        <span class="sticker bg-mint-pop size-12 grid place-items-center shrink-0 -rotate-6">
-          <IconArticle class="size-6" />
-        </span>
-        <div class="flex-1 min-w-0">
-          <h3 class="font-display text-2xl">Blog</h3>
-          <p class="text-sm text-carbon/70 truncate">Artículos y apuntes</p>
-        </div>
-        <IconArrowRight
-          class="size-5 shrink-0 group-hover:translate-x-1 transition-transform duration-200"
-        />
-      </RouterLink>
+      <div class="flex flex-col gap-4">
+        <a
+          :href="contacts.cv"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card p-5 md:p-6 flex items-center gap-4 hover:bg-surface-muted"
+          aria-label="Currículum"
+        >
+          <span class="sticker bg-carbon text-paper-white size-12 grid place-items-center shrink-0">
+            <IconFileCvFilled class="size-6" />
+          </span>
+          <div class="min-w-0 flex-1">
+            <h3 class="font-display text-2xl">Currículum</h3>
+            <p class="text-sm text-carbon/70 truncate">PDF · una página</p>
+          </div>
+          <IconArrowUpRight class="size-5 shrink-0" />
+        </a>
+
+        <RouterLink
+          to="/blog"
+          class="card p-5 md:p-6 flex items-center gap-4 hover:bg-surface-muted"
+          aria-label="Blog"
+        >
+          <span class="sticker bg-carbon text-paper-white size-12 grid place-items-center shrink-0">
+            <IconArticle class="size-6" />
+          </span>
+          <div class="min-w-0 flex-1">
+            <h3 class="font-display text-2xl">Blog</h3>
+            <p class="text-sm text-carbon/70 truncate">Artículos y apuntes</p>
+          </div>
+          <IconArrowRight class="size-5 shrink-0" />
+        </RouterLink>
+      </div>
     </aside>
 
     <section class="lg:col-span-8 space-y-4">
@@ -74,7 +92,11 @@ function onTabKeydown(event: KeyboardEvent, index: number) {
           @click="activeTab = tab.id"
           @keydown="onTabKeydown($event, index)"
           class="btn"
-          :class="activeTab === tab.id ? '' : 'bg-paper-white text-carbon hover:bg-soft-mist'"
+          :class="
+            activeTab === tab.id
+              ? ''
+              : 'bg-paper-white text-carbon hover:bg-carbon hover:text-paper-white'
+          "
         >
           {{ tab.label }}
         </button>

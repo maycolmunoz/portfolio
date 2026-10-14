@@ -3,14 +3,11 @@ import {
   IconBrandGithubFilled,
   IconBrandLinkedinFilled,
   IconBrandXFilled,
-  IconFileCvFilled,
   IconMailFilled,
 } from '@tabler/icons-vue'
 import { contacts } from '@/content/portfolio'
-import { stickers } from '@/lib/stickers'
 
 const links = [
-  { href: contacts.cv, icon: IconFileCvFilled, title: 'Currículum' },
   { href: contacts.email, icon: IconMailFilled, title: 'Correo' },
   { href: contacts.github, icon: IconBrandGithubFilled, title: 'GitHub' },
   { href: contacts.linkedin, icon: IconBrandLinkedinFilled, title: 'LinkedIn' },
@@ -19,12 +16,11 @@ const links = [
 </script>
 
 <template>
-  <nav class="flex flex-wrap items-center gap-3">
+  <nav class="flex flex-wrap items-center justify-between gap-3">
     <a
-      v-for="(link, index) in links"
+      v-for="link in links"
       :key="link.title"
-      class="sticker rounded-full size-11 grid place-items-center hover:-rotate-6 transition-transform duration-200"
-      :class="stickers[index % stickers.length]"
+      class="sticker rounded-full size-11 grid place-items-center bg-paper-white text-carbon hover:bg-carbon hover:text-paper-white"
       :href="link.href"
       :target="link.href.startsWith('http') ? '_blank' : undefined"
       :title="link.title"

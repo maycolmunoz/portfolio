@@ -4,7 +4,6 @@ import { useRoute, RouterLink } from 'vue-router'
 import { IconArrowLeft, IconArrowRight } from '@tabler/icons-vue'
 import { usePageMeta } from '@/composables/usePageMeta'
 import { getPost, getPostContent, blogPosts } from '@/content/blog'
-import { stickers } from '@/lib/stickers'
 
 const route = useRoute()
 const slug = route.params.slug as string
@@ -43,65 +42,79 @@ function formatDate(dateStr: string): string {
 </script>
 
 <template>
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <RouterLink to="/blog" class="inline-flex items-center gap-2 mb-8 pill">
-      <IconArrowLeft class="size-4" />
-      Volver al blog
-    </RouterLink>
-
-    <template v-if="post">
-      <article>
-        <header class="mb-8 pb-6 border-b border-carbon">
-          <h1 class="font-display uppercase text-4xl md:text-5xl leading-[0.85] mb-4">
-            {{ post.title }}
-          </h1>
-
-          <p class="text-sm text-carbon/60 mb-3">{{ formatDate(post.date) }}</p>
-
-          <div class="flex flex-wrap gap-2">
-            <span
-              v-for="(tag, index) in post.tags"
-              :key="tag"
-              class="pill"
-              :class="stickers[index % stickers.length]"
-            >
-              {{ tag }}
-            </span>
-          </div>
-        </header>
-
-        <div class="blog-content" v-html="content"></div>
-      </article>
-
-      <nav class="mt-12 pt-6 border-t border-carbon flex flex-col gap-4">
-        <div class="flex items-center justify-between gap-4">
-          <RouterLink v-if="prevPost" :to="`/blog/${prevPost.slug}`" class="pill min-w-0">
-            <IconArrowLeft class="size-4 shrink-0" />
-            <span class="truncate">{{ prevPost.title }}</span>
-          </RouterLink>
-          <RouterLink v-if="nextPost" :to="`/blog/${nextPost.slug}`" class="pill min-w-0 ml-auto">
-            <span class="truncate">{{ nextPost.title }}</span>
-            <IconArrowRight class="size-4 shrink-0" />
-          </RouterLink>
-        </div>
-
-        <div class="flex items-center justify-between gap-4 border-t border-carbon pt-4">
-          <RouterLink to="/blog" class="btn">
-            <IconArrowLeft class="size-4" />
-            Todos los artículos
-          </RouterLink>
-
-          <RouterLink to="/" class="pill">Portfolio</RouterLink>
-        </div>
-      </nav>
-    </template>
-
-    <div v-else class="text-center py-20">
-      <p class="font-display text-3xl mb-6">Artículo no encontrado</p>
-      <RouterLink to="/blog" class="btn">
+  <div class="bg-console-canvas py-10 min-h-screen">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <RouterLink
+        to="/blog"
+        class="inline-flex items-center gap-2 mb-8 pill hover:bg-carbon hover:text-paper-white"
+      >
         <IconArrowLeft class="size-4" />
         Volver al blog
       </RouterLink>
+
+      <template v-if="post">
+        <article class="card p-6 md:p-10">
+          <header class="mb-8 pb-6 border-b-2 border-carbon">
+            <h1 class="font-display uppercase text-4xl md:text-5xl leading-[0.85] mb-4">
+              {{ post.title }}
+            </h1>
+
+            <p class="text-sm text-carbon/60 mb-3">{{ formatDate(post.date) }}</p>
+
+            <div class="flex flex-wrap gap-2">
+              <span
+                v-for="tag in post.tags"
+                :key="tag"
+                class="pill bg-surface-muted text-carbon text-xs"
+              >
+                {{ tag }}
+              </span>
+            </div>
+          </header>
+
+          <div class="blog-content" v-html="content"></div>
+        </article>
+
+        <nav class="mt-12 pt-6 border-t-2 border-carbon flex flex-col gap-4">
+          <div class="flex items-center justify-between gap-4">
+            <RouterLink
+              v-if="prevPost"
+              :to="`/blog/${prevPost.slug}`"
+              class="pill min-w-0 hover:bg-carbon hover:text-paper-white"
+            >
+              <IconArrowLeft class="size-4 shrink-0" />
+              <span class="truncate">{{ prevPost.title }}</span>
+            </RouterLink>
+            <RouterLink
+              v-if="nextPost"
+              :to="`/blog/${nextPost.slug}`"
+              class="pill min-w-0 ml-auto hover:bg-carbon hover:text-paper-white"
+            >
+              <span class="truncate">{{ nextPost.title }}</span>
+              <IconArrowRight class="size-4 shrink-0" />
+            </RouterLink>
+          </div>
+
+          <div class="flex items-center justify-between gap-4 border-t-2 border-carbon pt-4">
+            <RouterLink to="/blog" class="btn">
+              <IconArrowLeft class="size-4" />
+              Todos los artículos
+            </RouterLink>
+
+            <RouterLink to="/" class="pill hover:bg-carbon hover:text-paper-white"
+              >Portfolio</RouterLink
+            >
+          </div>
+        </nav>
+      </template>
+
+      <div v-else class="text-center py-20">
+        <p class="font-display text-3xl mb-6">Artículo no encontrado</p>
+        <RouterLink to="/blog" class="btn">
+          <IconArrowLeft class="size-4" />
+          Volver al blog
+        </RouterLink>
+      </div>
     </div>
   </div>
 </template>
