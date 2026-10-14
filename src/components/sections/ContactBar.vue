@@ -7,57 +7,31 @@ import {
   IconMailFilled,
 } from '@tabler/icons-vue'
 import { contacts } from '@/content/portfolio'
+import { stickers } from '@/lib/stickers'
+
+const links = [
+  { href: contacts.cv, icon: IconFileCvFilled, title: 'Currículum' },
+  { href: contacts.email, icon: IconMailFilled, title: 'Correo' },
+  { href: contacts.github, icon: IconBrandGithubFilled, title: 'GitHub' },
+  { href: contacts.linkedin, icon: IconBrandLinkedinFilled, title: 'LinkedIn' },
+  { href: contacts.x, icon: IconBrandXFilled, title: 'X' },
+]
 </script>
 
 <template>
-  <nav class="flex flex-wrap items-center justify-between gap-6 py-1">
+  <nav class="flex flex-wrap items-center gap-3">
     <a
-      class="text-text-secondary hover:text-primary transition-colors duration-200"
-      :href="contacts.cv"
-      target="_blank"
-      title="Currículum"
-      aria-label="Currículum"
+      v-for="(link, index) in links"
+      :key="link.title"
+      class="sticker rounded-full size-11 grid place-items-center hover:-rotate-6 transition-transform duration-200"
+      :class="stickers[index % stickers.length]"
+      :href="link.href"
+      :target="link.href.startsWith('http') ? '_blank' : undefined"
+      :title="link.title"
+      :aria-label="link.title"
       rel="noopener noreferrer"
     >
-      <IconFileCvFilled class="size-6" />
-    </a>
-    <a
-      class="text-text-secondary hover:text-primary transition-colors duration-200"
-      :href="contacts.email"
-      title="Correo"
-      aria-label="Correo"
-    >
-      <IconMailFilled class="size-6" />
-    </a>
-    <a
-      class="text-text-secondary hover:text-primary transition-colors duration-200"
-      :href="contacts.github"
-      target="_blank"
-      title="GitHub"
-      aria-label="GitHub"
-      rel="noopener noreferrer"
-    >
-      <IconBrandGithubFilled class="size-6" />
-    </a>
-    <a
-      class="text-text-secondary hover:text-primary transition-colors duration-200"
-      :href="contacts.linkedin"
-      target="_blank"
-      title="LinkedIn"
-      aria-label="LinkedIn"
-      rel="noopener noreferrer"
-    >
-      <IconBrandLinkedinFilled class="size-6" />
-    </a>
-    <a
-      class="text-text-secondary hover:text-primary transition-colors duration-200"
-      :href="contacts.x"
-      target="_blank"
-      title="X"
-      aria-label="X"
-      rel="noopener noreferrer"
-    >
-      <IconBrandXFilled class="size-6" />
+      <component :is="link.icon" class="size-5" />
     </a>
   </nav>
 </template>

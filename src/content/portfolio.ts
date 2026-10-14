@@ -171,25 +171,7 @@ export const projects: Project[] = [
     link: 'https://github.com/maycolmunoz/moonshine-language-spanish',
   },
   {
-    stack: ['Laravel', 'Moonshine'],
-    title: 'Moon Leaflet',
-    stars: 2,
-    img: 'https://github.com/maycolmunoz/moon-leaflet/blob/main/_docs/images/component.webp?raw=true',
-    description:
-      'Integra Leaflet con MoonShine para habilitar mapas interactivos, permitiendo seleccionar coordenadas o mostrar múltiples ubicaciones dentro del panel de administración.',
-    repository: 'https://github.com/maycolmunoz/moon-leaflet',
-    link: 'https://github.com/maycolmunoz/moon-leaflet',
-  },
-  {
-    stack: [
-      'Laravel 10',
-      'Livewire 3',
-      'Filament',
-      'TailwindCSS',
-      'Alpine.js',
-      'MercadoPago',
-      'MySQL',
-    ],
+    stack: ['Laravel 10', 'Livewire 3', 'Filament', 'MercadoPago'],
     title: 'Comprana',
     stars: 1,
     img: 'https://github.com/maycolmunoz/comprana/blob/main/_docs/imgs/inicio.webp?raw=true',

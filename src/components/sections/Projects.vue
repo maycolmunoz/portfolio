@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { IconStarFilled, IconMoonStars } from '@tabler/icons-vue'
+import { IconArrowUpRight, IconStarFilled, IconMoonStars } from '@tabler/icons-vue'
 import { projects } from '@/content/portfolio'
+import { stickers } from '@/lib/stickers'
 </script>
 
 <template>
@@ -8,11 +9,10 @@ import { projects } from '@/content/portfolio'
     <div
       v-for="project in projects"
       :key="project.title"
-      v-reveal
-      class="bg-card rounded-[24px] shadow-sm border-2 border-dashed border-border p-5 hover:border-primary hover:shadow-md transition-all duration-200 group"
+      class="card p-5 hover:-translate-y-0.5 transition-transform duration-200 group"
     >
       <div class="space-y-4">
-        <div class="relative rounded-[16px] overflow-hidden border-2 border-dashed border-border">
+        <div class="relative rounded-card overflow-hidden border border-carbon">
           <img
             v-if="project.img"
             :src="project.img"
@@ -22,56 +22,59 @@ import { projects } from '@/content/portfolio'
           />
           <div
             v-else
-            class="w-full aspect-video bg-primary/10 flex items-center justify-center"
+            class="w-full aspect-video bg-sky-wash flex items-center justify-center"
             aria-hidden="true"
           >
-            <IconMoonStars class="size-12 text-primary/60" />
+            <IconMoonStars class="size-12" />
           </div>
           <span
             v-if="project.stars && project.stars > 0"
-            class="absolute top-3 right-3 flex items-center gap-1 bg-card/90 backdrop-blur px-2.5 py-1 rounded-full text-sm font-bold text-text border border-border shadow-sm"
+            class="sticker rounded-full bg-sunburst absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 label"
             :title="`${project.stars} estrellas en GitHub`"
           >
-            <IconStarFilled class="size-4 text-tertiary" />
+            <IconStarFilled class="size-3.5" />
             {{ project.stars }}
           </span>
         </div>
 
         <div class="space-y-3">
-          <h3 class="font-display text-xl md:text-2xl">
-            {{ project.title }}
-          </h3>
+          <h3 class="font-display text-2xl">{{ project.title }}</h3>
 
           <div class="flex flex-wrap gap-2">
             <span
-              v-for="tech in project.stack"
+              v-for="(tech, techIndex) in project.stack"
               :key="tech"
-              class="bg-tag-bg text-text-secondary rounded-full px-3 py-0.5 text-sm"
+              class="pill"
+              :class="stickers[techIndex % stickers.length]"
             >
               {{ tech }}
             </span>
           </div>
 
-          <p class="text-base leading-relaxed text-text-secondary">
+          <p class="text-base leading-relaxed text-carbon/70">
             {{ project.description }}
           </p>
 
-          <div class="flex gap-6 pt-2">
+          <div class="flex flex-wrap gap-2 pt-1">
             <a
               v-if="project.repository"
               :href="project.repository"
               target="_blank"
-              class="text-primary font-semibold hover:text-primary-hover transition-colors duration-200"
+              rel="noopener noreferrer"
+              class="pill"
             >
-              CÓDIGO
+              Código
+              <IconArrowUpRight class="size-4 group-hover:translate-x-0.5 transition-transform" />
             </a>
             <a
               v-if="project.link"
               :href="project.link"
               target="_blank"
-              class="text-primary font-semibold hover:text-primary-hover transition-colors duration-200"
+              rel="noopener noreferrer"
+              class="pill"
             >
-              DEMO
+              Demo
+              <IconArrowUpRight class="size-4 group-hover:translate-x-0.5 transition-transform" />
             </a>
           </div>
         </div>

@@ -1,27 +1,35 @@
 <script setup lang="ts">
 import { categorizedStack } from '@/content/portfolio'
+import { stickers } from '@/lib/stickers'
 </script>
 
 <template>
-  <div class="p-5 md:p-6 bg-card rounded-[24px] shadow-sm border-2 border-dashed border-border">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-      <div v-for="category in categorizedStack" :key="category.title" v-reveal class="space-y-3">
-        <h3
-          class="font-display text-xl md:text-2xl border-b border-dashed border-border pb-2 flex items-center gap-3"
-        >
-          <span class="w-4 h-4 bg-primary rounded shrink-0" />
-          {{ category.title }}
-        </h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+    <div
+      v-for="(category, categoryIndex) in categorizedStack"
+      :key="category.title"
+      class="space-y-4"
+    >
+      <h3
+        class="font-display text-2xl md:text-3xl border-b border-carbon pb-2 flex items-center gap-3"
+      >
+        <span
+          class="sticker size-7 grid place-items-center shrink-0 rotate-[-6deg]"
+          :class="stickers[categoryIndex % stickers.length]"
+          aria-hidden="true"
+        />
+        {{ category.title }}
+      </h3>
 
-        <div class="flex flex-wrap gap-2">
-          <div
-            v-for="tech in category.items"
-            :key="tech.name"
-            class="flex items-center gap-2 px-3.5 py-1.5 bg-primary/20 text-primary border border-primary/40 rounded-full text-sm transition-colors duration-200"
-          >
-            <component :is="tech.icon" class="size-4" stroke-width="2" />
-            <span>{{ tech.name }}</span>
-          </div>
+      <div class="flex flex-wrap gap-2">
+        <div
+          v-for="(tech, index) in category.items"
+          :key="tech.name"
+          class="pill"
+          :class="stickers[index % stickers.length]"
+        >
+          <component :is="tech.icon" class="size-4" stroke-width="2" />
+          <span>{{ tech.name }}</span>
         </div>
       </div>
     </div>

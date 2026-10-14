@@ -38,51 +38,43 @@ function onTabKeydown(event: KeyboardEvent, index: number) {
 
 <template>
   <div
-    class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 px-4 xl:px-0 py-8 relative"
+    class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 px-4 sm:px-6 lg:px-8 py-8 relative"
   >
     <aside class="lg:col-span-4 lg:sticky lg:top-8 self-start space-y-6">
       <AboutMe />
 
       <RouterLink
         to="/blog"
-        class="bg-card rounded-[24px] shadow-sm border-2 border-dashed border-border p-5 md:p-6 flex items-center gap-4 hover:border-primary transition-colors duration-200 group"
+        class="card p-5 md:p-6 flex items-center gap-4 hover:-translate-y-0.5 transition-transform duration-200 group"
         aria-label="Blog"
       >
-        <div class="bg-primary/20 rounded-full p-3 shrink-0">
-          <IconArticle class="size-6 text-primary" />
-        </div>
+        <span class="sticker bg-mint-pop size-12 grid place-items-center shrink-0 -rotate-6">
+          <IconArticle class="size-6" />
+        </span>
         <div class="flex-1 min-w-0">
-          <h3 class="font-display text-xl text-primary">Blog</h3>
-          <p class="font-body text-sm text-text-secondary truncate">Artículos y apuntes</p>
+          <h3 class="font-display text-2xl">Blog</h3>
+          <p class="text-sm text-carbon/70 truncate">Artículos y apuntes</p>
         </div>
         <IconArrowRight
-          class="size-5 text-primary shrink-0 group-hover:translate-x-1 transition-transform duration-200"
+          class="size-5 shrink-0 group-hover:translate-x-1 transition-transform duration-200"
         />
       </RouterLink>
     </aside>
 
     <section class="lg:col-span-8 space-y-4">
-      <div
-        role="tablist"
-        aria-label="Secciones del portafolio"
-        class="bg-card rounded-[24px] shadow-sm border-2 border-dashed border-border flex overflow-hidden"
-      >
+      <div role="tablist" aria-label="Secciones del portafolio" class="flex flex-wrap gap-2">
         <button
           v-for="(tab, index) in tabs"
-          :key="tab.id"
           :id="`tab-${tab.id}`"
+          :key="tab.id"
           role="tab"
           :aria-selected="activeTab === tab.id"
           :aria-controls="`panel-${tab.id}`"
           :tabindex="activeTab === tab.id ? 0 : -1"
           @click="activeTab = tab.id"
           @keydown="onTabKeydown($event, index)"
-          class="flex-1 px-4 md:px-5 py-3 md:py-3.5 text-sm md:text-base font-bold border-r border-dashed border-border last:border-r-0 transition-colors duration-200 cursor-pointer"
-          :class="
-            activeTab === tab.id
-              ? 'bg-primary text-white'
-              : 'bg-transparent hover:bg-primary/10 hover:text-primary'
-          "
+          class="btn"
+          :class="activeTab === tab.id ? '' : 'bg-paper-white text-carbon hover:bg-soft-mist'"
         >
           {{ tab.label }}
         </button>
@@ -92,7 +84,7 @@ function onTabKeydown(event: KeyboardEvent, index: number) {
         :id="`panel-${activeTab}`"
         role="tabpanel"
         :aria-labelledby="`tab-${activeTab}`"
-        class="bg-card rounded-[24px] shadow-sm border-2 border-dashed border-border p-6 md:p-8 lg:p-10 overflow-y-auto h-[80vh]"
+        class="card rounded-card-lg p-6 md:p-10 overflow-y-auto h-[70vh] min-h-[420px]"
       >
         <Stack v-show="activeTab === 'stack'" />
         <Experience v-show="activeTab === 'experience'" />
