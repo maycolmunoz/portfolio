@@ -13,7 +13,7 @@ import { projects } from '@/content/portfolio'
             :src="project.img"
             :alt="project.title"
             loading="lazy"
-            class="w-full aspect-video object-cover grayscale contrast-110"
+            class="w-full aspect-video object-cover"
           />
           <div
             v-else

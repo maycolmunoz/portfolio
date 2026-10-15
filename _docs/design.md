@@ -1,7 +1,7 @@
 # Neo-Brutalist Black & White — Style Reference
 > high-contrast monochrome architecture, hard drop shadows, zero frivolous animations
 
-**Theme:** light (pure black & white monochrome)
+**Theme:** light & dark (pure black & white monochrome, token-inverted)
 
 Source measurements are normalized; roles and recommendations are interpreted.
 
@@ -17,6 +17,23 @@ This design system strips away all candy colors, playful tilts, and bouncy anima
 | Surface Muted | `#dcdcdc` | `--color-surface-muted` | Secondary trims, table headers, blockquote background, tag pills |
 | Concrete Gray | `#d4d4d4` | `--color-concrete-gray` | Dividers, neutral accents |
 | Soft Mist | `#f0f0f0` | `--color-soft-mist` | Subtle hover surfaces |
+| System Slate | `#52525b` | `--color-system-slate` | Muted secondary text, metadata |
+
+### Dark Mode
+
+Toggled by adding/removing `.dark` on `<html>` (see `src/composables/useTheme.ts`; anti-FOUC inline script in `index.html`). Rather than per-component `dark:` variants, the theme overrides the same `--color-*` tokens under `.dark` — every utility (`bg-paper-white`, `text-carbon`, …) compiles to `var(--color-*)`, so the whole site inverts automatically.
+
+| Token | Light | Dark |
+|-------|-------|------|
+| `--color-carbon` (ink) | `#000000` | `#ffffff` |
+| `--color-paper-white` (surface) | `#ffffff` | `#171717` |
+| `--color-console-canvas` (ground) | `#e5e5e5` | `#0a0a0a` |
+| `--color-surface-muted` | `#dcdcdc` | `#262626` |
+| `--color-concrete-gray` | `#d4d4d4` | `#333333` |
+| `--color-soft-mist` | `#f0f0f0` | `#1f1f1f` |
+| `--color-system-slate` | `#52525b` | `#a1a1aa` |
+
+The `.dark` block is unlayered, so it wins over `@layer theme`'s `:root`. Code blocks (`.blog-content pre`) stay black/white in both themes.
 
 ## Tokens — Typography
 
@@ -61,6 +78,9 @@ High-contrast pill with `2px solid #000000` outline. Normal state: #ffffff backg
 ### Primary CTA Button (.btn)
 Solid black (#000000) background, white (#ffffff) text, `2px solid #000000` outline, and `3px 3px 0px 0px #000000` hard shadow. On click (`:active`), shifts 2px down and right to give tactile physical switch feedback.
 
+### Theme Toggle (`ThemeToggle.vue`)
+Icon-only circular `.btn` (40px, `p-0`), fixed top-right below the Google Translate widget. Sun in light mode, moon in dark; `aria-label` and `title` announce the target theme.
+
 ### Technical Badge (.sticker)
 Orthogonal (0deg rotation), sharp `2px solid #000000` border, #000000 fill with #ffffff text (or #ededed fill). No tilt, no wobble.
 
@@ -92,6 +112,7 @@ Pure black (#000000) terminal window with white (#ffffff) monospace font, bounde
   --color-surface-muted: #dcdcdc;
   --color-concrete-gray: #d4d4d4;
   --color-soft-mist: #f0f0f0;
+  --color-system-slate: #52525b;
 
   --font-display: 'Anton', 'Arial Narrow', sans-serif;
   --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
@@ -99,5 +120,16 @@ Pure black (#000000) terminal window with white (#ffffff) monospace font, bounde
 
   --radius-card: 16px;
   --radius-card-lg: 24px;
+}
+
+.dark {
+  color-scheme: dark;
+  --color-carbon: #ffffff;
+  --color-paper-white: #171717;
+  --color-console-canvas: #0a0a0a;
+  --color-surface-muted: #262626;
+  --color-concrete-gray: #333333;
+  --color-soft-mist: #1f1f1f;
+  --color-system-slate: #a1a1aa;
 }
 ```
