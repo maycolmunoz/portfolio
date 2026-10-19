@@ -207,14 +207,14 @@
 .blog-content h1 {
   font-family: var(--font-display);
   font-size: 2rem;
-  line-height: 1.1;
+  line-height: 1.2;
   margin-bottom: 0.75rem;
   margin-top: 2rem;
 }
 .blog-content h2 {
   font-family: var(--font-display);
   font-size: 1.75rem;
-  line-height: 1.1;
+  line-height: 1.2;
   margin-bottom: 0.75rem;
   margin-top: 2.5rem;
   padding-bottom: 0.5rem;
@@ -223,14 +223,14 @@
 .blog-content h3 {
   font-family: var(--font-display);
   font-size: 1.5rem;
-  line-height: 1.1;
+  line-height: 1.2;
   margin-bottom: 0.5rem;
   margin-top: 2rem;
 }
 .blog-content h4 {
   font-family: var(--font-display);
   font-size: 1.25rem;
-  line-height: 1.1;
+  line-height: 1.2;
   margin-bottom: 0.5rem;
   margin-top: 1.5rem;
 }

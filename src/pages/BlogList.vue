@@ -53,7 +53,7 @@ function formatDate(dateStr: string): string {
               >
                 {{ String(index + 1).padStart(2, '0') }}
               </span>
-              <h2 class="font-display text-2xl">{{ post.title }}</h2>
+              <h2 class="font-display text-2xl leading-snug">{{ post.title }}</h2>
             </div>
 
             <p class="text-sm text-carbon/60">{{ formatDate(post.date) }}</p>

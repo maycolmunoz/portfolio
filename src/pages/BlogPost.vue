@@ -43,7 +43,7 @@ function formatDate(dateStr: string): string {
 
 <template>
   <div class="bg-console-canvas py-10 min-h-screen">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <RouterLink
         to="/blog"
         class="inline-flex items-center gap-2 mb-8 pill hover:bg-carbon hover:text-paper-white"
@@ -53,9 +53,9 @@ function formatDate(dateStr: string): string {
       </RouterLink>
 
       <template v-if="post">
-        <article class="card p-6 md:p-10">
+        <article class="card p-6 md:p-10 lg:p-12">
           <header class="mb-8 pb-6 border-b-2 border-carbon">
-            <h1 class="font-display uppercase text-4xl md:text-5xl leading-[0.85] mb-4">
+            <h1 class="font-display uppercase text-4xl md:text-5xl leading-[1.05] mb-4">
               {{ post.title }}
             </h1>
 
